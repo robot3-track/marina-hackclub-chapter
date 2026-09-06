@@ -22,28 +22,24 @@ export const ConstitutionViewer: React.FC = () => {
   });
 
   return (
-    <section className="py-16 bg-[#17171d] text-white border-t border-[#252429]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section className="py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#338eda]/10 border border-[#338eda]/30 text-[#338eda] text-xs font-bold uppercase tracking-wider">
-            <FileText className="w-4 h-4" />
-            <span>Official Charter & Bylaws</span>
-          </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-white">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white">
             Hack Club Marina Constitution
           </h2>
 
-          <p className="text-sm sm:text-base text-[#8492a6]">
+          <p className="text-xs sm:text-base text-[#8492a6]">
             Official constitution governing Hack Club Marina Chapter of Marina High School. Covering membership, officer duties, finances, and meeting procedures.
           </p>
         </div>
 
         {/* Search & Article Filter Bar */}
-        <div className="bg-[#1e1e24] p-5 sm:p-6 rounded-2xl border border-[#2d2d38] space-y-4 shadow-lg">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-[#1e1e24] p-4 sm:p-6 rounded-2xl border border-[#2d2d38] space-y-4 shadow-lg">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             
             {/* Search Input */}
             <div className="relative w-full sm:w-80">
@@ -61,7 +57,7 @@ export const ConstitutionViewer: React.FC = () => {
             <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
               <button
                 onClick={() => setActiveArticleId('all')}
-                className={`px-4 py-2 text-xs font-bold rounded-full transition-colors whitespace-nowrap cursor-pointer ${
+                className={`px-3.5 py-1.5 text-xs font-bold rounded-full transition-colors whitespace-nowrap cursor-pointer ${
                   activeArticleId === 'all'
                     ? 'bg-[#ec3750] text-white'
                     : 'bg-[#17171d] text-[#8492a6] hover:text-white border border-[#2d2d38]'
@@ -73,7 +69,7 @@ export const ConstitutionViewer: React.FC = () => {
                 <button
                   key={art.id}
                   onClick={() => setActiveArticleId(art.id)}
-                  className={`px-4 py-2 text-xs font-bold rounded-full transition-colors whitespace-nowrap cursor-pointer ${
+                  className={`px-3.5 py-1.5 text-xs font-bold rounded-full transition-colors whitespace-nowrap cursor-pointer ${
                     activeArticleId === art.id
                       ? 'bg-[#ec3750] text-white'
                       : 'bg-[#17171d] text-[#8492a6] hover:text-white border border-[#2d2d38]'
@@ -88,10 +84,10 @@ export const ConstitutionViewer: React.FC = () => {
         </div>
 
         {/* Articles List */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {filteredArticles.length === 0 ? (
-            <div className="p-12 text-center bg-[#1e1e24] rounded-2xl border border-[#2d2d38]">
-              <p className="text-sm font-semibold text-[#8492a6]">
+            <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-2xl border border-[#2d2d38]">
+              <p className="text-xs sm:text-sm font-semibold text-[#8492a6]">
                 No matching articles found for "{searchTerm}"
               </p>
               <button
@@ -105,18 +101,18 @@ export const ConstitutionViewer: React.FC = () => {
             filteredArticles.map(article => (
               <div
                 key={article.id}
-                className="p-6 sm:p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-4"
+                className="p-5 sm:p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-4"
               >
                 <div className="flex items-center gap-2.5 pb-3 border-b border-[#2d2d38]">
                   <Bookmark className="w-5 h-5 text-[#ec3750]" />
-                  <h3 className="text-xl sm:text-2xl font-black text-white">
+                  <h3 className="text-lg sm:text-2xl font-black text-white">
                     {article.title}
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {article.sections.map((sec, idx) => (
-                    <div key={idx} className="space-y-1.5 text-sm sm:text-base leading-relaxed text-[#a0aec0]">
+                    <div key={idx} className="space-y-1.5 text-xs sm:text-base leading-relaxed text-[#a0aec0]">
                       {sec.number && (
                         <span className="font-extrabold text-[#ec3750] block text-xs uppercase tracking-wider mt-2">
                           {sec.number} {sec.title ? `• ${sec.title}` : ''}

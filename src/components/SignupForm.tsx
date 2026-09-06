@@ -17,21 +17,17 @@ export const SignupForm: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-[#17171d] text-white border-t border-[#252429]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ec3750]/10 border border-[#ec3750]/30 text-[#ec3750] text-xs font-bold uppercase tracking-wider">
-            <MessageSquare className="w-4 h-4" />
-            <span>Join Hack Club Marina • Fall 26-27'</span>
-          </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-white">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white">
             Get Connected & Join Chapter
           </h2>
 
-          <p className="text-sm sm:text-base text-[#8492a6] leading-relaxed">
+          <p className="text-xs sm:text-base text-[#8492a6] leading-relaxed">
             To get added to the official chapter group chat, receive meeting announcements, claim <strong className="text-white">free software & hardware grants</strong>, and get <strong className="text-[#f1c40f]">free stickers upon signup</strong>, contact chapter leadership directly via text or email.
           </p>
         </div>
@@ -53,20 +49,20 @@ export const SignupForm: React.FC = () => {
         </div>
 
         {/* Primary Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           
           {/* SMS Contact Card */}
-          <div className="p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-6 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-[#ec3750]/20 flex items-center justify-center text-[#ec3750]">
-                <Phone className="w-6 h-6" />
+          <div className="p-5 sm:p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-5 sm:space-y-6 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#ec3750]/20 flex items-center justify-center text-[#ec3750]">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
 
               <div>
                 <span className="text-xs font-bold text-[#ec3750] uppercase tracking-wider block">
                   Text Group Chat SMS
                 </span>
-                <h3 className="text-3xl font-black text-white mt-1 font-mono">
+                <h3 className="text-2xl sm:text-3xl font-black text-white mt-1 font-mono">
                   657-505-8696
                 </h3>
                 <p className="text-xs text-[#8492a6] mt-2 leading-relaxed">
@@ -76,7 +72,7 @@ export const SignupForm: React.FC = () => {
             </div>
 
             <div className="space-y-2 pt-4 border-t border-[#2d2d38]">
-              <div className="flex gap-2">
+              <div className="flex flex-col xs:flex-row gap-2">
                 <a
                   href="sms:6575058696"
                   className="flex-1 px-4 py-3 rounded-full bg-[#ec3750] hover:bg-[#d62b42] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
@@ -98,17 +94,17 @@ export const SignupForm: React.FC = () => {
           </div>
 
           {/* Email Contact Card */}
-          <div className="p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-6 flex flex-col justify-between hover:border-[#338eda]/50 transition-all">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-[#338eda]/20 flex items-center justify-center text-[#338eda]">
-                <Mail className="w-6 h-6" />
+          <div className="p-5 sm:p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-5 sm:space-y-6 flex flex-col justify-between hover:border-[#338eda]/50 transition-all">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#338eda]/20 flex items-center justify-center text-[#338eda]">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
 
               <div>
                 <span className="text-xs font-bold text-[#338eda] uppercase tracking-wider block">
                   Email Club President
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black text-white mt-1 font-mono break-all">
+                <h3 className="text-lg sm:text-2xl font-black text-white mt-1 font-mono break-all">
                   yychang100@student.hbuhsd.edu
                 </h3>
                 <p className="text-xs text-[#8492a6] mt-2 leading-relaxed">
@@ -118,7 +114,7 @@ export const SignupForm: React.FC = () => {
             </div>
 
             <div className="space-y-2 pt-4 border-t border-[#2d2d38]">
-              <div className="flex gap-2">
+              <div className="flex flex-col xs:flex-row gap-2">
                 <a
                   href="mailto:yychang100@student.hbuhsd.edu"
                   className="flex-1 px-4 py-3 rounded-full bg-[#338eda] hover:bg-[#2b7bbd] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
@@ -142,24 +138,24 @@ export const SignupForm: React.FC = () => {
         </div>
 
         {/* Meeting Times Banner */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-4">
-          <h3 className="text-lg font-black text-white flex items-center gap-2">
+        <div className="p-5 sm:p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-4">
+          <h3 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
             <Clock className="w-5 h-5 text-[#ff8c37]" />
             <span>Chapter Meeting Info & Dues</span>
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#8492a6]">
-            <div className="p-4 rounded-xl bg-[#17171d] border border-[#2d2d38] space-y-1">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs text-[#8492a6]">
+            <div className="p-3.5 sm:p-4 rounded-xl bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm">Meeting Schedule</span>
               <p>Lunch & After School Sessions</p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#17171d] border border-[#2d2d38] space-y-1">
+            <div className="p-3.5 sm:p-4 rounded-xl bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm">Location</span>
               <p>Designated Advisor's Classroom (Marina HS)</p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#17171d] border border-[#2d2d38] space-y-1">
+            <div className="p-3.5 sm:p-4 rounded-xl bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm">Membership Fee</span>
               <p className="text-[#33d6a6] font-extrabold">$0 Dues (100% Free)</p>
             </div>
