@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             {/* Hack Club Signature Display Headline */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white">
-                Where Marina Vikings{' '}
+                Where <span className="text-[#3b82f6]">Marina</span> <span className="text-[#f1c40f]">Vikings</span>{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ec3750] via-[#ff8c37] to-[#f1c40f]">
                   make cool stuff.
                 </span>
@@ -143,9 +143,9 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
                     <img
-                      src="/icon-square.svg"
-                      alt="Hack Club Icon"
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-contain shadow-md"
+                      src="/marina-hs-logo.jpg"
+                      alt="Marina High School Vikings Logo"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-contain shadow-md bg-[#131317]"
                     />
                     <div>
                       <h2 className="text-lg sm:text-xl font-black text-white">

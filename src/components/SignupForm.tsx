@@ -134,7 +134,7 @@ export const SignupForm: React.FC = () => {
                 <span className="text-xs font-bold text-[#338eda] uppercase tracking-wider block">
                   Email Club President
                 </span>
-                <h3 className="text-lg sm:text-1xl font-black text-white mt-1 font-mono break-all">
+                <h3 className="text-lg sm:text-xl font-black text-white mt-1 font-mono break-all">
                   yychang100@student.hbuhsd.edu
                 </h3>
                 <p className="text-xs text-[#8492a6] mt-2 leading-relaxed">
