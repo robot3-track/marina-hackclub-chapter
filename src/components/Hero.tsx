@@ -32,12 +32,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
           
           {/* Left Column: Headline & Direct Contact */}
           <div className="lg:col-span-7 space-y-8">
-            
-            {/* Top Announcement Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#252429] border border-[#ec3750]/40 text-xs font-bold text-[#ec3750] shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-[#f1c40f]" />
-              <span>Official Chapter • Hack Club HQ & Marina High School</span>
-            </div>
 
             {/* Hack Club Signature Display Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-white">
