@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 
 interface HeroProps {
   setActiveTab: (tab: string) => void;
@@ -21,7 +22,12 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
   return (
     <section className="relative overflow-hidden py-8 sm:py-16 md:py-20 bg-[#17171d] text-white">
-      {/* Background Decorative Grid */}
+      {/* Black & Red Hack Club Hardware Sprue Partial Background */}
+      <div 
+        className="absolute inset-x-0 bottom-0 h-96 sm:h-[480px] bg-cover bg-bottom opacity-25 mix-blend-screen pointer-events-none"
+        style={{ backgroundImage: `url('/hackclub_sprue_bg_1788727720034.jpg')` }}
+      />
+      {/* Radial Grid Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
@@ -30,7 +36,13 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Headline & Direct Contact */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="lg:col-span-7 space-y-6 sm:space-y-8"
+          >
 
             {/* Hack Club Signature Display Headline */}
             <div className="space-y-3">
@@ -43,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </div>
 
             <p className="text-sm sm:text-lg lg:text-xl text-[#a0aec0] font-normal leading-relaxed max-w-2xl">
-              Hack Club Marina is a student-led coding and maker community. We build software & hardware projects, claim <strong className="text-white">free software & hardware grants</strong> (APIs, hosting, microcontrollers & kits), compete in hackathons, and give <strong className="text-[#f1c40f]">free stickers to all members who sign up!</strong>
+              Hack Club Marina is a student-led coding and maker community. We build software & hardware projects, claim <strong className="text-white">free software & hardware grants</strong> (APIs, hosting, microcontrollers & kits), compete in hackathons, and connect Marina High School hackers!
             </p>
 
             {/* Quick Contact & Join Banner */}
@@ -51,9 +63,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <span className="text-xs font-black uppercase tracking-wider text-[#ec3750]">
                   Get Added to Chapter Group Chat (Fall 26-27')
-                </span>
-                <span className="px-3 py-1 rounded-md bg-[#f1c40f]/20 text-[#f1c40f] text-[11px] font-extrabold self-start sm:self-auto border border-[#f1c40f]/30">
-                  FREE STICKERS ON SIGNUP
                 </span>
               </div>
 
@@ -114,12 +123,18 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
               </button>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right Column: Hack Club Brand Assets & Visual Showcase */}
-          <div className="lg:col-span-5 relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
+            className="lg:col-span-5 relative"
+          >
             
-            {/* Visual Card Stack with Real SVGs & Hack Club Assets */}
+            {/* Visual Card Stack with Real Official SVGs */}
             <div className="relative space-y-4 sm:space-y-6">
               
               {/* Primary Card: Hack Club Marina Badge */}
@@ -166,11 +181,11 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   </p>
                 </div>
 
-                {/* Real SVG Banner Display */}
-                <div className="p-3 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-center">
+                {/* Official Brand Banner Box */}
+                <div className="p-3.5 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-center">
                   <img
                     src="/flag-standalone.svg"
-                    alt="Hack Club Banner"
+                    alt="Hack Club Standalone Banner"
                     className="h-10 sm:h-12 object-contain"
                   />
                 </div>
@@ -194,15 +209,21 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Feature Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-10 border-t border-[#252429]">
-          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-10 border-t border-[#252429]"
+        >
+          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#ec3750]/50 transition-all">
             <div className="h-10 flex items-center">
-              <img src="/flag-standalone.svg" alt="Hack Club Flag" className="h-8 object-contain" />
+              <img src="/hcb-light.png" alt="Marina Viking Logo" className="h-8 object-contain" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Hack Club Hackathons</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">
@@ -210,10 +231,9 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </p>
           </div>
 
-          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3">
-            <div className="h-10 flex items-center justify-between">
-              <img src="/2026.svg" alt="Hack Club 2026" className="h-7 object-contain" />
-              <img src="/logo.svg" alt="Hack Club Logo" className="h-6 w-6 object-contain" />
+          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#338eda]/50 transition-all">
+            <div className="h-10 flex items-center">
+              <img src="/icon-rounded.svg" alt="Hack Club Rounded Icon" className="h-8 w-8 object-contain" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Devpost Submissions</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">
@@ -221,16 +241,16 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </p>
           </div>
 
-          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3">
-            <div className="h-10 flex items-center justify-between">
-              <img src="/icon-square.svg" alt="Hack Club Marina" className="h-8 w-8 object-contain" />
+          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#33d6a6]/50 transition-all">
+            <div className="h-10 flex items-center">
+              <img src="/flag-orpheus-top.svg" alt="Hack Club Top Flag" className="h-8 object-contain" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Community & Hardware</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">
               Meet during lunch and after school in the advisor's classroom. Free snacks, microcontrollers, breadboards, and open hardware kits.
             </p>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'motion/react';
+import { CarouselTicker } from './CarouselTicker';
 
 interface HackathonsSectionProps {
   setActiveTab: (tab: string) => void;
@@ -6,11 +8,25 @@ interface HackathonsSectionProps {
 
 export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveTab }) => {
   return (
-    <section className="py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
+    <section className="relative overflow-hidden py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
+      {/* Black & Red Hack Club Hardware Sprue Partial Background */}
+      <div 
+        className="absolute inset-x-0 top-0 h-96 sm:h-[480px] bg-cover bg-top opacity-20 mix-blend-screen pointer-events-none"
+        style={{ backgroundImage: `url('/hackclub_sprue_bg_1788727720034.jpg')` }}
+      />
+      {/* Radial Grid Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4"
+        >
           <div className="flex items-center justify-center gap-3">
             <img src="/flag-standalone.svg" alt="Hack Club Flag" className="h-10 sm:h-12 object-contain" />
           </div>
@@ -20,18 +36,24 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           </h2>
 
           <p className="text-sm sm:text-base lg:text-lg text-[#8492a6] leading-relaxed">
-            We build cool software & hardware projects together, claim <strong className="text-white">free software & hardware grants</strong> (hosting, APIs, microcontrollers & kits), participate in Hack Club & Devpost hackathons, get <strong className="text-[#f1c40f]">free stickers</strong>, and hang out at Marina High School.
+            We build cool software & hardware projects together, claim <strong className="text-white">free software & hardware grants</strong> (hosting, APIs, microcontrollers & kits), participate in Hack Club & Devpost hackathons, get <strong className="text-[#f1c40f]">free sticker drops</strong>, and hang out at Marina High School.
           </p>
-        </div>
+        </motion.div>
 
         {/* 3 Core Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           
           {/* Pillar 1: Hack Club Hackathons */}
-          <div className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all">
+          <motion.div 
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
+            className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all shadow-xl"
+          >
             <div className="space-y-3 sm:space-y-4">
-              <div className="h-10 flex items-center justify-between">
-                <img src="/flag-orpheus-top.svg" alt="Hack Club Flag" className="h-8 object-contain" />
+              <div className="h-10 flex items-center">
+                <img src="/flag-orpheus-top.svg" alt="Hack Club Flag Orpheus" className="h-8 object-contain" />
               </div>
 
               <span className="text-xs font-bold text-[#ec3750] uppercase tracking-wider block">
@@ -71,14 +93,19 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               <span>Explore Hack Club Events</span>
               <span className="font-mono text-sm">→</span>
             </a>
-          </div>
+          </motion.div>
 
           {/* Pillar 2: Devpost Hackathons */}
-          <div className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#338eda]/50 transition-all">
+          <motion.div 
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+            className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#338eda]/50 transition-all shadow-xl"
+          >
             <div className="space-y-3 sm:space-y-4">
-              <div className="h-10 flex items-center justify-between">
-                <img src="/2026.svg" alt="Hack Club 2026" className="h-7 object-contain" />
-                <img src="/logo.svg" alt="Hack Club Logo" className="h-6 w-6 object-contain" />
+              <div className="h-10 flex items-center">
+                <img src="/2026.svg" alt="Hack Club 2026 Ribbon" className="h-7 object-contain" />
               </div>
 
               <span className="text-xs font-bold text-[#338eda] uppercase tracking-wider block">
@@ -118,13 +145,19 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               <span>Browse Devpost Hackathons</span>
               <span className="font-mono text-sm">→</span>
             </a>
-          </div>
+          </motion.div>
 
           {/* Pillar 3: Community Purpose */}
-          <div className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#33d6a6]/50 transition-all">
+          <motion.div 
+            initial={{ opacity: 0, y: 30, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
+            className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#33d6a6]/50 transition-all shadow-xl"
+          >
             <div className="space-y-3 sm:space-y-4">
-              <div className="h-10 flex items-center justify-between">
-                <img src="/icon-square.svg" alt="Hack Club Marina" className="h-8 w-8 object-contain" />
+              <div className="h-10 flex items-center">
+                <img src="/icon-rounded.svg" alt="Hack Club Rounded Icon" className="h-8 w-8 object-contain" />
               </div>
 
               <span className="text-xs font-bold text-[#33d6a6] uppercase tracking-wider block">
@@ -162,16 +195,24 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               <span>Join Chapter Group Chat</span>
               <span className="font-mono text-sm">→</span>
             </button>
-          </div>
+          </motion.div>
 
         </div>
 
+        {/* Continuous Auto-Scrolling Infinite Carousel Component */}
+        <CarouselTicker />
+
         {/* Feature Highlight Banner */}
-        <div className="p-5 sm:p-10 rounded-xl bg-[#1e1e24] border border-[#2d2d38] flex flex-col md:flex-row items-center justify-between gap-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="p-5 sm:p-10 rounded-xl bg-[#1e1e24] border border-[#2d2d38] flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl"
+        >
           <div className="space-y-2 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <img src="/hcb-light.png" alt="Hack Club Bank" className="h-5 object-contain" />
-              <img src="/icon-square.svg" alt="Hack Club Square Badge" className="h-5 w-5 object-contain" />
+              <img src="/hcb-light.png" alt="Hack Club Bank" className="h-4 object-contain" />
               <span className="text-xs font-bold text-[#ff8c37]">Official Chapter Charter • Marina High School</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
@@ -184,11 +225,11 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
           <button
             onClick={() => setActiveTab('signup')}
-            className="w-full sm:w-auto justify-center px-6 py-3 rounded-lg font-extrabold text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap"
+            className="w-full sm:w-auto justify-center px-6 py-3 rounded-lg font-extrabold text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap shadow-lg"
           >
             <span>Join Hack Club Marina</span>
           </button>
-        </div>
+        </motion.div>
 
       </div>
     </section>

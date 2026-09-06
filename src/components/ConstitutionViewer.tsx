@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'motion/react';
 import { CONSTITUTION_ARTICLES } from '../data/chapterData';
 
 export const ConstitutionViewer: React.FC = () => {
@@ -21,13 +22,27 @@ export const ConstitutionViewer: React.FC = () => {
   });
 
   return (
-    <section className="py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+    <section className="relative overflow-hidden py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
+      {/* Black & Red Hack Club Hardware Sprue Partial Background */}
+      <div 
+        className="absolute inset-x-0 bottom-0 h-96 sm:h-[480px] bg-cover bg-bottom opacity-20 mix-blend-screen pointer-events-none"
+        style={{ backgroundImage: `url('/hackclub_sprue_bg_1788727720034.jpg')` }}
+      />
+      {/* Radial Grid Overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="text-center max-w-3xl mx-auto space-y-3"
+        >
           <div className="flex items-center justify-center gap-3">
-            <img src="/logo.svg" alt="Hack Club Logo" className="h-10 w-10 object-contain" />
+            <img src="/flag-orpheus-top.svg" alt="Marina Viking Logo" className="h-10 object-contain" />
           </div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white">
@@ -37,10 +52,16 @@ export const ConstitutionViewer: React.FC = () => {
           <p className="text-xs sm:text-base text-[#8492a6]">
             Official constitution governing Hack Club Marina Chapter of Marina High School. Covering membership, officer duties, finances, and meeting procedures.
           </p>
-        </div>
+        </motion.div>
 
         {/* Search & Article Filter Bar */}
-        <div className="bg-[#1e1e24] p-4 sm:p-6 rounded-xl border border-[#2d2d38] space-y-4 shadow-lg">
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="bg-[#1e1e24] p-4 sm:p-6 rounded-xl border border-[#2d2d38] space-y-4 shadow-lg"
+        >
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             
             {/* Search Input */}
@@ -82,7 +103,7 @@ export const ConstitutionViewer: React.FC = () => {
             </div>
 
           </div>
-        </div>
+        </motion.div>
 
         {/* Articles List */}
         <div className="space-y-4 sm:space-y-6">
@@ -100,9 +121,13 @@ export const ConstitutionViewer: React.FC = () => {
             </div>
           ) : (
             filteredArticles.map(article => (
-              <div
+              <motion.div
                 key={article.id}
-                className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.4 }}
+                className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-lg"
               >
                 <div className="flex items-center gap-2.5 pb-3 border-b border-[#2d2d38]">
                   <span className="w-2.5 h-2.5 rounded-sm bg-[#ec3750] inline-block"></span>
@@ -125,13 +150,19 @@ export const ConstitutionViewer: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))
           )}
         </div>
 
         {/* Ratified Charter Footer */}
-        <div className="p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-30px" }}
+          transition={{ duration: 0.4 }}
+          className="p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl"
+        >
           <div className="flex items-center gap-3">
             <img src="/icon-square.svg" alt="Hack Club Marina" className="w-8 h-8 object-contain" />
             <div>
@@ -148,12 +179,12 @@ export const ConstitutionViewer: React.FC = () => {
             href="https://hackclub.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-lg text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors cursor-pointer"
+            className="px-5 py-2.5 rounded-lg text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors cursor-pointer shadow-md"
           >
             <span>Hack Club Main HQ</span>
             <span className="font-mono text-sm">→</span>
           </a>
-        </div>
+        </motion.div>
 
       </div>
     </section>

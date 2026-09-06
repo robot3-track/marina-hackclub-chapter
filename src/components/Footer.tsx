@@ -24,17 +24,6 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-[#8492a6] leading-relaxed max-w-sm">
               Official student chapter of Hack Club at Marina High School. Creating an inclusive space for high schoolers to learn coding, build hardware, and launch projects.
             </p>
-
-            <div className="flex items-center gap-3 pt-2">
-              <img src="/flag-standalone.svg" alt="Hack Club Flag Banner" className="h-6 object-contain" />
-              <img src="/hcb-light.png" alt="Hack Club Bank" className="h-4 object-contain" />
-              <img src="/2026.svg" alt="Hack Club 2026" className="h-5 object-contain" />
-            </div>
-
-            <div className="flex items-center gap-2 text-xs text-[#33d6a6] font-semibold">
-              <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block"></span>
-              <span>Supported by Hack Club HQ</span>
-            </div>
           </div>
 
           {/* Direct Contacts */}
