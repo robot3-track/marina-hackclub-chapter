@@ -72,6 +72,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="https://devpost.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <img src="/devpost.svg" alt="Devpost Logo" className="w-4 h-4 object-contain inline-block" />
                   <span>Devpost Hackathons</span>
                   <span className="font-mono text-xs text-[#338eda]">→</span>
                 </a>

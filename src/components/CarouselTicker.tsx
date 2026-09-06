@@ -53,7 +53,7 @@ const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
     tag: 'Devpost Competitions',
     tagColor: '#33d6a6',
     description: 'Team up with Marina High School chapter members to build software apps & games for global Devpost competitions.',
-    icon: '/viking-logo.svg',
+    icon: '/devpost.svg',
     linkText: 'Devpost Portal',
     linkUrl: 'https://devpost.com/hackathons',
     accentBorder: 'hover:border-[#33d6a6]',

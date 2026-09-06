@@ -233,7 +233,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
           <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#338eda]/50 transition-all">
             <div className="h-10 flex items-center">
-              <img src="/icon-rounded.svg" alt="Hack Club Rounded Icon" className="h-8 w-8 object-contain" />
+              <img src="/devpost.svg" alt="Devpost Logo" className="h-8 w-8 object-contain" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Devpost Submissions</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">

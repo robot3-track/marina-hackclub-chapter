@@ -105,7 +105,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           >
             <div className="space-y-3 sm:space-y-4">
               <div className="h-10 flex items-center">
-                <img src="/2026.svg" alt="Hack Club 2026 Ribbon" className="h-7 object-contain" />
+                <img src="/devpost.svg" alt="Devpost Logo" className="h-8 w-8 object-contain" />
               </div>
 
               <span className="text-xs font-bold text-[#338eda] uppercase tracking-wider block">
