@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             {/* Hack Club Signature Display Headline */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white">
-                Where <span className="text-[#3b82f6]">Marina</span> <span className="text-[#f1c40f]">Vikings</span>{' '}
+                Where <span className="text-[#3b82f6]">Marina</span> <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5A5] via-[#F1C40F] to-[#B38700] drop-shadow-[0_0_12px_rgba(241,196,15,0.4)]">Vikings</span>{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ec3750] via-[#ff8c37] to-[#f1c40f]">
                   make cool stuff.
                 </span>
