@@ -1,5 +1,4 @@
 import React from 'react';
-import { FileText, Users, Sparkles, MessageSquare, Phone } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: string;
@@ -33,10 +32,10 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Clean Logo and Title */}
         <button
           onClick={() => setActiveTab('overview')}
-          className="flex items-center gap-2 sm:gap-3 text-left group focus:outline-none"
+          className="flex items-center gap-2 sm:gap-3 text-left group focus:outline-none cursor-pointer"
         >
           <img
-            src="/icon-rounded.svg"
+            src="/logo.svg"
             alt="Hack Club Logo"
             className="w-7 h-7 sm:w-9 sm:h-9 object-contain group-hover:scale-105 transition-transform"
           />
@@ -51,12 +50,12 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-2 lg:gap-4">
+        <nav className="hidden md:flex items-center gap-2 lg:gap-3">
           <button
             onClick={() => setActiveTab('overview')}
-            className={`px-3.5 py-1.5 text-sm font-extrabold rounded-full transition-colors cursor-pointer ${
+            className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer ${
               activeTab === 'overview'
-                ? 'bg-[#252429] text-white border border-[#ec3750]/50'
+                ? 'bg-[#252429] text-white border border-[#ec3750]/60'
                 : 'text-[#8492a6] hover:text-white'
             }`}
           >
@@ -65,48 +64,45 @@ export const Header: React.FC<HeaderProps> = ({
 
           <button
             onClick={() => setActiveTab('hackathons')}
-            className={`px-3.5 py-1.5 text-sm font-extrabold rounded-full transition-colors flex items-center gap-1.5 cursor-pointer ${
+            className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer ${
               activeTab === 'hackathons'
-                ? 'bg-[#252429] text-white border border-[#ec3750]/50'
+                ? 'bg-[#252429] text-white border border-[#ec3750]/60'
                 : 'text-[#8492a6] hover:text-white'
             }`}
           >
-            <Sparkles className="w-4 h-4 text-[#ec3750]" />
             Hackathons & Devpost
           </button>
 
           <button
             onClick={() => setActiveTab('constitution')}
-            className={`px-3.5 py-1.5 text-sm font-extrabold rounded-full transition-colors flex items-center gap-1.5 cursor-pointer ${
+            className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer ${
               activeTab === 'constitution'
-                ? 'bg-[#252429] text-white border border-[#ec3750]/50'
+                ? 'bg-[#252429] text-white border border-[#338eda]/60'
                 : 'text-[#8492a6] hover:text-white'
             }`}
           >
-            <FileText className="w-4 h-4 text-[#338eda]" />
             Constitution
           </button>
 
           <button
             onClick={() => setActiveTab('signup')}
-            className={`px-3.5 py-1.5 text-sm font-extrabold rounded-full transition-colors flex items-center gap-1.5 cursor-pointer ${
+            className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer ${
               activeTab === 'signup'
-                ? 'bg-[#252429] text-white border border-[#ec3750]/50'
+                ? 'bg-[#252429] text-white border border-[#33d6a6]/60'
                 : 'text-[#8492a6] hover:text-white'
             }`}
           >
-            <MessageSquare className="w-4 h-4 text-[#33d6a6]" />
             Contact & Join
           </button>
         </nav>
 
-        {/* Hack Club Style Action Pill */}
+        {/* Hack Club Action Button */}
         <div className="hidden xs:flex items-center gap-2">
           <button
             onClick={() => setActiveTab('signup')}
-            className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-full font-black text-xs sm:text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white transition-all transform hover:scale-105 shadow-md flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
+            className="px-4 sm:px-5 py-2 rounded-md font-black text-xs sm:text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white transition-all shadow-md cursor-pointer whitespace-nowrap"
           >
-            <span>Join Chapter</span>
+            Join Chapter
           </button>
         </div>
       </div>
@@ -115,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="md:hidden border-t border-[#252429] px-3 py-2 overflow-x-auto flex items-center gap-2 scrollbar-none bg-[#121217]">
         <button
           onClick={() => setActiveTab('overview')}
-          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-full whitespace-nowrap transition-colors ${
+          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer ${
             activeTab === 'overview' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
           }`}
         >
@@ -123,7 +119,7 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
         <button
           onClick={() => setActiveTab('hackathons')}
-          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-full whitespace-nowrap transition-colors ${
+          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer ${
             activeTab === 'hackathons' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
           }`}
         >
@@ -132,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         <button
           onClick={() => setActiveTab('constitution')}
-          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-full whitespace-nowrap transition-colors ${
+          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer ${
             activeTab === 'constitution' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
           }`}
         >
@@ -140,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
         <button
           onClick={() => setActiveTab('signup')}
-          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-full whitespace-nowrap transition-colors ${
+          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer ${
             activeTab === 'signup' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
           }`}
         >

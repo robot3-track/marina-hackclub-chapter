@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ArrowRight, Phone, Mail, MapPin, Clock, ShieldCheck, Sparkles, Code, Cpu, Trophy, Check } from 'lucide-react';
 
 interface HeroProps {
   setActiveTab: (tab: string) => void;
@@ -34,72 +33,66 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
           <div className="lg:col-span-7 space-y-6 sm:space-y-8">
 
             {/* Hack Club Signature Display Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white">
-              Where Marina Vikings{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ec3750] via-[#ff8c37] to-[#f1c40f]">
-                make cool stuff.
-              </span>
-            </h1>
+            <div className="space-y-3">
+              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white">
+                Where Marina Vikings{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ec3750] via-[#ff8c37] to-[#f1c40f]">
+                  make cool stuff.
+                </span>
+              </h1>
+            </div>
 
             <p className="text-sm sm:text-lg lg:text-xl text-[#a0aec0] font-normal leading-relaxed max-w-2xl">
               Hack Club Marina is a student-led coding and maker community. We build software & hardware projects, claim <strong className="text-white">free software & hardware grants</strong> (APIs, hosting, microcontrollers & kits), compete in hackathons, and give <strong className="text-[#f1c40f]">free stickers to all members who sign up!</strong>
             </p>
 
             {/* Quick Contact & Join Banner */}
-            <div className="p-4 sm:p-6 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-xl">
+            <div className="p-4 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-xl">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <span className="text-xs font-black uppercase tracking-wider text-[#ec3750]">
                   Get Added to Chapter Group Chat (Fall 26-27')
                 </span>
-                <span className="px-2.5 py-1 rounded-full bg-[#f1c40f]/20 text-[#f1c40f] text-[11px] font-extrabold self-start sm:self-auto flex items-center gap-1">
-                  🎁 FREE STICKERS ON SIGNUP
+                <span className="px-3 py-1 rounded-md bg-[#f1c40f]/20 text-[#f1c40f] text-[11px] font-extrabold self-start sm:self-auto border border-[#f1c40f]/30">
+                  FREE STICKERS ON SIGNUP
                 </span>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
                 {/* Phone Contact */}
-                <div className="flex-1 p-3 rounded-xl bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2.5 overflow-hidden">
-                    <Phone className="w-4 h-4 text-[#ec3750] flex-shrink-0" />
-                    <div className="truncate">
-                      <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Text Group Chat</span>
-                      <span className="text-sm font-bold text-white font-mono">657-505-8696</span>
-                    </div>
+                <div className="flex-1 p-3 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
+                  <div className="truncate">
+                    <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Text Group Chat</span>
+                    <span className="text-sm font-bold text-white font-mono">657-505-8696</span>
                   </div>
                   <button
                     onClick={() => copyText('657-505-8696', 'phone')}
                     className="px-3 py-1.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-xs font-bold text-[#8492a6] hover:text-white transition-colors flex-shrink-0 cursor-pointer"
                   >
-                    {copiedPhone ? <Check className="w-3.5 h-3.5 text-[#33d6a6]" /> : 'Copy'}
+                    {copiedPhone ? <span className="text-[#33d6a6] font-extrabold">Copied</span> : 'Copy'}
                   </button>
                 </div>
 
                 {/* Email Contact */}
-                <div className="flex-1 p-3 rounded-xl bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2.5 overflow-hidden">
-                    <Mail className="w-4 h-4 text-[#338eda] flex-shrink-0" />
-                    <div className="truncate">
-                      <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Email President Yohan</span>
-                      <span className="text-xs font-bold text-white font-mono truncate block">yychang100@student.hbuhsd.edu</span>
-                    </div>
+                <div className="flex-1 p-3 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
+                  <div className="truncate">
+                    <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Email President Yohan</span>
+                    <span className="text-xs font-bold text-white font-mono truncate block">yychang100@student.hbuhsd.edu</span>
                   </div>
                   <button
                     onClick={() => copyText('yychang100@student.hbuhsd.edu', 'email')}
                     className="px-3 py-1.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-xs font-bold text-[#8492a6] hover:text-white transition-colors flex-shrink-0 cursor-pointer"
                   >
-                    {copiedEmail ? <Check className="w-3.5 h-3.5 text-[#33d6a6]" /> : 'Copy'}
+                    {copiedEmail ? <span className="text-[#33d6a6] font-extrabold">Copied</span> : 'Copy'}
                   </button>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#8492a6] pt-3 border-t border-[#2d2d38]">
-                <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#33d6a6]" />
-                  <span>Meetings: Lunch & After School</span>
+                <div>
+                  <span className="text-[#33d6a6] font-bold">Meetings:</span> Lunch & After School
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#ff8c37]" />
-                  <span>Advisor's Room (Marina HS)</span>
+                <div>
+                  <span className="text-[#ff8c37] font-bold">Location:</span> Advisor's Room (Marina HS)
                 </div>
               </div>
             </div>
@@ -108,15 +101,14 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <button
                 onClick={() => setActiveTab('hackathons')}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full font-black text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center justify-center gap-2 transition-all shadow-lg cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-black text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center justify-center transition-all shadow-lg cursor-pointer"
               >
-                <span>Hackathons & Devpost</span>
-                <ArrowRight className="w-4 h-4" />
+                Hackathons & Devpost
               </button>
 
               <button
                 onClick={() => setActiveTab('constitution')}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full font-bold text-sm bg-[#252429] hover:bg-[#32303c] text-white border border-[#3c4858] transition-colors cursor-pointer text-center justify-center flex items-center"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-bold text-sm bg-[#252429] hover:bg-[#32303c] text-white border border-[#3c4858] transition-colors cursor-pointer text-center justify-center flex items-center"
               >
                 Chapter Constitution
               </button>
@@ -131,14 +123,14 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             <div className="relative space-y-4 sm:space-y-6">
               
               {/* Primary Card: Hack Club Marina Badge */}
-              <div className="p-4 sm:p-6 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-5 shadow-2xl transform lg:rotate-1 hover:rotate-0 transition-all">
+              <div className="p-4 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-5 shadow-2xl transform lg:rotate-1 hover:rotate-0 transition-all">
                 
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
                     <img
                       src="/icon-square.svg"
                       alt="Hack Club Icon"
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl object-contain shadow-md"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-contain shadow-md"
                     />
                     <div>
                       <h2 className="text-lg sm:text-xl font-black text-white">
@@ -158,7 +150,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                 </div>
 
                 {/* Hack Club Bank / HCB Card Banner */}
-                <div className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-[#ec3750] to-[#a633d6] text-white space-y-1.5">
+                <div className="p-3.5 sm:p-4 rounded-lg bg-gradient-to-r from-[#ec3750] to-[#a633d6] text-white space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold opacity-90">
                       Supported by Hack Club HQ
@@ -175,11 +167,11 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                 </div>
 
                 {/* Real SVG Banner Display */}
-                <div className="p-3 sm:p-4 rounded-xl bg-[#17171d] border border-[#2d2d38] flex items-center justify-center">
+                <div className="p-3 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-center">
                   <img
                     src="/flag-standalone.svg"
-                    alt="Hack Club Standalone Banner"
-                    className="h-12 sm:h-16 object-contain"
+                    alt="Hack Club Banner"
+                    className="h-10 sm:h-12 object-contain"
                   />
                 </div>
 
@@ -208,9 +200,9 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
         {/* Feature Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-10 border-t border-[#252429]">
-          <div className="p-5 sm:p-6 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-[#ec3750]/20 flex items-center justify-center text-[#ec3750]">
-              <Trophy className="w-5 h-5" />
+          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3">
+            <div className="h-10 flex items-center">
+              <img src="/flag-standalone.svg" alt="Hack Club Flag" className="h-8 object-contain" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Hack Club Hackathons</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">
@@ -218,9 +210,10 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </p>
           </div>
 
-          <div className="p-5 sm:p-6 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-[#338eda]/20 flex items-center justify-center text-[#338eda]">
-              <Code className="w-5 h-5" />
+          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3">
+            <div className="h-10 flex items-center justify-between">
+              <img src="/2026.svg" alt="Hack Club 2026" className="h-7 object-contain" />
+              <img src="/logo.svg" alt="Hack Club Logo" className="h-6 w-6 object-contain" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Devpost Submissions</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">
@@ -228,9 +221,9 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </p>
           </div>
 
-          <div className="p-5 sm:p-6 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-[#33d6a6]/20 flex items-center justify-center text-[#33d6a6]">
-              <Cpu className="w-5 h-5" />
+          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3">
+            <div className="h-10 flex items-center justify-between">
+              <img src="/icon-square.svg" alt="Hack Club Marina" className="h-8 w-8 object-contain" />
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Community & Hardware</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">

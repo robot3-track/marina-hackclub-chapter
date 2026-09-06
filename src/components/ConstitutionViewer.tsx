@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { CONSTITUTION_ARTICLES } from '../data/chapterData';
-import { Search, FileText, CheckCircle2, Bookmark, ExternalLink } from 'lucide-react';
 
 export const ConstitutionViewer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,6 +26,9 @@ export const ConstitutionViewer: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="flex items-center justify-center gap-3">
+            <img src="/logo.svg" alt="Hack Club Logo" className="h-10 w-10 object-contain" />
+          </div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white">
             Hack Club Marina Constitution
@@ -38,18 +40,17 @@ export const ConstitutionViewer: React.FC = () => {
         </div>
 
         {/* Search & Article Filter Bar */}
-        <div className="bg-[#1e1e24] p-4 sm:p-6 rounded-2xl border border-[#2d2d38] space-y-4 shadow-lg">
+        <div className="bg-[#1e1e24] p-4 sm:p-6 rounded-xl border border-[#2d2d38] space-y-4 shadow-lg">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             
             {/* Search Input */}
             <div className="relative w-full sm:w-80">
-              <Search className="w-4 h-4 absolute left-3.5 top-3 text-[#8492a6]" />
               <input
                 type="text"
                 placeholder="Search constitution bylaws..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 text-xs rounded-full bg-[#17171d] text-white placeholder-[#8492a6] border border-[#2d2d38] focus:border-[#ec3750] outline-none"
+                className="w-full px-4 py-2.5 text-xs rounded-lg bg-[#17171d] text-white placeholder-[#8492a6] border border-[#2d2d38] focus:border-[#ec3750] outline-none"
               />
             </div>
 
@@ -57,7 +58,7 @@ export const ConstitutionViewer: React.FC = () => {
             <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
               <button
                 onClick={() => setActiveArticleId('all')}
-                className={`px-3.5 py-1.5 text-xs font-bold rounded-full transition-colors whitespace-nowrap cursor-pointer ${
+                className={`px-3.5 py-1.5 text-xs font-bold rounded-md transition-colors whitespace-nowrap cursor-pointer ${
                   activeArticleId === 'all'
                     ? 'bg-[#ec3750] text-white'
                     : 'bg-[#17171d] text-[#8492a6] hover:text-white border border-[#2d2d38]'
@@ -69,7 +70,7 @@ export const ConstitutionViewer: React.FC = () => {
                 <button
                   key={art.id}
                   onClick={() => setActiveArticleId(art.id)}
-                  className={`px-3.5 py-1.5 text-xs font-bold rounded-full transition-colors whitespace-nowrap cursor-pointer ${
+                  className={`px-3.5 py-1.5 text-xs font-bold rounded-md transition-colors whitespace-nowrap cursor-pointer ${
                     activeArticleId === art.id
                       ? 'bg-[#ec3750] text-white'
                       : 'bg-[#17171d] text-[#8492a6] hover:text-white border border-[#2d2d38]'
@@ -86,13 +87,13 @@ export const ConstitutionViewer: React.FC = () => {
         {/* Articles List */}
         <div className="space-y-4 sm:space-y-6">
           {filteredArticles.length === 0 ? (
-            <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-2xl border border-[#2d2d38]">
+            <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-xl border border-[#2d2d38]">
               <p className="text-xs sm:text-sm font-semibold text-[#8492a6]">
                 No matching articles found for "{searchTerm}"
               </p>
               <button
                 onClick={() => setSearchTerm('')}
-                className="mt-3 text-xs font-bold text-[#ec3750] hover:underline"
+                className="mt-3 text-xs font-bold text-[#ec3750] hover:underline cursor-pointer"
               >
                 Clear Search
               </button>
@@ -101,10 +102,10 @@ export const ConstitutionViewer: React.FC = () => {
             filteredArticles.map(article => (
               <div
                 key={article.id}
-                className="p-5 sm:p-8 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] space-y-4"
+                className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4"
               >
                 <div className="flex items-center gap-2.5 pb-3 border-b border-[#2d2d38]">
-                  <Bookmark className="w-5 h-5 text-[#ec3750]" />
+                  <span className="w-2.5 h-2.5 rounded-sm bg-[#ec3750] inline-block"></span>
                   <h3 className="text-lg sm:text-2xl font-black text-white">
                     {article.title}
                   </h3>
@@ -130,12 +131,12 @@ export const ConstitutionViewer: React.FC = () => {
         </div>
 
         {/* Ratified Charter Footer */}
-        <div className="p-6 rounded-2xl bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <CheckCircle2 className="w-6 h-6 text-[#33d6a6] flex-shrink-0" />
+            <img src="/icon-square.svg" alt="Hack Club Marina" className="w-8 h-8 object-contain" />
             <div>
               <p className="font-extrabold text-sm">
-                Ratified Charter of Hackclub Marina Chapter
+                Ratified Charter of Hack Club Marina Chapter
               </p>
               <p className="text-xs text-[#8492a6]">
                 Marina High School Interclub Council & Hack Club HQ Supported
@@ -147,10 +148,10 @@ export const ConstitutionViewer: React.FC = () => {
             href="https://hackclub.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-full text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors"
+            className="px-5 py-2.5 rounded-lg text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors cursor-pointer"
           >
             <span>Hack Club Main HQ</span>
-            <ExternalLink className="w-3.5 h-3.5" />
+            <span className="font-mono text-sm">→</span>
           </a>
         </div>
 

@@ -1,33 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
-  <!-- Hack Club Signature Red Squircle Base (1:1 Ratio) -->
+  <!-- Hack Club Signature Red Squircle Base -->
   <rect width="512" height="512" rx="112" fill="#EC3750"/>
   
-  <!-- Subtle Inner Highlight Rim -->
-  <rect x="16" y="16" width="480" height="480" rx="96" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="8"/>
-  
-  <!-- Left Viking Horn (Gold) -->
-  <path d="M 148 150 C 110 110 82 60 70 30 C 105 50 142 95 175 125 Z" fill="#F1C40F" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
-  
-  <!-- Right Viking Horn (Gold) -->
-  <path d="M 364 150 C 402 110 430 60 442 30 C 407 50 370 95 337 125 Z" fill="#F1C40F" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Subtle Inner Border Frame -->
+  <rect x="12" y="12" width="488" height="488" rx="100" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="6"/>
 
-  <!-- Sleek Viking Helmet Dome over Top of 'H' -->
-  <path d="M 172 170 C 172 110 340 110 340 170 V 205 H 172 V 170 Z" fill="#FFFFFF"/>
-  <path d="M 156 195 H 356 V 220 C 356 228 348 235 340 235 H 172 C 164 235 156 228 156 220 V 195 Z" fill="#252429"/>
-  <!-- Helmet Nose Guard -->
-  <path d="M 242 195 H 270 V 260 L 256 275 L 242 260 V 195 Z" fill="#252429"/>
-  <!-- Visor Eye Slots -->
-  <rect x="180" y="204" width="46" height="15" rx="4" fill="#17171D"/>
-  <rect x="286" y="204" width="46" height="15" rx="4" fill="#17171D"/>
+  <!-- Viking Gold Horns -->
+  <!-- Left Horn -->
+  <path d="M 170 145 C 130 100 90 60 70 25 C 115 45 155 85 190 120 Z" fill="#F1C40F" stroke="#17171D" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Right Horn -->
+  <path d="M 342 145 C 382 100 422 60 442 25 C 397 45 357 85 322 120 Z" fill="#F1C40F" stroke="#17171D" stroke-width="5" stroke-linejoin="round"/>
 
-  <!-- Hack Club 'h' Letterform Body (Integrated directly into the helmet base) -->
-  <!-- Left Stem -->
-  <rect x="172" y="230" width="56" height="200" rx="16" fill="#FFFFFF"/>
+  <!-- Gold Helmet Crown Band -->
+  <path d="M 150 155 C 150 95 362 95 362 155 V 195 C 362 203 354 210 344 210 H 168 C 158 210 150 203 150 195 V 155 Z" fill="#F1C40F"/>
+  <!-- Dark Visor & Eye Slot Plate -->
+  <path d="M 162 180 H 350 V 212 C 350 220 342 228 332 228 H 180 C 170 228 162 220 162 212 V 180 Z" fill="#17171D"/>
+  <rect x="180" y="190" width="56" height="18" rx="4" fill="#FFFFFF"/>
+  <rect x="276" y="190" width="56" height="18" rx="4" fill="#FFFFFF"/>
+  <!-- Center Nose Guard -->
+  <path d="M 242 180 H 270 V 250 L 256 265 L 242 250 V 180 Z" fill="#17171D" stroke="#F1C40F" stroke-width="3"/>
+
+  <!-- White Hack Club 'h' Letterform -->
+  <!-- Left Main Vertical Stem -->
+  <rect x="165" y="215" width="58" height="225" rx="18" fill="#FFFFFF"/>
   
   <!-- Right Arch of 'h' -->
-  <path d="M 220 310 C 220 260 328 260 328 310 V 430 H 272 V 320 C 272 298 220 298 220 320 V 430 H 172 V 310 Z" fill="#FFFFFF"/>
-  
-  <!-- Small Flag Accent on Top of Helmet -->
-  <path d="M 256 75 L 256 125" stroke="#F1C40F" stroke-width="5" stroke-linecap="round"/>
-  <path d="M 256 78 L 298 94 L 256 110 Z" fill="#F1C40F"/>
+  <path d="M 215 305 C 215 245 345 245 345 305 V 440 H 287 V 315 C 287 290 223 290 223 315 V 440 H 165 V 305 Z" fill="#FFFFFF"/>
 </svg>

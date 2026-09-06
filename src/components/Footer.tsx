@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExternalLink, Phone, Mail, ShieldCheck, Heart } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -14,7 +13,7 @@ export const Footer: React.FC = () => {
               <img
                 src="/icon-square.svg"
                 alt="Hack Club Marina Logo"
-                className="w-10 h-10 rounded-xl object-contain"
+                className="w-10 h-10 rounded-lg object-contain"
               />
               <div>
                 <span className="font-black text-lg text-white tracking-tight">HACK CLUB <span className="text-[#ec3750]">MARINA</span></span>
@@ -26,8 +25,14 @@ export const Footer: React.FC = () => {
               Official student chapter of Hack Club at Marina High School. Creating an inclusive space for high schoolers to learn coding, build hardware, and launch projects.
             </p>
 
+            <div className="flex items-center gap-3 pt-2">
+              <img src="/flag-standalone.svg" alt="Hack Club Flag Banner" className="h-6 object-contain" />
+              <img src="/hcb-light.png" alt="Hack Club Bank" className="h-4 object-contain" />
+              <img src="/2026.svg" alt="Hack Club 2026" className="h-5 object-contain" />
+            </div>
+
             <div className="flex items-center gap-2 text-xs text-[#33d6a6] font-semibold">
-              <ShieldCheck className="w-4 h-4" />
+              <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block"></span>
               <span>0 Membership Dues • Supported by Hack Club HQ</span>
             </div>
           </div>
@@ -39,14 +44,12 @@ export const Footer: React.FC = () => {
             </p>
             <ul className="space-y-2 text-xs text-[#8492a6]">
               <li className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#ec3750]" />
                 <span className="text-white font-bold">Text GC:</span>
-                <a href="sms:6575058696" className="hover:text-[#ec3750] transition-colors font-mono">657-505-8696</a>
+                <a href="sms:6575058696" className="hover:text-[#ec3750] transition-colors font-mono font-bold">657-505-8696</a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#338eda]" />
                 <span className="text-white font-bold">Email:</span>
-                <a href="mailto:yychang100@student.hbuhsd.edu" className="hover:text-[#338eda] transition-colors font-mono">yychang100@student.hbuhsd.edu</a>
+                <a href="mailto:yychang100@student.hbuhsd.edu" className="hover:text-[#338eda] transition-colors font-mono font-bold">yychang100@student.hbuhsd.edu</a>
               </li>
               <li>
                 <span className="text-white font-bold">Meetings:</span> Lunch & After School (Advisor's Classroom)
@@ -63,25 +66,25 @@ export const Footer: React.FC = () => {
               <li>
                 <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <span>Hack Club Main HQ</span>
-                  <ExternalLink className="w-3 h-3 text-[#ec3750]" />
+                  <span className="font-mono text-xs text-[#ec3750]">→</span>
                 </a>
               </li>
               <li>
                 <a href="https://hackclub.com/brand" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <span>Hack Club Brand Assets</span>
-                  <ExternalLink className="w-3 h-3 text-[#ec3750]" />
+                  <span className="font-mono text-xs text-[#ec3750]">→</span>
                 </a>
               </li>
               <li>
                 <a href="https://scrapbook.hackclub.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <span>Hack Club Scrapbook</span>
-                  <ExternalLink className="w-3 h-3 text-[#ec3750]" />
+                  <span className="font-mono text-xs text-[#ec3750]">→</span>
                 </a>
               </li>
               <li>
                 <a href="https://devpost.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
                   <span>Devpost Hackathons</span>
-                  <ExternalLink className="w-3 h-3 text-[#338eda]" />
+                  <span className="font-mono text-xs text-[#338eda]">→</span>
                 </a>
               </li>
             </ul>
@@ -92,9 +95,8 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-[#8492a6] gap-3">
           <p>© {new Date().getFullYear()} Hack Club Marina High School Chapter.</p>
-          <div className="flex items-center gap-1">
-            <span>Built for Marina HS Student Hackers with</span>
-            <Heart className="w-3.5 h-3.5 text-[#ec3750] fill-current" />
+          <div className="flex items-center gap-1.5">
+            <span>Built for Marina HS Student Hackers</span>
           </div>
         </div>
 
