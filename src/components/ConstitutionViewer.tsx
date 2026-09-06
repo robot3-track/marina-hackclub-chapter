@@ -164,7 +164,7 @@ export const ConstitutionViewer: React.FC = () => {
           className="p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl"
         >
           <div className="flex items-center gap-3">
-            <img src="/icon-square.svg" alt="Hack Club Marina" className="w-8 h-8 object-contain" />
+            <img src="/hcb-light.png" alt="Hack Club Marina" className="w-8 h-8 object-contain" />
             <div>
               <p className="font-extrabold text-sm">
                 Ratified Charter of Hack Club Marina Chapter
