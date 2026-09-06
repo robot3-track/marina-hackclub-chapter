@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
 
             <div className="flex items-center gap-2 text-xs text-[#33d6a6] font-semibold">
               <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block"></span>
-              <span>0 Membership Dues • Supported by Hack Club HQ</span>
+              <span>Supported by Hack Club HQ</span>
             </div>
           </div>
 
