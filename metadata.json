@@ -1,0 +1,6 @@
+{
+  "name": "Hack Club Marina High School Chapter",
+  "description": "Official homepage of Hack Club Marina HS Chapter. Coding workshops, hardware projects, official constitution, leadership team, and student signup.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

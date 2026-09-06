@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: "Plus Jakarta Sans", "Phantom Sans", system-ui, sans-serif;
+    --font-body: "Plus Jakarta Sans", "Phantom Sans", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "SF Mono", monospace;
+
+    /* Hack Club Color Palette */
+    --hc-darker: #121217;
+    --hc-dark: #17171d;
+    --hc-darkless: #252429;
+    --hc-black: #1f2d3d;
+    --hc-steel: #273444;
+    --hc-slate: #3c4858;
+    --hc-muted: #8492a6;
+    --hc-smoke: #e0e6ed;
+    --hc-snow: #f9fafc;
+    --hc-white: #ffffff;
+    --hc-red: #ec3750;
+    --hc-orange: #ff8c37;
+    --hc-yellow: #f1c40f;
+    --hc-green: #33d6a6;
+    --hc-cyan: #5bc0de;
+    --hc-blue: #338eda;
+    --hc-purple: #a633d6;
+
+    --hc-text: #1f2d3d;
+    --hc-background: #ffffff;
+    --hc-elevated: #ffffff;
+    --hc-sheet: #f9fafc;
+    --hc-sunken: #e0e6ed;
+    --hc-border: #e0e6ed;
+    --hc-secondary: #3c4858;
+    --hc-primary: #ec3750;
+    --hc-accent: #338eda;
+  }
+
+  .dark {
+    --hc-text: #ffffff;
+    --hc-background: #17171d;
+    --hc-elevated: #252429;
+    --hc-sheet: #252429;
+    --hc-sunken: #121217;
+    --hc-border: #252429;
+    --hc-secondary: #8492a6;
+    --hc-muted: #8492a6;
+    --hc-accent: #5bc0de;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--hc-text);
+    background-color: var(--hc-background);
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Hack Club Banner Flag positioning */
+.flag-banner {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 10rem;
+  z-index: 50;
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (min-width: 640px) {
+  .flag-banner {
+    left: 2rem;
+    width: 12rem;
+  }
+}
+
+.flag-banner:hover {
+  transform: translateY(4px);
+}
+
+/* Custom Code highlighting styles from theme */
+.hc-code-block {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  padding: 1rem;
+  background-color: #121217;
+  color: #f9fafc;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.hc-inline-code {
+  font-family: var(--font-mono);
+  color: #a633d6;
+  background-color: #e0e6ed;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+.dark .hc-inline-code {
+  background-color: #252429;
+  color: #5bc0de;
+}
+
+/* Wavy link hover effect as in Theme UI styles */
+.hc-link {
+  color: #ec3750;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: all 0.15s ease;
+}
+
+.hc-link:hover {
+  text-decoration-style: wavy;
+}
