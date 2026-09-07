@@ -1,4 +1,5 @@
 import React from 'react';
+import { Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -24,6 +25,18 @@ export const Footer: React.FC = () => {
             <p className="text-xs text-[#8492a6] leading-relaxed max-w-sm">
               Official student chapter of Hack Club at Marina High School. Creating an inclusive space for high schoolers to learn coding, build hardware, and launch projects.
             </p>
+
+            <div className="pt-1">
+              <a
+                href="https://www.instagram.com/hackclub.marina"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#252429] hover:bg-[#2d2b33] border border-[#323138] text-white text-xs font-semibold transition-all hover:scale-105 group"
+              >
+                <Instagram className="w-4 h-4 text-[#E4405F] group-hover:scale-110 transition-transform" />
+                <span>Follow @hackclub.marina</span>
+              </a>
+            </div>
           </div>
 
           {/* Direct Contacts */}
@@ -32,6 +45,11 @@ export const Footer: React.FC = () => {
               Chapter Direct Contacts
             </p>
             <ul className="space-y-2 text-xs text-[#8492a6]">
+              <li className="flex items-center gap-2">
+                <Instagram className="w-4 h-4 text-[#E4405F] shrink-0" />
+                <span className="text-white font-bold">Instagram:</span>
+                <a href="https://www.instagram.com/hackclub.marina" target="_blank" rel="noopener noreferrer" className="hover:text-[#E4405F] transition-colors font-mono font-bold">@hackclub.marina</a>
+              </li>
               <li className="flex items-center gap-2">
                 <span className="text-white font-bold">Text GC:</span>
                 <a href="sms:6575058696" className="hover:text-[#ec3750] transition-colors font-mono font-bold">657-505-8696</a>
