@@ -8,7 +8,6 @@ export const Footer: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-[#252429]">
           
-          {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <img
@@ -39,7 +38,6 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Direct Contacts */}
           <div className="md:col-span-4 space-y-3">
             <p className="text-xs font-black uppercase tracking-wider text-[#ff8c37]">
               Chapter Direct Contacts
@@ -59,12 +57,11 @@ export const Footer: React.FC = () => {
                 <a href="mailto:yychang100@student.hbuhsd.edu" className="hover:text-[#338eda] transition-colors font-mono font-bold">yychang100@student.hbuhsd.edu</a>
               </li>
               <li>
-                <span className="text-white font-bold">Meetings:</span> Lunch & After School (Advisor's Classroom)
+                <span className="text-white font-bold">Meetings:</span> Room 252 and Lunch on Mondays unless revised
               </li>
             </ul>
           </div>
 
-          {/* Hack Club Brand Links */}
           <div className="md:col-span-3 space-y-3">
             <p className="text-xs font-black uppercase tracking-wider text-[#ec3750]">
               Hack Club HQ
@@ -100,7 +97,6 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Footer Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-[#8492a6] gap-3">
           <p>© {new Date().getFullYear()} Hack Club Marina High School Chapter.</p>
           <div className="flex items-center gap-1.5">

@@ -18,17 +18,14 @@ export const SignupForm: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
-      {/* Black & Red Hack Club Hardware Sprue Partial Background */}
       <div 
         className="absolute inset-x-0 bottom-0 h-96 sm:h-[420px] bg-cover bg-bottom opacity-20 mix-blend-screen pointer-events-none"
         style={{ backgroundImage: `url('/hackclub_sprue_bg_1788727720034.jpg')` }}
       />
-      {/* Radial Grid Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-12">
         
-        {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -46,7 +43,6 @@ export const SignupForm: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Member Perks Highlight Banner */}
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -68,10 +64,8 @@ export const SignupForm: React.FC = () => {
           </span>
         </motion.div>
 
-        {/* Primary Contact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           
-          {/* SMS Contact Card */}
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -117,7 +111,6 @@ export const SignupForm: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Email Contact Card */}
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -165,7 +158,6 @@ export const SignupForm: React.FC = () => {
 
         </div>
 
-        {/* Meeting Times Banner */}
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -190,7 +182,7 @@ export const SignupForm: React.FC = () => {
 
             <div className="p-3.5 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm">Location</span>
-              <p>Designated Advisor's Classroom (Marina HS)</p>
+              <p>Room 252 and Lunch on Mondays unless revised (Marina HS)</p>
             </div>
 
             <div className="p-3.5 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] space-y-1">
@@ -200,7 +192,6 @@ export const SignupForm: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Privacy Note */}
         <div className="p-4 rounded-lg bg-[#1e1e24] border border-[#2d2d38] text-center text-xs text-[#8492a6]">
           Member directory is kept private. Text <strong className="text-white font-mono">657-505-8696</strong> to join the private chapter group chat.
         </div>

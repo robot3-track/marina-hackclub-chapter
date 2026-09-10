@@ -23,17 +23,14 @@ export const ConstitutionViewer: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
-      {/* Black & Red Hack Club Hardware Sprue Partial Background */}
       <div 
         className="absolute inset-x-0 bottom-0 h-96 sm:h-[480px] bg-cover bg-bottom opacity-20 mix-blend-screen pointer-events-none"
         style={{ backgroundImage: `url('/hackclub_sprue_bg_1788727720034.jpg')` }}
       />
-      {/* Radial Grid Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
         
-        {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -54,7 +51,6 @@ export const ConstitutionViewer: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Search & Article Filter Bar */}
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -64,7 +60,6 @@ export const ConstitutionViewer: React.FC = () => {
         >
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             
-            {/* Search Input */}
             <div className="relative w-full sm:w-80">
               <input
                 type="text"
@@ -75,7 +70,6 @@ export const ConstitutionViewer: React.FC = () => {
               />
             </div>
 
-            {/* Jump Buttons */}
             <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
               <button
                 onClick={() => setActiveArticleId('all')}
@@ -105,7 +99,6 @@ export const ConstitutionViewer: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Articles List */}
         <div className="space-y-4 sm:space-y-6">
           {filteredArticles.length === 0 ? (
             <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-xl border border-[#2d2d38]">
@@ -155,7 +148,6 @@ export const ConstitutionViewer: React.FC = () => {
           )}
         </div>
 
-        {/* Ratified Charter Footer */}
         <motion.div 
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}

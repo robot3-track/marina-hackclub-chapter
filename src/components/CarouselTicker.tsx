@@ -85,7 +85,6 @@ const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
 export const CarouselTicker: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
 
-  // Duplicate items array to create seamless infinite loop
   const doubleItems = [...HACKATHON_CAROUSEL_ITEMS, ...HACKATHON_CAROUSEL_ITEMS];
 
   return (
@@ -97,17 +96,14 @@ export const CarouselTicker: React.FC = () => {
       className="space-y-4"
     >
 
-      {/* Outer Overflow Container */}
       <div 
         className="relative overflow-hidden rounded-xl bg-[#131317] border border-[#2d2d38] p-4 sm:p-6 shadow-2xl"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        {/* Left & Right Fade Shadows for smooth visual blending */}
         <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#131317] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#131317] to-transparent z-10 pointer-events-none" />
 
-        {/* Carousel Moving Track */}
         <div 
           className="flex gap-4 sm:gap-6 w-max"
           style={{

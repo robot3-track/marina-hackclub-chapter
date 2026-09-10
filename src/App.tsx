@@ -11,13 +11,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#17171d] text-white font-sans selection:bg-[#ec3750] selection:text-white">
-      {/* Header with Dangling Hack Club Flag */}
       <Header
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
 
-      {/* Main Content Body */}
       <main className="flex-1">
         {activeTab === 'overview' && (
           <>
@@ -35,7 +33,6 @@ export default function App() {
         {activeTab === 'signup' && <SignupForm />}
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

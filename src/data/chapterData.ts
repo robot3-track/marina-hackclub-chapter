@@ -248,7 +248,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
       },
       {
         number: 'Section II',
-        content: 'Meetings will be held during lunch or after school in the designated advisor’s classroom.'
+        content: 'Meetings will be held during lunch or after school in Room 252 and Lunch on Mondays unless revised.'
       }
     ]
   }
@@ -261,7 +261,7 @@ export const WORKSHOPS: Workshop[] = [
     category: 'Software',
     date: 'Next Tuesday',
     time: 'Lunch & After School (3:30 PM)',
-    location: "Advisor's Classroom",
+    location: "Room 252 and Lunch on Mondays unless revised",
     description: 'Learn HTML, CSS, and Tailwind CSS basics. Everyone walks out with a live website hosted on the web!',
     tags: ['HTML/CSS', 'Tailwind', 'Beginner Friendly'],
     difficulty: 'Beginner'
@@ -272,7 +272,7 @@ export const WORKSHOPS: Workshop[] = [
     category: 'Hardware',
     date: 'Thursday',
     time: 'After School (3:30 PM)',
-    location: "Advisor's Classroom",
+    location: "Room 252 and Lunch on Mondays unless revised",
     description: 'Hands-on hardware session using microcontrollers granted by Hack Club HQ. Program LEDs, buzzers, and environmental sensors.',
     tags: ['Arduino', 'C++', 'Circuitry', 'HQ Kits'],
     difficulty: 'All Levels'
@@ -283,7 +283,7 @@ export const WORKSHOPS: Workshop[] = [
     category: 'Software',
     date: 'Next Week',
     time: 'Lunch Session',
-    location: "Advisor's Classroom",
+    location: "Room 252 and Lunch on Mondays unless revised",
     description: 'Hook up Gemini AI models to build web tools, text generators, and smart study helpers.',
     tags: ['JavaScript', 'Gemini API', 'AI Tools'],
     difficulty: 'Intermediate'
@@ -294,7 +294,7 @@ export const WORKSHOPS: Workshop[] = [
     category: 'Hackathon',
     date: 'Upcoming Month',
     time: 'Flexible Build Session',
-    location: "Advisor's Classroom & Discord",
+    location: "Room 252 and Lunch on Mondays unless revised & Discord",
     description: 'Team up with fellow Marina HS students to submit projects to global Hack Club hackathons and win grants and swag!',
     tags: ['Hackathons', 'Team Building', 'Swag'],
     difficulty: 'All Levels'

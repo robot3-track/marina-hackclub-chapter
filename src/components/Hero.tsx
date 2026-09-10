@@ -22,20 +22,16 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
   return (
     <section className="relative overflow-hidden py-8 sm:py-16 md:py-20 bg-[#17171d] text-white">
-      {/* Black & Red Hack Club Hardware Sprue Partial Background */}
       <div 
         className="absolute inset-x-0 bottom-0 h-96 sm:h-[480px] bg-cover bg-bottom opacity-25 mix-blend-screen pointer-events-none"
         style={{ backgroundImage: `url('/hackclub_sprue_bg_1788727720034.jpg')` }}
       />
-      {/* Radial Grid Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
         
-        {/* Main Hero Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Headline & Direct Contact */}
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -44,7 +40,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             className="lg:col-span-7 space-y-6 sm:space-y-8"
           >
 
-            {/* Hack Club Signature Display Headline */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white">
                 Where <span className="text-[#3b82f6]">Marina</span> <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5A5] via-[#F1C40F] to-[#B38700] drop-shadow-[0_0_12px_rgba(241,196,15,0.4)]">Vikings</span>{' '}
@@ -58,7 +53,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
               Hack Club Marina is a student-led coding and maker community. We build software & hardware projects, claim <strong className="text-white">free software & hardware grants</strong> (APIs, hosting, microcontrollers & kits), compete in hackathons, and connect Marina High School hackers!
             </p>
 
-            {/* Quick Contact & Join Banner */}
             <div className="p-4 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-xl">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <span className="text-xs font-black uppercase tracking-wider text-[#ec3750]">
@@ -67,7 +61,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                {/* Phone Contact */}
                 <div className="flex-1 p-3 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
                   <div className="truncate">
                     <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Text Group Chat</span>
@@ -81,7 +74,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   </button>
                 </div>
 
-                {/* Email Contact */}
                 <div className="flex-1 p-3 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
                   <div className="truncate">
                     <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Email President Yohan</span>
@@ -101,12 +93,11 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   <span className="text-[#33d6a6] font-bold">Meetings:</span> Lunch & After School
                 </div>
                 <div>
-                  <span className="text-[#ff8c37] font-bold">Location:</span> Advisor's Room (Marina HS)
+                  <span className="text-[#ff8c37] font-bold">Location:</span> Room 252 and Lunch on Mondays unless revised (Marina HS)
                 </div>
               </div>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <button
                 onClick={() => setActiveTab('hackathons')}
@@ -125,7 +116,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
           </motion.div>
 
-          {/* Right Column: Hack Club Brand Assets & Visual Showcase */}
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -134,10 +124,8 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             className="lg:col-span-5 relative"
           >
             
-            {/* Visual Card Stack with Real Official SVGs */}
             <div className="relative space-y-4 sm:space-y-6">
               
-              {/* Primary Card: Hack Club Marina Badge */}
               <div className="p-4 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-5 shadow-2xl transform lg:rotate-1 hover:rotate-0 transition-all">
                 
                 <div className="flex items-center justify-between gap-2">
@@ -164,7 +152,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   />
                 </div>
 
-                {/* Hack Club Bank / HCB Card Banner */}
                 <div className="p-3.5 sm:p-4 rounded-lg bg-gradient-to-r from-[#ec3750] to-[#a633d6] text-white space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold opacity-90">
@@ -181,7 +168,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   </p>
                 </div>
 
-                {/* Official Brand Banner Box */}
                 <div className="p-3.5 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-center">
                   <img
                     src="/flag-standalone.svg"
@@ -213,7 +199,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
         </div>
 
-        {/* Feature Pillars */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +232,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </div>
             <h3 className="text-base sm:text-lg font-black text-white">Community & Hardware</h3>
             <p className="text-xs text-[#8492a6] leading-relaxed">
-              Meet during lunch and after school in the advisor's classroom. Free snacks, microcontrollers, breadboards, and open hardware kits.
+              Meet during lunch and after school in Room 252 and Lunch on Mondays unless revised. Free snacks, microcontrollers, breadboards, and open hardware kits.
             </p>
           </div>
         </motion.div>

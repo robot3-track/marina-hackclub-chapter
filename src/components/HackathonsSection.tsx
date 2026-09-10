@@ -9,17 +9,14 @@ interface HackathonsSectionProps {
 export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveTab }) => {
   return (
     <section className="relative overflow-hidden py-10 sm:py-16 bg-[#17171d] text-white border-t border-[#252429]">
-      {/* Black & Red Hack Club Hardware Sprue Partial Background */}
       <div 
         className="absolute inset-x-0 top-0 h-96 sm:h-[480px] bg-cover bg-top opacity-20 mix-blend-screen pointer-events-none"
         style={{ backgroundImage: `url('/hackclub_sprue_bg_1788727720034.jpg')` }}
       />
-      {/* Radial Grid Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
         
-        {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -40,10 +37,8 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           </p>
         </motion.div>
 
-        {/* 3 Core Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           
-          {/* Pillar 1: Hack Club Hackathons */}
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -95,7 +90,6 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
             </a>
           </motion.div>
 
-          {/* Pillar 2: Devpost Hackathons */}
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -147,7 +141,6 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
             </a>
           </motion.div>
 
-          {/* Pillar 3: Community Purpose */}
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -179,7 +172,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block flex-shrink-0"></span>
-                  <span>Lunch & After-School sessions in Advisor's room</span>
+                  <span>Lunch & After-School sessions in Room 252 and Lunch on Mondays unless revised</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block flex-shrink-0"></span>
@@ -199,10 +192,8 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
         </div>
 
-        {/* Continuous Auto-Scrolling Infinite Carousel Component */}
         <CarouselTicker />
 
-        {/* Feature Highlight Banner */}
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}

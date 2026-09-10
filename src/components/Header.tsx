@@ -11,7 +11,6 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="relative z-40 bg-[#17171d] border-b border-[#252429]">
-      {/* Hack Club Flag dangling banner - Positioned Top Left without overlapping */}
       <a
         href="https://hackclub.com"
         target="_blank"
@@ -26,10 +25,8 @@ export const Header: React.FC<HeaderProps> = ({
         />
       </a>
 
-      {/* Main Nav Container - Padded left so it NEVER overlaps the flag */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pl-22 sm:pl-32 md:pl-44 py-2.5 sm:py-3.5 flex items-center justify-between">
         
-        {/* Clean Logo and Title */}
         <button
           onClick={() => setActiveTab('overview')}
           className="flex items-center gap-2 sm:gap-3 text-left group focus:outline-none cursor-pointer"
@@ -49,7 +46,6 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </button>
 
-        {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-2 lg:gap-3">
           <button
             onClick={() => setActiveTab('overview')}
@@ -96,7 +92,6 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </nav>
 
-        {/* Hack Club Action Button */}
         <div className="hidden xs:flex items-center gap-2">
           <button
             onClick={() => setActiveTab('signup')}
@@ -107,7 +102,6 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Mobile Scrollable Nav Bar */}
       <div className="md:hidden border-t border-[#252429] px-3 py-2 overflow-x-auto flex items-center gap-2 scrollbar-none bg-[#121217]">
         <button
           onClick={() => setActiveTab('overview')}
