@@ -33,8 +33,112 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           </h2>
 
           <p className="text-sm sm:text-base lg:text-lg text-[#8492a6] leading-relaxed">
-            We build cool software & hardware projects together, claim <strong className="text-white">free software & hardware grants</strong> (hosting, APIs, microcontrollers & kits), participate in Hack Club & Devpost hackathons, get <strong className="text-[#f1c40f]">free sticker drops</strong>, and hang out at Marina High School.
+            We build cool software & hardware projects together, claim <strong className="text-white">free software & hardware grants</strong> (hosting, APIs, microcontrollers & kits), participate in Hack Club & Devpost hackathons—<strong className="text-[#338eda]">starting first with the NASA Space Apps Challenge on November 14–15th</strong>—get <strong className="text-[#f1c40f]">free sticker drops</strong>, and hang out at Marina High School.
           </p>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.05, ease: 'easeOut' }}
+          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0a1128] via-[#101b3b] to-[#1e1e24] border-2 border-[#1d4ed8]/40 p-6 sm:p-8 md:p-10 shadow-2xl space-y-6"
+        >
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0b3d91]/30 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-[#3b82f6]/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#253248]">
+            <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
+              <img
+                src="/nasa-logo.svg"
+                alt="NASA Meatball Insignia"
+                className="h-10 sm:h-12 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(11,61,145,0.8)]"
+              />
+              <div className="h-6 w-[1px] bg-[#324565] hidden sm:block" />
+              <img
+                src="/space-apps-logo.png"
+                alt="NASA Space Apps Challenge Logo"
+                className="h-7 sm:h-9 w-auto object-contain"
+              />
+            </div>
+
+            <div>
+              <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#60a5fa]">
+                First Event · November 14–15th
+              </span>
+            </div>
+          </div>
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+            <div className="lg:col-span-7 space-y-4">
+              <div className="space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#38bdf8] block">
+                  Chapter Kickoff Hackathon
+                </span>
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+                  NASA Space Apps Challenge
+                </h3>
+              </div>
+
+              <p className="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
+                Hack Club Marina is kicking off our competition calendar with the official <strong className="text-white">NASA International Space Apps Challenge</strong> on <strong className="text-[#38bdf8]">November 14–15th</strong>! Marina High School students will collaborate in teams to solve real-world challenges on Earth and in space using NASA’s open-source satellite data, space exploration missions, and developer APIs.
+              </p>
+
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-[#94a3b8] pt-2">
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span><strong className="text-white">Date:</strong> November 14–15th</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span><strong className="text-white">Format:</strong> Official 48-Hour Global Hackathon</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span><strong className="text-white">Real NASA Data:</strong> Earth observation & Mars/Artemis APIs</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span><strong className="text-white">All Levels:</strong> Coders, designers, scientists & beginners</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="lg:col-span-5 flex flex-col justify-between p-4 sm:p-6 rounded-xl bg-[#0f172a]/80 border border-[#1e293b] space-y-4">
+              <div className="space-y-2">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#94a3b8] block">
+                  Marina High School Squad
+                </span>
+                <p className="text-xs text-[#cbd5e1]">
+                  Want to be on the Marina High School roster for the November 14–15th NASA hackathon? Join our official team roster directly on Space Apps!
+                </p>
+              </div>
+
+              <div className="space-y-2.5 pt-2">
+                <a
+                  href="https://www.spaceappschallenge.org/2026/find-a-team/hackclub-marina-high-school-chapter-team-1/?tab=details"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 rounded-lg font-black text-xs sm:text-sm bg-[#2563eb] hover:bg-[#1d4ed8] text-white flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg group"
+                >
+                  <span>Join Marina Space Apps Team</span>
+                  <span className="font-mono group-hover:translate-x-0.5 transition-transform">→</span>
+                </a>
+
+                <div className="flex items-center justify-center gap-2 pt-1 text-xs">
+                  <a
+                    href="https://www.spaceappschallenge.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#60a5fa] hover:text-white transition-colors font-bold inline-flex items-center gap-1"
+                  >
+                    <span>Space Apps Challenge Overview</span>
+                    <span className="font-mono text-xs">↗</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

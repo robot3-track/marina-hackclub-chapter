@@ -15,6 +15,17 @@ interface CarouselItem {
 
 const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
   {
+    id: 'nasa-space-apps',
+    title: 'NASA Space Apps',
+    tag: 'First Event • Nov 14–15th',
+    tagColor: '#38bdf8',
+    description: 'Our first major challenge! Build space apps, satellite tools, and Earth solutions using official NASA open data on November 14–15th.',
+    icon: '/nasa-logo.svg',
+    linkText: 'NASA Space Apps',
+    linkUrl: 'https://www.spaceappschallenge.org',
+    accentBorder: 'hover:border-[#38bdf8]',
+  },
+  {
     id: 'scrapyard',
     title: 'Scrapyard 2026',
     tag: 'Global Hardware Hackathon',
