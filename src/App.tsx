@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { HackathonsSection } from './components/HackathonsSection';
 import { ConstitutionViewer } from './components/ConstitutionViewer';
 import { SignupForm } from './components/SignupForm';
+import { DevPortal } from './components/DevPortal';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -31,9 +32,11 @@ export default function App() {
         {activeTab === 'constitution' && <ConstitutionViewer />}
 
         {activeTab === 'signup' && <SignupForm />}
+
+        {activeTab === 'devportal' && <DevPortal />}
       </main>
 
-      <Footer />
+      <Footer setActiveTab={setActiveTab} />
     </div>
   );
 }

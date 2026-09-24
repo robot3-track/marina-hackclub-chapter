@@ -1,4 +1,5 @@
 import React from 'react';
+import { Lock } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: string;
@@ -90,6 +91,19 @@ export const Header: React.FC<HeaderProps> = ({
           >
             Contact & Join
           </button>
+
+          <button
+            onClick={() => setActiveTab('devportal')}
+            className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer flex items-center gap-1.5 ${
+              activeTab === 'devportal'
+                ? 'bg-[#252429] text-[#f1c40f] border border-[#f1c40f]/60'
+                : 'text-[#8492a6] hover:text-[#f1c40f]'
+            }`}
+            title="Internal Finance & Developer Portal"
+          >
+            <Lock className="w-3.5 h-3.5" />
+            <span>Dev Portal</span>
+          </button>
         </nav>
 
         <div className="hidden xs:flex items-center gap-2">
@@ -135,6 +149,15 @@ export const Header: React.FC<HeaderProps> = ({
           }`}
         >
           Contact & Join
+        </button>
+        <button
+          onClick={() => setActiveTab('devportal')}
+          className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer flex items-center gap-1.5 ${
+            activeTab === 'devportal' ? 'bg-[#f1c40f] text-[#121217]' : 'bg-[#252429] text-[#f1c40f]'
+          }`}
+        >
+          <Lock className="w-3 h-3" />
+          <span>Dev Portal</span>
         </button>
       </div>
     </header>

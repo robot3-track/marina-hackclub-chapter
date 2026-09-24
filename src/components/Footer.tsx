@@ -1,7 +1,11 @@
 import React from 'react';
-import { Instagram } from 'lucide-react';
+import { Instagram, Lock } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  setActiveTab?: (tab: string) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
   return (
     <footer className="bg-[#121217] text-white border-t border-[#252429] pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -99,8 +103,20 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-[#8492a6] gap-3">
           <p>© {new Date().getFullYear()} Hack Club Marina High School Chapter.</p>
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-3">
             <span>Built for Marina HS Student Hackers</span>
+            {setActiveTab && (
+              <>
+                <span>•</span>
+                <button
+                  onClick={() => setActiveTab('devportal')}
+                  className="hover:text-[#f1c40f] transition-colors cursor-pointer flex items-center gap-1.5 font-semibold"
+                >
+                  <Lock className="w-3 h-3 text-[#f1c40f]" />
+                  <span>Dev Portal</span>
+                </button>
+              </>
+            )}
           </div>
         </div>
 

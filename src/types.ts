@@ -53,3 +53,29 @@ export interface MemberSignup {
   excitementLevel: number;
   rememberMe: boolean;
 }
+
+export type TransactionType = 'income' | 'expense';
+
+export type FinanceCategory =
+  | 'Grants & Sponsorships'
+  | 'Hardware & Components'
+  | 'Hackathon Fees & Travel'
+  | 'Swag & Stickers'
+  | 'Food & Meeting Snacks'
+  | 'Software & Subscriptions'
+  | 'Donations & Dues'
+  | 'Miscellaneous';
+
+export interface FinanceTransaction {
+  id: string;
+  date: string;
+  type: TransactionType;
+  amount: number;
+  category: FinanceCategory;
+  description: string;
+  paymentMethod: 'Hack Club Bank (HCB)' | 'Cash Box' | 'Officer Reimbursement' | 'ASB / School Account' | 'Other';
+  loggedBy: string;
+  notes?: string;
+  createdAt: number;
+}
+
