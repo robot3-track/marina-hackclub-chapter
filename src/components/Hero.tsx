@@ -100,8 +100,19 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <button
+                onClick={() => {
+                  setActiveTab('signup');
+                  const el = document.getElementById('join-section');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-black text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center justify-center gap-2 transition-all shadow-lg cursor-pointer"
+              >
+                <span>Join Chapter & Sign Up</span>
+              </button>
+
+              <button
                 onClick={() => setActiveTab('hackathons')}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-black text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center justify-center transition-all shadow-lg cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-bold text-sm bg-[#252429] hover:bg-[#32303c] text-white border border-[#3c4858] transition-colors cursor-pointer text-center justify-center flex items-center"
               >
                 Hackathons & Devpost
               </button>
@@ -152,9 +163,9 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   />
                 </div>
 
-                <div className="p-3.5 sm:p-4 rounded-lg bg-gradient-to-r from-[#ec3750] to-[#a633d6] text-white space-y-1.5">
+                <div className="p-3.5 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] text-white space-y-1.5">
                   <div className="flex items-center justify-between">
-                    <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold opacity-90">
+                    <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-[#8492a6]">
                       Supported by Hack Club HQ
                     </span>
                     <img
@@ -163,7 +174,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                       className="h-4 sm:h-5 object-contain"
                     />
                   </div>
-                  <p className="text-xs sm:text-sm font-black">
+                  <p className="text-xs sm:text-sm font-bold text-white">
                     Software & Hardware Grants, Free Sticker Drops & HQ Budget
                   </p>
                 </div>

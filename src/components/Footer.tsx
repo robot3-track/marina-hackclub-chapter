@@ -60,6 +60,10 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 <span className="text-white font-bold">Email:</span>
                 <a href="mailto:yychang100@student.hbuhsd.edu" className="hover:text-[#338eda] transition-colors font-mono font-bold">yychang100@student.hbuhsd.edu</a>
               </li>
+              <li className="flex items-center gap-2">
+                <span className="text-white font-bold">Sign Up Form:</span>
+                <a href="https://forms.gle/oPvfMFuVs8yu46267" target="_blank" rel="noopener noreferrer" className="hover:text-[#ec3750] transition-colors font-mono font-bold">forms.gle/oPvfMFuVs8yu46267</a>
+              </li>
               <li>
                 <span className="text-white font-bold">Meetings:</span> Room 252 and Lunch on Mondays unless revised
               </li>
