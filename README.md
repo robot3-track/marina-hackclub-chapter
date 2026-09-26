@@ -4,8 +4,6 @@
 
 We are very excited that you are here, thanks for checking us out! We are a group of teenagers from Marina HS who would like to bring the environment of coding and building meaningful projects to our community. We incorporate aspects of education, such as the creation of study apps, as well as the ethical use of AI. We teach club members about how to use AI properly as an assistant, not a full vibe-coding application.
 
--
-
 ## What we will be doing for Hackclub in the 2026-27 school year.
 
 This school year, we will be doing the following Hackclub and other Hackathon events.
