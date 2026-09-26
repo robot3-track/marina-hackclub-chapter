@@ -29,9 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
-        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -39,10 +37,9 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className="lg:col-span-7 space-y-6 sm:space-y-8"
           >
-
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white">
-                Where <span className="text-[#3b82f6]">Marina</span> <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#FFF5A5] via-[#F1C40F] to-[#B38700] drop-shadow-[0_0_12px_rgba(241,196,15,0.4)]">Vikings</span>{' '}
+                Where <span className="text-[#3b82f6]">Marina</span> <span className="text-[#f1c40f]">Vikings</span>{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ec3750] via-[#ff8c37] to-[#f1c40f]">
                   make cool stuff.
                 </span>
@@ -53,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
               Hack Club Marina is a student-led coding and maker community. We build software & hardware projects, claim <strong className="text-white">free software & hardware grants</strong> (APIs, hosting, microcontrollers & kits), compete in hackathons, and connect Marina High School hackers!
             </p>
 
-            <div className="p-4 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-xl">
+            <div className="p-4 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-xl">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <span className="text-xs font-black uppercase tracking-wider text-[#ec3750]">
                   Get Added to Chapter Group Chat (Fall 26-27')
@@ -61,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <div className="flex-1 p-3 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
+                <div className="flex-1 p-3 rounded-md bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
                   <div className="truncate">
                     <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Text Group Chat</span>
                     <span className="text-sm font-bold text-white font-mono">657-505-8696</span>
@@ -74,7 +71,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   </button>
                 </div>
 
-                <div className="flex-1 p-3 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
+                <div className="flex-1 p-3 rounded-md bg-[#17171d] border border-[#2d2d38] flex items-center justify-between gap-2">
                   <div className="truncate">
                     <span className="text-[10px] text-[#8492a6] uppercase font-bold block">Email President Yohan</span>
                     <span className="text-xs font-bold text-white font-mono truncate block">yychang100@student.hbuhsd.edu</span>
@@ -105,26 +102,25 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   const el = document.getElementById('join-section');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-black text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center justify-center gap-2 transition-all shadow-lg cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-md font-black text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
               >
                 <span>Join Chapter & Sign Up</span>
               </button>
 
               <button
                 onClick={() => setActiveTab('hackathons')}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-bold text-sm bg-[#252429] hover:bg-[#32303c] text-white border border-[#3c4858] transition-colors cursor-pointer text-center justify-center flex items-center"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-md font-bold text-sm bg-[#252429] hover:bg-[#32303c] text-white border border-[#3c4858] transition-colors cursor-pointer text-center justify-center flex items-center"
               >
                 Hackathons & Devpost
               </button>
 
               <button
                 onClick={() => setActiveTab('constitution')}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-lg font-bold text-sm bg-[#252429] hover:bg-[#32303c] text-white border border-[#3c4858] transition-colors cursor-pointer text-center justify-center flex items-center"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-md font-bold text-sm bg-[#252429] hover:bg-[#32303c] text-white border border-[#3c4858] transition-colors cursor-pointer text-center justify-center flex items-center"
               >
                 Chapter Constitution
               </button>
             </div>
-
           </motion.div>
 
           <motion.div 
@@ -134,17 +130,14 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
             className="lg:col-span-5 relative"
           >
-            
             <div className="relative space-y-4 sm:space-y-6">
-              
-              <div className="p-4 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-5 shadow-2xl transform lg:rotate-1 hover:rotate-0 transition-all">
-                
+              <div className="p-4 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-5 shadow-xl transform lg:rotate-1 hover:rotate-0 transition-all">
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
                     <img
                       src="/marina-hs-logo.jpg"
                       alt="Marina High School Vikings Logo"
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-contain shadow-md bg-[#131317]"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-md object-contain shadow-md bg-[#131317]"
                     />
                     <div>
                       <h2 className="text-lg sm:text-xl font-black text-white">
@@ -158,19 +151,19 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
 
                   <img
                     src="/2026.svg"
-                    alt="Hack Club 2026 Banner"
+                    alt="Hack Club 2026"
                     className="h-7 sm:h-8 object-contain"
                   />
                 </div>
 
-                <div className="p-3.5 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] text-white space-y-1.5">
+                <div className="p-3.5 sm:p-4 rounded-md bg-[#17171d] border border-[#2d2d38] text-white space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-[#8492a6]">
                       Supported by Hack Club HQ
                     </span>
                     <img
-                      src="/hcb-light.png"
-                      alt="Hack Club Bank"
+                      src="/flag-orpheus-top.svg"
+                      alt="Hack Club Flag"
                       className="h-4 sm:h-5 object-contain"
                     />
                   </div>
@@ -179,35 +172,23 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                   </p>
                 </div>
 
-                <div className="p-3.5 sm:p-4 rounded-lg bg-[#17171d] border border-[#2d2d38] flex items-center justify-center">
-                  <img
-                    src="/flag-standalone.svg"
-                    alt="Hack Club Standalone Banner"
-                    className="h-10 sm:h-12 object-contain"
-                  />
-                </div>
-
-                <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                  <div className="p-2 sm:p-2.5 rounded-lg bg-[#17171d] border border-[#2d2d38]">
-                    <span className="font-extrabold text-[#33d6a6] block text-xs sm:text-sm">$0</span>
-                    <span className="text-[9px] sm:text-[10px] text-[#8492a6]">Dues</span>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div className="p-2.5 rounded-md bg-[#17171d] border border-[#2d2d38]">
+                    <span className="font-extrabold text-[#33d6a6] block text-xs sm:text-sm">$0 Dues</span>
+                    <span className="text-[9px] sm:text-[10px] text-[#8492a6]">100% Free</span>
                   </div>
-                  <div className="p-2 sm:p-2.5 rounded-lg bg-[#17171d] border border-[#2d2d38]">
-                    <span className="font-extrabold text-[#ec3750] block text-xs sm:text-sm">100%</span>
-                    <span className="text-[9px] sm:text-[10px] text-[#8492a6]">Student-Led</span>
+                  <div className="p-2.5 rounded-md bg-[#17171d] border border-[#2d2d38]">
+                    <span className="font-extrabold text-[#338eda] block text-xs sm:text-sm">Rm 252</span>
+                    <span className="text-[9px] sm:text-[10px] text-[#8492a6]">Mondays Lunch</span>
                   </div>
-                  <div className="p-2 sm:p-2.5 rounded-lg bg-[#17171d] border border-[#2d2d38]">
+                  <div className="p-2.5 rounded-md bg-[#17171d] border border-[#2d2d38]">
                     <span className="font-extrabold text-[#ff8c37] block text-xs sm:text-sm">Free Hardware</span>
                     <span className="text-[9px] sm:text-[10px] text-[#8492a6]">Grants</span>
                   </div>
                 </div>
-
               </div>
-
             </div>
-
           </motion.div>
-
         </div>
 
         <motion.div 
@@ -217,7 +198,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-10 border-t border-[#252429]"
         >
-          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#ec3750]/50 transition-all">
+          <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#ec3750]/50 transition-all">
             <div className="h-10 flex items-center">
               <img src="/hcb-light.png" alt="Marina Viking Logo" className="h-8 object-contain" />
             </div>
@@ -227,7 +208,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </p>
           </div>
 
-          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#338eda]/50 transition-all">
+          <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#338eda]/50 transition-all">
             <div className="h-10 flex items-center">
               <img src="/devpost.svg" alt="Devpost Logo" className="h-8 w-8 object-contain" />
             </div>
@@ -237,7 +218,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </p>
           </div>
 
-          <div className="p-5 sm:p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#33d6a6]/50 transition-all">
+          <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-3 hover:border-[#33d6a6]/50 transition-all">
             <div className="h-10 flex items-center">
               <img src="/flag-orpheus-top.svg" alt="Hack Club Top Flag" className="h-8 object-contain" />
             </div>
@@ -247,7 +228,6 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             </p>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

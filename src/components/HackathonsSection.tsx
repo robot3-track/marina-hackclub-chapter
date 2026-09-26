@@ -42,17 +42,14 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.05, ease: 'easeOut' }}
-          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0a1128] via-[#101b3b] to-[#1e1e24] border-2 border-[#1d4ed8]/40 p-6 sm:p-8 md:p-10 shadow-2xl space-y-6"
+          className="relative overflow-hidden rounded-md bg-[#0f172a] border border-[#1d4ed8]/50 p-6 sm:p-8 md:p-10 shadow-xl space-y-6"
         >
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#0b3d91]/30 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-[#3b82f6]/20 rounded-full blur-3xl pointer-events-none" />
-
           <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#253248]">
             <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
               <img
                 src="/nasa-logo.svg"
                 alt="NASA Meatball Insignia"
-                className="h-10 sm:h-12 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(11,61,145,0.8)]"
+                className="h-10 sm:h-12 w-auto object-contain"
               />
               <div className="h-6 w-[1px] bg-[#324565] hidden sm:block" />
               <img
@@ -86,25 +83,25 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-[#94a3b8] pt-2">
                 <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
                   <span><strong className="text-white">Date:</strong> November 14–15th</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
                   <span><strong className="text-white">Format:</strong> Official 48-Hour Global Hackathon</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
                   <span><strong className="text-white">Real NASA Data:</strong> Earth observation & Mars/Artemis APIs</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#38bdf8] mt-1 inline-block flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
                   <span><strong className="text-white">All Levels:</strong> Coders, designers, scientists & beginners</span>
                 </li>
               </ul>
             </div>
 
-            <div className="lg:col-span-5 flex flex-col justify-between p-4 sm:p-6 rounded-xl bg-[#0f172a]/80 border border-[#1e293b] space-y-4">
+            <div className="lg:col-span-5 flex flex-col justify-between p-4 sm:p-6 rounded-md bg-[#0f172a] border border-[#1e293b] space-y-4">
               <div className="space-y-2">
                 <span className="text-[10px] font-mono uppercase tracking-widest text-[#94a3b8] block">
                   Marina High School Squad
@@ -119,7 +116,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                   href="https://www.spaceappschallenge.org/2026/find-a-team/hackclub-marina-high-school-chapter-team-1/?tab=details"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-lg font-black text-xs sm:text-sm bg-[#2563eb] hover:bg-[#1d4ed8] text-white flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg group"
+                  className="w-full py-3 px-4 rounded-md font-black text-xs sm:text-sm bg-[#2563eb] hover:bg-[#1d4ed8] text-white flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md group"
                 >
                   <span>Join Marina Space Apps Team</span>
                   <span className="font-mono group-hover:translate-x-0.5 transition-transform">→</span>
@@ -142,13 +139,12 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          
           <motion.div 
             initial={{ opacity: 0, y: 30, scale: 0.98 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
-            className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all shadow-xl"
+            className="p-5 sm:p-8 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all shadow-lg"
           >
             <div className="space-y-3 sm:space-y-4">
               <div className="h-10 flex items-center">
@@ -169,15 +165,15 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
               <ul className="space-y-2 text-xs text-[#a0aec0]">
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#ec3750] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#ec3750] inline-block flex-shrink-0"></span>
                   <span>Travel stipends & micro-grants from HQ</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#ec3750] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#ec3750] inline-block flex-shrink-0"></span>
                   <span>Free microcontrollers, PCBs & electronic kits</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#ec3750] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#ec3750] inline-block flex-shrink-0"></span>
                   <span>Connect with 25,000+ teen hackers globally</span>
                 </li>
               </ul>
@@ -199,7 +195,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
-            className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#338eda]/50 transition-all shadow-xl"
+            className="p-5 sm:p-8 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#338eda]/50 transition-all shadow-lg"
           >
             <div className="space-y-3 sm:space-y-4">
               <div className="h-10 flex items-center">
@@ -220,15 +216,15 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
               <ul className="space-y-2 text-xs text-[#a0aec0]">
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#338eda] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#338eda] inline-block flex-shrink-0"></span>
                   <span>Team project sprints for all skill levels</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#338eda] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#338eda] inline-block flex-shrink-0"></span>
                   <span>Publish code on GitHub & project pages on Devpost</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#338eda] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#338eda] inline-block flex-shrink-0"></span>
                   <span>Win cash prizes, tech swag, and internships</span>
                 </li>
               </ul>
@@ -250,7 +246,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
-            className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#33d6a6]/50 transition-all shadow-xl"
+            className="p-5 sm:p-8 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 sm:space-y-5 flex flex-col justify-between hover:border-[#33d6a6]/50 transition-all shadow-lg"
           >
             <div className="space-y-3 sm:space-y-4">
               <div className="h-10 flex items-center">
@@ -271,15 +267,15 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
               <ul className="space-y-2 text-xs text-[#a0aec0]">
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#33d6a6] inline-block flex-shrink-0"></span>
                   <span>0 Membership Dues — 100% Free for all students</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#33d6a6] inline-block flex-shrink-0"></span>
                   <span>Lunch & After-School sessions in Room 252 and Lunch on Mondays unless revised</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#33d6a6] inline-block flex-shrink-0"></span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#33d6a6] inline-block flex-shrink-0"></span>
                   <span>Free snacks, sticker drops, and mentorship</span>
                 </li>
               </ul>
@@ -293,7 +289,6 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               <span className="font-mono text-sm">→</span>
             </button>
           </motion.div>
-
         </div>
 
         <CarouselTicker />
@@ -303,7 +298,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="p-5 sm:p-10 rounded-xl bg-[#1e1e24] border border-[#2d2d38] flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl"
+          className="p-5 sm:p-8 rounded-md bg-[#1e1e24] border border-[#2d2d38] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl"
         >
           <div className="space-y-2 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3">
@@ -320,7 +315,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
           <button
             onClick={() => setActiveTab('signup')}
-            className="w-full sm:w-auto justify-center px-6 py-3 rounded-lg font-extrabold text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap shadow-lg"
+            className="w-full sm:w-auto justify-center px-6 py-3 rounded-md font-extrabold text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap shadow-md"
           >
             <span>Join Hack Club Marina</span>
           </button>

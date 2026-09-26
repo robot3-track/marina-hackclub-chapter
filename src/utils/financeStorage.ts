@@ -16,9 +16,7 @@ export async function fetchRemoteTransactions(): Promise<FinanceTransaction[]> {
         return data;
       }
     }
-  } catch {
-    // Silently fallback to local storage
-  }
+  } catch {}
   return loadLocalTransactions();
 }
 
@@ -28,7 +26,6 @@ export function loadLocalTransactions(): FinanceTransaction[] {
     if (!raw) return [];
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
-    // Clean out any legacy demo transactions
     return parsed.filter(t => t && t.id && !t.id.startsWith('tx-00'));
   } catch {
     return [];
@@ -38,9 +35,7 @@ export function loadLocalTransactions(): FinanceTransaction[] {
 export function saveLocalTransactions(txs: FinanceTransaction[]): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(txs));
-  } catch {
-    // Ignore storage errors
-  }
+  } catch {}
 }
 
 export async function syncSaveTransactions(txs: FinanceTransaction[]): Promise<void> {
@@ -51,9 +46,7 @@ export async function syncSaveTransactions(txs: FinanceTransaction[]): Promise<v
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(txs),
     });
-  } catch {
-    // Storage saved locally as reliable offline/local backup
-  }
+  } catch {}
 }
 
 export function exportToCSV(txs: FinanceTransaction[]): void {

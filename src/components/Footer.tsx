@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               <img
                 src="/icon-square.svg"
                 alt="Hack Club Marina Logo"
-                className="w-10 h-10 rounded-lg object-contain"
+                className="w-10 h-10 rounded-md object-contain"
               />
               <div>
                 <span className="font-black text-lg text-white tracking-tight">HACK CLUB <span className="text-[#ec3750]">MARINA</span></span>
@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 href="https://www.instagram.com/hackclub.marina"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#252429] hover:bg-[#2d2b33] border border-[#323138] text-white text-xs font-semibold transition-all hover:scale-105 group"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#252429] hover:bg-[#2d2b33] border border-[#323138] text-white text-xs font-semibold transition-all hover:scale-105 group"
               >
                 <Instagram className="w-4 h-4 text-[#E4405F] group-hover:scale-110 transition-transform" />
                 <span>Follow @hackclub.marina</span>

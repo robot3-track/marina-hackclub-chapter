@@ -42,9 +42,7 @@ function getAttemptRecord(): AttemptRecord {
 function saveAttemptRecord(record: AttemptRecord): void {
   try {
     sessionStorage.setItem(ATTEMPTS_STORAGE_KEY, JSON.stringify(record));
-  } catch {
-    // Ignore storage errors
-  }
+  } catch {}
 }
 
 export function checkLockoutStatus(): { isLocked: boolean; remainingSeconds: number } {
@@ -136,15 +134,11 @@ export function setDevPortalAuthenticated(): void {
       expiresAt: Date.now() + 4 * 60 * 60 * 1000,
     };
     sessionStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(session));
-  } catch {
-    // Ignore storage errors
-  }
+  } catch {}
 }
 
 export function clearDevPortalAuth(): void {
   try {
     sessionStorage.removeItem(AUTH_STORAGE_KEY);
-  } catch {
-    // Ignore storage errors
-  }
+  } catch {}
 }

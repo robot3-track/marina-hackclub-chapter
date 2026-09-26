@@ -30,7 +30,6 @@ export const ConstitutionViewer: React.FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
-        
         <motion.div 
           initial={{ opacity: 0, y: 30, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -56,17 +55,16 @@ export const ConstitutionViewer: React.FC = () => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="bg-[#1e1e24] p-4 sm:p-6 rounded-xl border border-[#2d2d38] space-y-4 shadow-lg"
+          className="bg-[#1e1e24] p-4 sm:p-6 rounded-md border border-[#2d2d38] space-y-4 shadow-md"
         >
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-            
             <div className="relative w-full sm:w-80">
               <input
                 type="text"
                 placeholder="Search constitution bylaws..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2.5 text-xs rounded-lg bg-[#17171d] text-white placeholder-[#8492a6] border border-[#2d2d38] focus:border-[#ec3750] outline-none"
+                className="w-full px-4 py-2.5 text-xs rounded-md bg-[#17171d] text-white placeholder-[#8492a6] border border-[#2d2d38] focus:border-[#ec3750] outline-none"
               />
             </div>
 
@@ -95,13 +93,12 @@ export const ConstitutionViewer: React.FC = () => {
                 </button>
               ))}
             </div>
-
           </div>
         </motion.div>
 
         <div className="space-y-4 sm:space-y-6">
           {filteredArticles.length === 0 ? (
-            <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-xl border border-[#2d2d38]">
+            <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-md border border-[#2d2d38]">
               <p className="text-xs sm:text-sm font-semibold text-[#8492a6]">
                 No matching articles found for "{searchTerm}"
               </p>
@@ -120,7 +117,7 @@ export const ConstitutionViewer: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4 }}
-                className="p-5 sm:p-8 rounded-xl bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-lg"
+                className="p-5 sm:p-8 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 shadow-md"
               >
                 <div className="flex items-center gap-2.5 pb-3 border-b border-[#2d2d38]">
                   <span className="w-2.5 h-2.5 rounded-sm bg-[#ec3750] inline-block"></span>
@@ -153,7 +150,7 @@ export const ConstitutionViewer: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-30px" }}
           transition={{ duration: 0.4 }}
-          className="p-6 rounded-xl bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl"
+          className="p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md"
         >
           <div className="flex items-center gap-3">
             <img src="/hcb-light.png" alt="Hack Club Marina" className="w-8 h-8 object-contain" />
@@ -171,7 +168,7 @@ export const ConstitutionViewer: React.FC = () => {
             href="https://hackclub.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-lg text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors cursor-pointer shadow-md"
+            className="px-5 py-2.5 rounded-md text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors cursor-pointer shadow-sm"
           >
             <span>Hack Club Main HQ</span>
             <span className="font-mono text-sm">→</span>

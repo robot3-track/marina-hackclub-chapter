@@ -29,8 +29,6 @@ export const SignupForm: React.FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(#ec3750_1px,transparent_1px)] [background-size:32px_32px] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
-        
-        {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +45,6 @@ export const SignupForm: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Simple Embed with Attached Link (No box around embed) */}
         <div className="w-full space-y-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm">
             <span className="text-[#8492a6]">
@@ -85,10 +82,8 @@ export const SignupForm: React.FC = () => {
           </div>
         </div>
 
-        {/* Alternative Direct Contact Channels */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pt-4">
-          
-          <div className="p-5 sm:p-6 rounded-lg bg-[#1e1e24] border border-[#2d2d38] space-y-4 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all">
+          <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all">
             <div className="space-y-3">
               <div className="h-8 flex items-center">
                 <img src="/icon-square.svg" alt="Hack Club Icon" className="w-7 h-7 rounded-md object-contain" />
@@ -111,7 +106,7 @@ export const SignupForm: React.FC = () => {
               <div className="flex flex-col xs:flex-row gap-2">
                 <a
                   href="sms:6575058696"
-                  className="flex-1 px-4 py-2.5 rounded-lg bg-[#ec3750] hover:bg-[#d62b42] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
+                  className="flex-1 px-4 py-2.5 rounded-md bg-[#ec3750] hover:bg-[#d62b42] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Send Text SMS</span>
@@ -119,7 +114,7 @@ export const SignupForm: React.FC = () => {
 
                 <button
                   onClick={() => copyToClipboard('657-505-8696', 'phone')}
-                  className="px-4 py-2.5 rounded-lg bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer"
+                  className="px-4 py-2.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer"
                   title="Copy Phone Number"
                 >
                   {copiedPhone ? (
@@ -138,7 +133,7 @@ export const SignupForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="p-5 sm:p-6 rounded-lg bg-[#1e1e24] border border-[#2d2d38] space-y-4 flex flex-col justify-between hover:border-[#338eda]/50 transition-all">
+          <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 flex flex-col justify-between hover:border-[#338eda]/50 transition-all">
             <div className="space-y-3">
               <div className="h-8 flex items-center">
                 <img src="/hcb-light.png" alt="Hack Club Flag Left" className="h-6 object-contain" />
@@ -161,7 +156,7 @@ export const SignupForm: React.FC = () => {
               <div className="flex flex-col xs:flex-row gap-2">
                 <a
                   href="mailto:yychang100@student.hbuhsd.edu"
-                  className="flex-1 px-4 py-2.5 rounded-lg bg-[#338eda] hover:bg-[#2b7bbd] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
+                  className="flex-1 px-4 py-2.5 rounded-md bg-[#338eda] hover:bg-[#2b7bbd] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>Send Email</span>
@@ -169,7 +164,7 @@ export const SignupForm: React.FC = () => {
 
                 <button
                   onClick={() => copyToClipboard('yychang100@student.hbuhsd.edu', 'email')}
-                  className="px-4 py-2.5 rounded-lg bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer"
+                  className="px-4 py-2.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer"
                   title="Copy Email Address"
                 >
                   {copiedEmail ? (
@@ -187,11 +182,9 @@ export const SignupForm: React.FC = () => {
               </div>
             </div>
           </div>
-
         </div>
 
-        {/* Meeting Details */}
-        <div className="p-5 sm:p-6 rounded-lg bg-[#1e1e24] border border-[#2d2d38] space-y-4">
+        <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-sm sm:text-base font-black text-white flex items-center gap-2">
               <Calendar className="w-4 h-4 text-[#ec3750]" />
@@ -203,7 +196,7 @@ export const SignupForm: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs text-[#8492a6]">
-            <div className="p-3.5 rounded-lg bg-[#17171d] border border-[#2d2d38] space-y-1">
+            <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-[#33d6a6]" />
                 <span>Meeting Schedule</span>
@@ -211,7 +204,7 @@ export const SignupForm: React.FC = () => {
               <p>Lunch & After School Sessions</p>
             </div>
 
-            <div className="p-3.5 rounded-lg bg-[#17171d] border border-[#2d2d38] space-y-1">
+            <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#ff8c37]" />
                 <span>Location</span>
@@ -219,7 +212,7 @@ export const SignupForm: React.FC = () => {
               <p>Room 252 and Lunch on Mondays unless revised (Marina HS)</p>
             </div>
 
-            <div className="p-3.5 rounded-lg bg-[#17171d] border border-[#2d2d38] space-y-1">
+            <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#338eda]" />
                 <span>Membership Fee</span>
@@ -229,7 +222,7 @@ export const SignupForm: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-3.5 rounded-lg bg-[#1e1e24] border border-[#2d2d38] text-center text-xs text-[#8492a6]">
+        <div className="p-3.5 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-center text-xs text-[#8492a6]">
           Member directory is kept private. Submissions go directly to chapter leadership. Text <strong className="text-white font-mono">657-505-8696</strong> if you have any questions.
         </div>
 

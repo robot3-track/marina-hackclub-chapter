@@ -106,9 +106,8 @@ export const CarouselTicker: React.FC = () => {
       transition={{ duration: 0.6 }}
       className="space-y-4"
     >
-
       <div 
-        className="relative overflow-hidden rounded-xl bg-[#131317] border border-[#2d2d38] p-4 sm:p-6 shadow-2xl"
+        className="relative overflow-hidden rounded-md bg-[#131317] border border-[#2d2d38] p-4 sm:p-6 shadow-xl"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -125,7 +124,7 @@ export const CarouselTicker: React.FC = () => {
           {doubleItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className={`w-[280px] sm:w-[340px] flex-shrink-0 p-4 sm:p-5 rounded-xl bg-[#1e1e24] border border-[#2d2d38] ${item.accentBorder} transition-all duration-300 flex flex-col justify-between space-y-4 hover:scale-[1.02] hover:shadow-xl`}
+              className={`w-[280px] sm:w-[340px] flex-shrink-0 p-4 sm:p-5 rounded-md bg-[#1e1e24] border border-[#2d2d38] ${item.accentBorder} transition-all duration-300 flex flex-col justify-between space-y-4 hover:scale-[1.01] hover:shadow-lg`}
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-2">
