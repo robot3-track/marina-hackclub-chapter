@@ -1,6 +1,5 @@
 ## Welcome to Marina HS Hackclub Chapter!!
---
-[![Donate via HCB](https://hackclub.com/assets/hackClubLogoRed.svg?dpl=dpl_2nLA526HVseHb48pA8hPeMzxQFJq)](https://hcb.hackclub.com/donations/start/hackclub-marina-chapter)
+
 ![Home Page](Vikings.png)
 
 We are very excited that you are here, thanks for checking us out! We are a group of teenagers from Marina HS who would like to bring the environment of coding and building meaningful projects to our community. We incorporate aspects of education, such as the creation of study apps, as well as the ethical use of AI. We teach club members about how to use AI properly as an assistant, not a full vibe-coding application.
