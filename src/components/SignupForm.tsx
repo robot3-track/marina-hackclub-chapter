@@ -40,14 +40,14 @@ export const SignupForm: React.FC = () => {
             Join Hack Club Marina
           </h2>
 
-          <p className="text-sm sm:text-lg text-[#e0e6ed] leading-relaxed max-w-2xl mx-auto font-normal">
+          <p className="text-sm sm:text-lg text-white leading-relaxed max-w-2xl mx-auto font-normal">
             Fill out the official membership form below to sign up for the chapter. You will be added to the chapter group chat, receive workshop announcements, claim free software & hardware grants, and get free stickers upon signup.
           </p>
         </motion.div>
 
         <div className="w-full space-y-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm">
-            <span className="text-[#cbd5e1] font-medium">
+            <span className="text-white font-bold">
               Sign-up Form:
             </span>
             <a
@@ -69,13 +69,13 @@ export const SignupForm: React.FC = () => {
             Loading form...
           </iframe>
 
-          <div className="text-center text-sm text-[#cbd5e1]">
+          <div className="text-center text-sm text-white">
             Direct form link:{' '}
             <a
               href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#ec3750] underline font-mono ml-1 focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden font-semibold"
+              className="text-[#338eda] hover:text-[#5bc0de] underline font-mono ml-1 focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden font-bold"
             >
               {GOOGLE_FORM_URL}
             </a>
@@ -96,7 +96,7 @@ export const SignupForm: React.FC = () => {
                 <h3 className="text-xl sm:text-2xl font-black text-white mt-1 font-mono">
                   657-505-8696
                 </h3>
-                <p className="text-sm text-[#cbd5e1] mt-2 leading-relaxed">
+                <p className="text-sm text-white mt-2 leading-relaxed">
                   Text this number with your name and grade to get added directly to the official Hack Club Marina chapter group chat.
                 </p>
               </div>
@@ -125,7 +125,7 @@ export const SignupForm: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4 text-[#cbd5e1]" />
+                      <Copy className="w-4 h-4 text-white" />
                       <span>Copy</span>
                     </>
                   )}
@@ -147,7 +147,7 @@ export const SignupForm: React.FC = () => {
                 <h3 className="text-base sm:text-lg font-black text-white mt-1 font-mono break-all">
                   yychang100@student.hbuhsd.edu
                 </h3>
-                <p className="text-sm text-[#cbd5e1] mt-2 leading-relaxed">
+                <p className="text-sm text-white mt-2 leading-relaxed">
                   Email Club President Yohan Chang for official chapter inquiries, workshop proposals, or ASB administration details.
                 </p>
               </div>
@@ -176,7 +176,7 @@ export const SignupForm: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4 text-[#cbd5e1]" />
+                      <Copy className="w-4 h-4 text-white" />
                       <span>Copy</span>
                     </>
                   )}
@@ -197,13 +197,13 @@ export const SignupForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-sm text-[#cbd5e1]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-sm text-white font-medium">
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
                 <Calendar className="w-4 h-4 text-[#33d6a6]" />
                 <span>Meeting Schedule</span>
               </span>
-              <p>Lunch & After School Sessions</p>
+              <p className="text-white">Lunch & After School Sessions</p>
             </div>
 
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
@@ -211,7 +211,7 @@ export const SignupForm: React.FC = () => {
                 <MapPin className="w-4 h-4 text-[#ff8c37]" />
                 <span>Location</span>
               </span>
-              <p>Room 252 and Lunch on Mondays unless revised (Marina HS)</p>
+              <p className="text-white">Room 252 and Lunch on Mondays unless revised (Marina HS)</p>
             </div>
 
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
@@ -224,8 +224,8 @@ export const SignupForm: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-4 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-center text-sm text-[#cbd5e1]">
-          Member directory is kept private. Submissions go directly to chapter leadership. Text <strong className="text-white font-mono">657-505-8696</strong> if you have any questions.
+        <div className="p-4 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-center text-sm text-white">
+          Member directory is kept private. Submissions go directly to chapter leadership. Text <strong className="text-[#33d6a6] font-mono">657-505-8696</strong> if you have any questions.
         </div>
       </div>
     </section>

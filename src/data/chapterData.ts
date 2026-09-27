@@ -58,55 +58,55 @@ export const TOP_OFFICIALS: Officer[] = [
     id: '4',
     name: 'Demir Deran',
     grade: '10th Grade',
-    role: 'Treasurer & Software Lead',
+    role: 'Treasurer / Software',
     department: 'Software',
-    description: 'Leads software engineering workshops, manages web/mobile projects, and oversees club software architecture.',
-    avatarColor: '#a633d6'
+    description: 'Maintains software project repositories, guides chapter coding sessions, and coordinates Hack Club Bank requests.',
+    avatarColor: '#33d6a6'
   },
   {
     id: '5',
     name: 'Kai Scholler',
     grade: '10th Grade',
-    role: 'Treasurer & Communications',
+    role: 'Treasurer / Communications',
     department: 'Communications',
-    description: 'Coordinates communications between administration, members, and external partners.',
+    description: 'Oversees announcements, club calendar, and manages communications with Marina High School student body.',
     avatarColor: '#5bc0de'
   },
   {
     id: '6',
     name: 'Noah Kalbhenn',
     grade: '10th Grade',
-    role: 'Treasurer, Fundraising & Social Media',
+    role: 'Treasurer / Fundraising & Social Media',
     department: 'Fundraising & Socials',
-    description: 'Manages club accounts, ASB allocation requests, fundraising events, and social media media presence.',
-    avatarColor: '#33d6a6'
+    description: 'Coordinates chapter fundraising efforts, manages sponsorship outreach, and leads social media initiatives.',
+    avatarColor: '#f1c40f'
   },
   {
     id: '7',
     name: 'Kai Bulosan',
     grade: '10th Grade',
-    role: 'Treasurer & Hardware Lead',
+    role: 'Treasurer / Hardware',
     department: 'Hardware',
-    description: 'Manages hardware inventory (microcontrollers, sensors, soldering kits) and leads hands-on hardware build sessions.',
-    avatarColor: '#f1c40f'
+    description: 'Manages physical hardware kits, microcontrollers, Raspberry Pis, and breadboards granted by Hack Club HQ.',
+    avatarColor: '#a633d6'
   },
   {
     id: '8',
+    name: 'Eli Chem',
+    grade: '10th Grade',
+    role: 'Social Media',
+    department: 'Fundraising & Socials',
+    description: 'Documents meetings, captures project builds, and runs the official chapter Instagram page @hackclub.marina.',
+    avatarColor: '#ec3750'
+  },
+  {
+    id: '9',
     name: 'Zachary Ruiz',
     grade: '10th Grade',
     role: 'Club Promoter',
     department: 'Promotion',
-    description: 'Directs campus promotion, flyer campaigns, and Club Rush member recruitment activities.',
+    description: 'Designs campus flyers, distributes chapter stickers, and coordinates recruitment drives during Club Rush.',
     avatarColor: '#ff8c37'
-  },
-  {
-    id: '9',
-    name: 'Eli Chem',
-    grade: '10th Grade',
-    role: 'Social Media Lead',
-    department: 'Fundraising & Socials',
-    description: 'Creates digital content, event highlights, and manages social media channels for the chapter.',
-    avatarColor: '#e1306c'
   }
 ];
 
@@ -116,7 +116,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     title: 'Preamble',
     sections: [
       {
-        content: 'We, the students of Marina High School, in order to promote diversity, acceptance, and teamwork.'
+        content: 'We, the students of Marina High School, in order to foster passion for technology, hands-on computer science, maker culture, and collaborative engineering, do hereby establish this constitution for the Hack Club Marina Chapter.'
       }
     ]
   },
@@ -125,7 +125,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     title: 'Article I - Name',
     sections: [
       {
-        content: 'The name of this organization shall be Hackclub Marina Chapter.'
+        content: 'The name of this organization shall be Hack Club Marina Chapter.'
       }
     ]
   },
@@ -134,7 +134,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     title: 'Article II - Purpose',
     sections: [
       {
-        content: 'The purpose of this organization shall be to create an inclusive space where students of all skill levels learn to code, collaborate on hands-on software and hardware projects, and access global technical resources and hackathons under the support of the main Hackclub Branch.'
+        content: 'The purpose of this organization shall be to create an inclusive space where students of all skill levels learn to code, collaborate on hands-on software and hardware projects, and access global technical resources and hackathons under the support of the main Hack Club organization.'
       }
     ]
   },
@@ -144,7 +144,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     sections: [
       {
         number: 'Section I',
-        content: 'The membership of Hackclub Marina Chapter shall consist of any student enrolled at Marina High School.'
+        content: 'The membership of Hack Club Marina Chapter shall consist of any student enrolled at Marina High School.'
       },
       {
         number: 'Section II',
@@ -157,7 +157,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     title: 'Article IV - Officers',
     sections: [
       {
-        content: 'The officers of Hackclub Marina Chapter shall consist of President, Vice President, Secretary, and Treasurer/Technical Lead.'
+        content: 'The officers of Hack Club Marina Chapter shall consist of President, Vice President, Secretary, and Treasurer/Technical Lead.'
       }
     ]
   },
@@ -211,11 +211,11 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
       },
       {
         number: 'Section II',
-        content: 'If Hackclub Marina Chapter becomes inactive or disbands, all assets of the club will revert to the Associated Student Body general account for the Interclub Council.'
+        content: 'If Hack Club Marina Chapter becomes inactive or disbands, all assets of the club will revert to the Associated Student Body general account for the Interclub Council.'
       },
       {
         number: 'Section III',
-        content: 'Funds to operate Hackclub Marina Chapter shall be raised through approved fundraising activities, donations, ASB allocations, and/or Hackclub HQ support.'
+        content: 'Funds to operate Hack Club Marina Chapter shall be raised through approved fundraising activities, donations, ASB allocations, and/or Hack Club HQ support.'
       }
     ]
   },
@@ -225,7 +225,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     sections: [
       {
         number: 'Section I',
-        content: 'Hackclub Marina Chapter shall host coding workshops, collaborative build sessions, and project showcases throughout the school year.'
+        content: 'Hack Club Marina Chapter shall host coding workshops, collaborative build sessions, and project showcases throughout the school year.'
       }
     ]
   },
@@ -234,7 +234,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     title: 'Article IX - Amendments',
     sections: [
       {
-        content: 'This constitution may be amended by a two-thirds (2/3) majority vote of eligible active members of Hackclub Marina Chapter.'
+        content: 'This constitution may be amended by a two-thirds (2/3) majority vote of eligible active members of Hack Club Marina Chapter.'
       }
     ]
   },
@@ -244,7 +244,7 @@ export const CONSTITUTION_ARTICLES: ConstitutionArticle[] = [
     sections: [
       {
         number: 'Section I',
-        content: 'Hackclub Marina Chapter will hold regular club meetings on a flexible schedule as announced by officers.'
+        content: 'Hack Club Marina Chapter will hold regular club meetings on a flexible schedule as announced by officers.'
       },
       {
         number: 'Section II',
@@ -279,13 +279,13 @@ export const WORKSHOPS: Workshop[] = [
   },
   {
     id: 'ws-3',
-    title: 'AI App Lab: Gemini API & Smart Prompts',
+    title: 'Full-Stack Web Dev: APIs & Real-Time Apps',
     category: 'Software',
     date: 'Next Week',
     time: 'Lunch Session',
     location: "Room 252 and Lunch on Mondays unless revised",
-    description: 'Hook up Gemini AI models to build web tools, text generators, and smart study helpers.',
-    tags: ['JavaScript', 'Gemini API', 'AI Tools'],
+    description: 'Build full-stack web applications, connect real REST APIs, and deploy interactive tools for student Hack Clubbers.',
+    tags: ['JavaScript', 'APIs', 'Full-Stack'],
     difficulty: 'Intermediate'
   },
   {
@@ -322,11 +322,11 @@ export const FEATURED_PROJECTS: ClubProject[] = [
   },
   {
     id: 'p3',
-    title: 'Marina High Homework Helper',
+    title: 'Marina High Flashcard Study Deck',
     author: 'Yohan Chang & Thien Nguyen',
-    description: 'Study flashcard generator and quiz practice tool powered by simple local storage and prompt automation.',
-    category: 'AI Tool',
+    description: 'Interactive study flashcard generator and quiz practice tool built by student Hack Clubbers.',
+    category: 'Web App',
     stars: 22,
-    tags: ['JavaScript', 'Gemini', 'UI']
+    tags: ['JavaScript', 'TypeScript', 'Web']
   }
 ];

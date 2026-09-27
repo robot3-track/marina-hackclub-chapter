@@ -329,7 +329,7 @@ export const DevPortal: React.FC = () => {
             <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
               Developer & Treasury Portal
             </h2>
-            <p className="text-xs text-[#8492a6]">
+            <p className="text-sm text-white font-medium">
               Marina Chapter internal finance management. Enter officer PIN to continue.
             </p>
           </motion.div>
@@ -341,15 +341,15 @@ export const DevPortal: React.FC = () => {
           >
             <form onSubmit={handlePinSubmit} className="space-y-4">
               <div className="space-y-2">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-[#8492a6]">Officer PIN</span>
+                <div className="flex items-center justify-between text-xs sm:text-sm">
+                  <span className="font-bold text-white">Officer PIN</span>
                   <button
                     type="button"
                     onClick={() => setShowPin(!showPin)}
-                    className="text-[#8492a6] hover:text-white flex items-center gap-1 cursor-pointer transition-colors"
+                    className="text-white hover:text-[#f1c40f] flex items-center gap-1 cursor-pointer transition-colors"
                   >
                     {showPin ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                    <span className="text-[11px]">{showPin ? 'Hide' : 'Show'}</span>
+                    <span className="text-xs">{showPin ? 'Hide' : 'Show'}</span>
                   </button>
                 </div>
 
@@ -410,7 +410,7 @@ export const DevPortal: React.FC = () => {
                 type="button"
                 onClick={handleKeypadClear}
                 disabled={lockoutTimer > 0}
-                className="py-2.5 bg-[#17171d] hover:bg-[#252429] border border-[#2d2d38] text-[#8492a6] text-xs font-bold transition-colors cursor-pointer disabled:opacity-40"
+                className="py-2.5 bg-[#17171d] hover:bg-[#252429] border border-[#2d2d38] text-white hover:text-[#ec3750] text-xs font-bold transition-colors cursor-pointer disabled:opacity-40"
               >
                 Clear
               </button>
@@ -426,19 +426,19 @@ export const DevPortal: React.FC = () => {
                 type="button"
                 onClick={handleKeypadBackspace}
                 disabled={lockoutTimer > 0}
-                className="py-2.5 bg-[#17171d] hover:bg-[#252429] border border-[#2d2d38] text-[#8492a6] text-xs font-bold transition-colors cursor-pointer disabled:opacity-40"
+                className="py-2.5 bg-[#17171d] hover:bg-[#252429] border border-[#2d2d38] text-white hover:text-[#f1c40f] text-xs font-bold transition-colors cursor-pointer disabled:opacity-40"
               >
                 Del
               </button>
             </div>
 
-            <div className="pt-3 border-t border-[#252429] space-y-1.5 text-[11px] text-[#8492a6]">
+            <div className="pt-3 border-t border-[#252429] space-y-1.5 text-xs text-white">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#33d6a6] flex-shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-[#33d6a6] flex-shrink-0" />
                 <span>Salted SHA-256 Hash Verification</span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="w-3.5 h-3.5 text-[#338eda] flex-shrink-0" />
+                <Shield className="w-4 h-4 text-[#338eda] flex-shrink-0" />
                 <span>Rate-Limit Protection</span>
               </div>
             </div>
@@ -454,11 +454,11 @@ export const DevPortal: React.FC = () => {
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 bg-[#1e1e24] border border-[#2d2d38]">
           <div className="space-y-1">
-            <div className="flex items-center gap-2 text-[11px] text-[#8492a6]">
+            <div className="flex items-center gap-2 text-xs text-white">
               <span className="w-2 h-2 bg-[#33d6a6] inline-block" />
-              <span className="font-mono uppercase tracking-wider text-white">Chapter Ledger</span>
+              <span className="font-mono uppercase tracking-wider text-[#33d6a6] font-bold">Chapter Ledger</span>
               <span>•</span>
-              <span>Shared Server Storage</span>
+              <span className="text-white">Shared Server Storage</span>
               {syncNotice && (
                 <span className="text-[#33d6a6] font-semibold ml-2">{syncNotice}</span>
               )}
@@ -466,7 +466,7 @@ export const DevPortal: React.FC = () => {
             <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white">
               Finance & Spending Management
             </h1>
-            <p className="text-xs text-[#8492a6]">
+            <p className="text-sm text-white font-medium leading-relaxed">
               Live ledger for chapter transactions, money added, and expenses. Stored on server for all officers to access.
             </p>
           </div>
@@ -474,24 +474,24 @@ export const DevPortal: React.FC = () => {
           <div className="flex items-center gap-2 flex-wrap">
             <button
               onClick={() => openAddModal('income')}
-              className="px-3.5 py-2 text-xs font-bold bg-[#33d6a6] hover:bg-[#28b38a] text-[#121217] flex items-center gap-1.5 transition-all cursor-pointer"
+              className="px-3.5 py-2 text-xs sm:text-sm font-bold bg-[#33d6a6] hover:bg-[#28b38a] text-[#121217] flex items-center gap-1.5 transition-all cursor-pointer"
             >
-              <Plus className="w-3.5 h-3.5" />
+              <Plus className="w-4 h-4" />
               <span>Add Money (+)</span>
             </button>
 
             <button
               onClick={() => openAddModal('expense')}
-              className="px-3.5 py-2 text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-all cursor-pointer"
+              className="px-3.5 py-2 text-xs sm:text-sm font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-all cursor-pointer"
             >
-              <Minus className="w-3.5 h-3.5" />
+              <Minus className="w-4 h-4" />
               <span>Subtract Money (-)</span>
             </button>
 
             <button
               onClick={loadData}
               disabled={isLoadingData}
-              className="px-3 py-2 text-xs font-bold bg-[#252429] hover:bg-[#2d2d38] text-white border border-[#3d3d4a] flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-3 py-2 text-xs sm:text-sm font-bold bg-[#252429] hover:bg-[#2d2d38] text-white border border-[#3d3d4a] flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Refresh ledger from server"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${isLoadingData ? 'animate-spin' : ''}`} />
@@ -501,16 +501,16 @@ export const DevPortal: React.FC = () => {
             <button
               onClick={() => exportToCSV(transactions)}
               disabled={transactions.length === 0}
-              className="px-3 py-2 text-xs font-bold bg-[#252429] hover:bg-[#2d2d38] disabled:opacity-40 text-white border border-[#3d3d4a] flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-3 py-2 text-xs sm:text-sm font-bold bg-[#252429] hover:bg-[#2d2d38] disabled:opacity-40 text-white border border-[#3d3d4a] flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Download CSV file"
             >
-              <FileSpreadsheet className="w-3.5 h-3.5 text-[#338eda]" />
+              <FileSpreadsheet className="w-4 h-4 text-[#338eda]" />
               <span className="hidden sm:inline">Export CSV</span>
             </button>
 
             <button
               onClick={handleLockPortal}
-              className="px-3 py-2 text-xs font-bold bg-[#252429] hover:bg-[#ec3750]/20 text-[#ec3750] border border-[#ec3750]/40 flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-3 py-2 text-xs sm:text-sm font-bold bg-[#252429] hover:bg-[#ec3750]/20 text-[#ec3750] border border-[#ec3750]/40 flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Lock dev portal"
             >
               <Lock className="w-3.5 h-3.5" />
@@ -521,53 +521,53 @@ export const DevPortal: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
-            <div className="flex items-center justify-between text-[#8492a6] text-[11px] font-mono uppercase tracking-wider">
+            <div className="flex items-center justify-between text-white text-xs font-mono uppercase tracking-wider font-bold">
               <span>Treasury Balance</span>
-              <Wallet className="w-3.5 h-3.5 text-[#f1c40f]" />
+              <Wallet className="w-4 h-4 text-[#f1c40f]" />
             </div>
             <div className={`text-2xl font-black font-mono ${stats.netBalance >= 0 ? 'text-[#33d6a6]' : 'text-[#ec3750]'}`}>
               ${stats.netBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </div>
-            <div className="text-[10px] text-[#8492a6]">
+            <div className="text-xs text-white font-medium">
               Net Available Chapter Balance
             </div>
           </div>
 
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
-            <div className="flex items-center justify-between text-[#33d6a6] text-[11px] font-mono uppercase tracking-wider">
+            <div className="flex items-center justify-between text-[#33d6a6] text-xs font-mono uppercase tracking-wider font-bold">
               <span>Total Money Added</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-4 h-4" />
             </div>
             <div className="text-2xl font-black font-mono text-[#33d6a6]">
               +${stats.totalIncome.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </div>
-            <div className="text-[10px] text-[#8492a6]">
+            <div className="text-xs text-white font-medium">
               Total Inflows Logged
             </div>
           </div>
 
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
-            <div className="flex items-center justify-between text-[#ec3750] text-[11px] font-mono uppercase tracking-wider">
+            <div className="flex items-center justify-between text-[#ec3750] text-xs font-mono uppercase tracking-wider font-bold">
               <span>Total Spent</span>
-              <ArrowDownLeft className="w-3.5 h-3.5" />
+              <ArrowDownLeft className="w-4 h-4" />
             </div>
             <div className="text-2xl font-black font-mono text-[#ec3750]">
               -${stats.totalExpense.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </div>
-            <div className="text-[10px] text-[#8492a6]">
+            <div className="text-xs text-white font-medium">
               Total Outflows Logged
             </div>
           </div>
 
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
-            <div className="flex items-center justify-between text-[#338eda] text-[11px] font-mono uppercase tracking-wider">
+            <div className="flex items-center justify-between text-[#338eda] text-xs font-mono uppercase tracking-wider font-bold">
               <span>Total Records</span>
-              <Check className="w-3.5 h-3.5" />
+              <Check className="w-4 h-4" />
             </div>
             <div className="text-2xl font-black font-mono text-white">
               {transactions.length}
             </div>
-            <div className="text-[10px] text-[#8492a6]">
+            <div className="text-xs text-white font-medium">
               Saved Entries in Database
             </div>
           </div>
@@ -575,9 +575,9 @@ export const DevPortal: React.FC = () => {
 
         {transactions.length > 0 && stats.totalExpense > 0 && (
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-3">
-            <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#8492a6]">
-              <span>Spending Breakdown by Category</span>
-              <span>Total Expenses: ${stats.totalExpense.toFixed(2)}</span>
+            <div className="flex items-center justify-between text-xs font-mono uppercase tracking-wider text-white">
+              <span className="font-bold">Spending Breakdown by Category</span>
+              <span className="font-semibold text-[#f1c40f]">Total Expenses: ${stats.totalExpense.toFixed(2)}</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 pt-1">
@@ -586,17 +586,17 @@ export const DevPortal: React.FC = () => {
                 const pct = (spent / stats.totalExpense) * 100;
                 return (
                   <div key={cat} className="p-2.5 bg-[#17171d] border border-[#252429] space-y-1">
-                    <div className="flex items-center justify-between text-[11px]">
-                      <span className="truncate text-[#8492a6]" title={cat}>{cat}</span>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="truncate text-white font-medium" title={cat}>{cat}</span>
                       <span className="font-mono font-bold text-white">${spent.toFixed(2)}</span>
                     </div>
-                    <div className="w-full bg-[#252429] h-1 overflow-hidden">
+                    <div className="w-full bg-[#252429] h-1.5 overflow-hidden">
                       <div
                         className="h-full bg-[#ec3750] transition-all duration-300"
                         style={{ width: `${Math.min(pct, 100)}%` }}
                       />
                     </div>
-                    <div className="text-[10px] text-right text-[#8492a6] font-mono">
+                    <div className="text-xs text-right text-white font-mono font-bold">
                       {pct.toFixed(0)}%
                     </div>
                   </div>
@@ -610,13 +610,13 @@ export const DevPortal: React.FC = () => {
           
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
             <div className="relative flex-1 max-w-md">
-              <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-[#8492a6]" />
+              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-white" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
                 placeholder="Search memo, officer, account, notes..."
-                className="w-full pl-9 pr-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750] transition-colors"
+                className="w-full pl-9 pr-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white placeholder-white/70 focus:outline-none focus:border-[#ec3750] transition-colors"
               />
             </div>
 
@@ -624,24 +624,24 @@ export const DevPortal: React.FC = () => {
               <div className="flex items-center bg-[#17171d] border border-[#2d2d38] p-0.5 text-xs">
                 <button
                   onClick={() => setTypeFilter('all')}
-                  className={`px-3 py-1 font-bold text-[11px] transition-colors cursor-pointer ${
-                    typeFilter === 'all' ? 'bg-[#252429] text-white' : 'text-[#8492a6] hover:text-white'
+                  className={`px-3 py-1 font-bold text-xs transition-colors cursor-pointer ${
+                    typeFilter === 'all' ? 'bg-[#252429] text-white' : 'text-white hover:text-[#ec3750]'
                   }`}
                 >
                   All
                 </button>
                 <button
                   onClick={() => setTypeFilter('income')}
-                  className={`px-3 py-1 font-bold text-[11px] transition-colors cursor-pointer ${
-                    typeFilter === 'income' ? 'bg-[#33d6a6] text-[#121217]' : 'text-[#8492a6] hover:text-white'
+                  className={`px-3 py-1 font-bold text-xs transition-colors cursor-pointer ${
+                    typeFilter === 'income' ? 'bg-[#33d6a6] text-[#121217]' : 'text-[#33d6a6] hover:text-white'
                   }`}
                 >
                   + Added
                 </button>
                 <button
                   onClick={() => setTypeFilter('expense')}
-                  className={`px-3 py-1 font-bold text-[11px] transition-colors cursor-pointer ${
-                    typeFilter === 'expense' ? 'bg-[#ec3750] text-white' : 'text-[#8492a6] hover:text-white'
+                  className={`px-3 py-1 font-bold text-xs transition-colors cursor-pointer ${
+                    typeFilter === 'expense' ? 'bg-[#ec3750] text-white' : 'text-[#ec3750] hover:text-white'
                   }`}
                 >
                   - Spent
@@ -651,7 +651,7 @@ export const DevPortal: React.FC = () => {
               <select
                 value={categoryFilter}
                 onChange={e => setCategoryFilter(e.target.value)}
-                className="py-1.5 px-2.5 bg-[#17171d] border border-[#2d2d38] text-xs text-white focus:outline-none focus:border-[#ec3750] cursor-pointer"
+                className="py-1.5 px-2.5 bg-[#17171d] border border-[#2d2d38] text-xs sm:text-sm text-white focus:outline-none focus:border-[#ec3750] cursor-pointer"
               >
                 <option value="all">All Categories</option>
                 {CATEGORIES.map(c => (
@@ -662,7 +662,7 @@ export const DevPortal: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value as any)}
-                className="py-1.5 px-2.5 bg-[#17171d] border border-[#2d2d38] text-xs text-white focus:outline-none focus:border-[#ec3750] cursor-pointer"
+                className="py-1.5 px-2.5 bg-[#17171d] border border-[#2d2d38] text-xs sm:text-sm text-white focus:outline-none focus:border-[#ec3750] cursor-pointer"
               >
                 <option value="date-desc">Newest First</option>
                 <option value="date-asc">Oldest First</option>
@@ -673,9 +673,9 @@ export const DevPortal: React.FC = () => {
           </div>
 
           <div className="overflow-x-auto border border-[#2d2d38]">
-            <table className="w-full text-left text-xs border-collapse">
+            <table className="w-full text-left text-xs sm:text-sm border-collapse">
               <thead>
-                <tr className="bg-[#17171d] text-[#8492a6] border-b border-[#2d2d38] uppercase tracking-wider font-mono text-[10px]">
+                <tr className="bg-[#17171d] text-white border-b border-[#2d2d38] uppercase tracking-wider font-mono text-xs">
                   <th className="py-2.5 px-3">Date</th>
                   <th className="py-2.5 px-3">Type</th>
                   <th className="py-2.5 px-3">Amount</th>
@@ -689,23 +689,23 @@ export const DevPortal: React.FC = () => {
               <tbody className="divide-y divide-[#252429]">
                 {filteredTransactions.length === 0 ? (
                   <tr>
-                    <td colSpan={8} className="py-12 text-center text-[#8492a6]">
+                    <td colSpan={8} className="py-12 text-center text-white">
                       {transactions.length === 0 ? (
                         <div className="space-y-3 max-w-sm mx-auto">
                           <p className="text-sm text-white font-bold">Ledger is empty</p>
-                          <p className="text-xs text-[#8492a6]">
+                          <p className="text-xs sm:text-sm text-white font-medium">
                             No transactions recorded yet. Click below to log your first real chapter entry.
                           </p>
                           <div className="flex items-center justify-center gap-2 pt-2">
                             <button
                               onClick={() => openAddModal('income')}
-                              className="px-3 py-1.5 text-xs font-bold bg-[#33d6a6] text-[#121217] cursor-pointer"
+                              className="px-3 py-1.5 text-xs sm:text-sm font-bold bg-[#33d6a6] text-[#121217] cursor-pointer"
                             >
                               + Add Money
                             </button>
                             <button
                               onClick={() => openAddModal('expense')}
-                              className="px-3 py-1.5 text-xs font-bold bg-[#ec3750] text-white cursor-pointer"
+                              className="px-3 py-1.5 text-xs sm:text-sm font-bold bg-[#ec3750] text-white cursor-pointer"
                             >
                               - Subtract Money
                             </button>
@@ -719,11 +719,11 @@ export const DevPortal: React.FC = () => {
                 ) : (
                   filteredTransactions.map(tx => (
                     <tr key={tx.id} className="hover:bg-[#252429]/40 transition-colors">
-                      <td className="py-2.5 px-3 font-mono text-[#cbd5e1] whitespace-nowrap">
+                      <td className="py-2.5 px-3 font-mono text-white whitespace-nowrap text-xs sm:text-sm">
                         {tx.date}
                       </td>
 
-                      <td className="py-2.5 px-3 whitespace-nowrap font-mono text-[11px] font-bold">
+                      <td className="py-2.5 px-3 whitespace-nowrap font-mono text-xs font-bold">
                         {tx.type === 'income' ? (
                           <span className="text-[#33d6a6]">+ ADD</span>
                         ) : (
@@ -741,26 +741,26 @@ export const DevPortal: React.FC = () => {
                         </span>
                       </td>
 
-                      <td className="py-2.5 px-3 whitespace-nowrap text-xs text-[#cbd5e1]">
+                      <td className="py-2.5 px-3 whitespace-nowrap text-xs sm:text-sm text-white">
                         {tx.category}
                       </td>
 
                       <td className="py-2.5 px-3 max-w-xs">
-                        <div className="font-semibold text-white truncate" title={tx.description}>
+                        <div className="font-semibold text-white truncate text-xs sm:text-sm" title={tx.description}>
                           {tx.description}
                         </div>
                         {tx.notes && (
-                          <div className="text-[11px] text-[#8492a6] truncate" title={tx.notes}>
+                          <div className="text-xs text-white truncate" title={tx.notes}>
                             {tx.notes}
                           </div>
                         )}
                       </td>
 
-                      <td className="py-2.5 px-3 whitespace-nowrap text-xs text-[#cbd5e1]">
+                      <td className="py-2.5 px-3 whitespace-nowrap text-xs sm:text-sm text-white">
                         {tx.paymentMethod}
                       </td>
 
-                      <td className="py-2.5 px-3 whitespace-nowrap text-xs text-[#8492a6]">
+                      <td className="py-2.5 px-3 whitespace-nowrap text-xs sm:text-sm text-white">
                         {tx.loggedBy}
                       </td>
 
@@ -768,14 +768,14 @@ export const DevPortal: React.FC = () => {
                         <div className="inline-flex items-center gap-1">
                           <button
                             onClick={() => openEditModal(tx)}
-                            className="p-1.5 hover:bg-[#2d2d38] text-[#8492a6] hover:text-white transition-colors cursor-pointer"
+                            className="p-1.5 hover:bg-[#2d2d38] text-white hover:text-[#338eda] transition-colors cursor-pointer"
                             title="Edit Record"
                           >
                             <Edit3 className="w-3.5 h-3.5" />
                           </button>
                           <button
                             onClick={() => setDeletingTx(tx)}
-                            className="p-1.5 hover:bg-[#ec3750]/20 text-[#8492a6] hover:text-[#ec3750] transition-colors cursor-pointer"
+                            className="p-1.5 hover:bg-[#ec3750]/20 text-white hover:text-[#ec3750] transition-colors cursor-pointer"
                             title="Delete Record"
                           >
                             <Trash2 className="w-3.5 h-3.5" />
@@ -789,7 +789,7 @@ export const DevPortal: React.FC = () => {
             </table>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#8492a6] pt-1">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white pt-1">
             <div>
               {filteredTransactions.length} of {transactions.length} transactions shown
             </div>
@@ -798,7 +798,7 @@ export const DevPortal: React.FC = () => {
               <button
                 onClick={() => exportToJSON(transactions)}
                 disabled={transactions.length === 0}
-                className="hover:text-white disabled:opacity-40 transition-colors cursor-pointer flex items-center gap-1"
+                className="text-white hover:text-[#33d6a6] disabled:opacity-40 transition-colors cursor-pointer flex items-center gap-1"
               >
                 <Download className="w-3 h-3" />
                 <span>Backup JSON</span>
@@ -825,7 +825,7 @@ export const DevPortal: React.FC = () => {
                 </h3>
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="p-1 hover:bg-[#252429] text-[#8492a6] hover:text-white transition-colors cursor-pointer"
+                  className="p-1 hover:bg-[#252429] text-white hover:text-[#ec3750] transition-colors cursor-pointer"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -834,31 +834,31 @@ export const DevPortal: React.FC = () => {
               <form onSubmit={handleSaveTransaction} className="space-y-4">
                 
                 <div className="space-y-1">
-                  <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Transaction Type</label>
+                  <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Transaction Type</label>
                   <div className="grid grid-cols-2 gap-2">
                     <button
                       type="button"
                       onClick={() => setModalType('income')}
-                      className={`py-2 px-3 font-bold text-xs flex items-center justify-center gap-1.5 border transition-all cursor-pointer ${
+                      className={`py-2 px-3 font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 border transition-all cursor-pointer ${
                         modalType === 'income'
                           ? 'bg-[#33d6a6] text-[#121217] border-[#33d6a6]'
-                          : 'bg-[#17171d] text-[#8492a6] border-[#2d2d38] hover:text-white'
+                          : 'bg-[#17171d] text-white border-[#2d2d38] hover:bg-[#252429]'
                       }`}
                     >
-                      <Plus className="w-3.5 h-3.5" />
+                      <Plus className="w-4 h-4" />
                       <span>Add Money (+)</span>
                     </button>
 
                     <button
                       type="button"
                       onClick={() => setModalType('expense')}
-                      className={`py-2 px-3 font-bold text-xs flex items-center justify-center gap-1.5 border transition-all cursor-pointer ${
+                      className={`py-2 px-3 font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 border transition-all cursor-pointer ${
                         modalType === 'expense'
                           ? 'bg-[#ec3750] text-white border-[#ec3750]'
-                          : 'bg-[#17171d] text-[#8492a6] border-[#2d2d38] hover:text-white'
+                          : 'bg-[#17171d] text-white border-[#2d2d38] hover:bg-[#252429]'
                       }`}
                     >
-                      <Minus className="w-3.5 h-3.5" />
+                      <Minus className="w-4 h-4" />
                       <span>Subtract Money (-)</span>
                     </button>
                   </div>
@@ -866,9 +866,9 @@ export const DevPortal: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="space-y-1">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Amount ($ USD) *</label>
+                    <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Amount ($ USD) *</label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8492a6] font-mono">$</span>
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white font-mono font-bold">$</span>
                       <input
                         type="number"
                         step="0.01"
@@ -877,30 +877,30 @@ export const DevPortal: React.FC = () => {
                         value={modalAmount}
                         onChange={e => setModalAmount(e.target.value)}
                         placeholder="0.00"
-                        className="w-full pl-7 pr-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white font-mono focus:outline-none focus:border-[#ec3750]"
+                        className="w-full pl-7 pr-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white placeholder-white/60 font-mono focus:outline-none focus:border-[#ec3750]"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Date *</label>
+                    <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Date *</label>
                     <input
                       type="date"
                       required
                       value={modalDate}
                       onChange={e => setModalDate(e.target.value)}
-                      className="w-full px-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
+                      className="w-full px-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="space-y-1">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Category</label>
+                    <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Category</label>
                     <select
                       value={modalCategory}
                       onChange={e => setModalCategory(e.target.value as FinanceCategory)}
-                      className="w-full px-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
+                      className="w-full px-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
                     >
                       {CATEGORIES.map(c => (
                         <option key={c} value={c}>{c}</option>
@@ -909,11 +909,11 @@ export const DevPortal: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Account / Payment Method</label>
+                    <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Account / Payment Method</label>
                     <select
                       value={modalPaymentMethod}
                       onChange={e => setModalPaymentMethod(e.target.value as any)}
-                      className="w-full px-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
+                      className="w-full px-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
                     >
                       {PAYMENT_METHODS.map(m => (
                         <option key={m} value={m}>{m}</option>
@@ -923,41 +923,41 @@ export const DevPortal: React.FC = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Description / Item Memo *</label>
+                  <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Description / Item Memo *</label>
                   <input
                     type="text"
                     required
                     value={modalDescription}
                     onChange={e => setModalDescription(e.target.value)}
                     placeholder="e.g. Domain renewal, Pizza for meeting, Grant funding"
-                    className="w-full px-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
+                    className="w-full px-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white placeholder-white/60 focus:outline-none focus:border-[#ec3750]"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Logged By (Officer)</label>
+                  <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Logged By (Officer)</label>
                   <input
                     type="text"
                     value={modalLoggedBy}
                     onChange={e => setModalLoggedBy(e.target.value)}
                     placeholder="e.g. President, Treasurer, or Name"
-                    className="w-full px-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750]"
+                    className="w-full px-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white placeholder-white/60 focus:outline-none focus:border-[#ec3750]"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-mono uppercase tracking-wider text-[#8492a6] block">Notes / Reference (Optional)</label>
+                  <label className="text-xs sm:text-sm font-mono uppercase tracking-wider text-white font-bold block">Notes / Reference (Optional)</label>
                   <textarea
                     rows={2}
                     value={modalNotes}
                     onChange={e => setModalNotes(e.target.value)}
                     placeholder="Receipt details or notes"
-                    className="w-full px-3 py-2 text-xs bg-[#17171d] border border-[#2d2d38] text-white focus:outline-none focus:border-[#ec3750] resize-none"
+                    className="w-full px-3 py-2 text-xs sm:text-sm bg-[#17171d] border border-[#2d2d38] text-white placeholder-white/60 focus:outline-none focus:border-[#ec3750] resize-none"
                   />
                 </div>
 
                 {formError && (
-                  <div className="text-xs text-[#ec3750] font-bold">
+                  <div className="text-xs sm:text-sm text-[#ec3750] font-bold">
                     {formError}
                   </div>
                 )}
@@ -966,13 +966,13 @@ export const DevPortal: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setIsModalOpen(false)}
-                    className="px-4 py-2 text-xs font-bold text-[#8492a6] hover:text-white transition-colors cursor-pointer"
+                    className="px-4 py-2 text-xs sm:text-sm font-bold text-white hover:bg-[#252429] border border-[#2d2d38] transition-colors cursor-pointer"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 text-xs font-bold uppercase tracking-wider bg-[#ec3750] hover:bg-[#d62b42] text-white transition-all cursor-pointer"
+                    className="px-5 py-2 text-xs sm:text-sm font-bold uppercase tracking-wider bg-[#ec3750] hover:bg-[#d62b42] text-white transition-all cursor-pointer"
                   >
                     {editingTx ? 'Update Entry' : 'Save Entry'}
                   </button>
@@ -990,15 +990,15 @@ export const DevPortal: React.FC = () => {
               exit={{ opacity: 0, scale: 0.98 }}
               className="relative w-full max-w-md bg-[#1e1e24] border border-[#ec3750]/40 p-6 space-y-4"
             >
-              <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono">
+              <h3 className="text-sm sm:text-base font-bold text-white uppercase tracking-wider font-mono">
                 Confirm Record Deletion
               </h3>
-              <p className="text-xs text-[#cbd5e1]">
+              <p className="text-xs sm:text-sm text-white font-medium">
                 Are you sure you want to delete this transaction?
               </p>
-              <div className="p-3 bg-[#17171d] border border-[#252429] text-xs space-y-1">
+              <div className="p-3 bg-[#17171d] border border-[#252429] text-xs sm:text-sm space-y-1">
                 <div className="font-bold text-white">{deletingTx.description}</div>
-                <div className="font-mono text-[#8492a6]">
+                <div className="font-mono text-white font-semibold">
                   {deletingTx.date} • {deletingTx.type === 'income' ? '+' : '-'}${deletingTx.amount.toFixed(2)}
                 </div>
               </div>
@@ -1007,14 +1007,14 @@ export const DevPortal: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setDeletingTx(null)}
-                  className="px-4 py-2 text-xs font-bold text-[#8492a6] hover:text-white transition-colors cursor-pointer"
+                  className="px-4 py-2 text-xs sm:text-sm font-bold text-white hover:bg-[#252429] border border-[#2d2d38] transition-colors cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="button"
                   onClick={confirmDelete}
-                  className="px-4 py-2 text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white transition-all cursor-pointer"
+                  className="px-4 py-2 text-xs sm:text-sm font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white transition-all cursor-pointer"
                 >
                   Delete Transaction
                 </button>
