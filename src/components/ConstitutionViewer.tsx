@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import Icon from '@hackclub/icons';
 import { CONSTITUTION_ARTICLES } from '../data/chapterData';
 
 export const ConstitutionViewer: React.FC = () => {
@@ -41,12 +42,12 @@ export const ConstitutionViewer: React.FC = () => {
             <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Top Flag" className="h-10 object-contain" />
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
             Hack Club Marina Constitution
           </h2>
 
           <p className="text-sm sm:text-base text-white font-normal">
-            Official constitution governing Hack Club Marina Chapter of Marina High School. Covering membership, officer duties, finances, and meeting procedures.
+            Official constitution governing Hack Club Marina Chapter of Marina High School, operating as a 501(c)(3) fiscally sponsored nonprofit student organization under Hack Club Bank (The Hack Foundation, EIN: 81-2908499). Covering membership, officer duties, finances, and meeting procedures.
           </p>
         </motion.div>
 
@@ -59,12 +60,13 @@ export const ConstitutionViewer: React.FC = () => {
         >
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <div className="relative w-full sm:w-80">
+              <Icon glyph="search" size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-white" />
               <input
                 type="text"
                 placeholder="Search constitution bylaws..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2.5 text-sm rounded-md bg-[#17171d] text-white placeholder-white/60 border border-[#2d2d38] focus:border-[#ec3750] focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden outline-none"
+                className="w-full pl-9 pr-4 py-2.5 text-sm rounded-md bg-[#17171d] text-white placeholder-white/60 border border-[#2d2d38] focus:border-[#ec3750] focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden outline-none"
               />
             </div>
 

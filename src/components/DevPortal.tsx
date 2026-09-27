@@ -1,27 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import {
-  Lock,
-  Unlock,
-  Shield,
-  ShieldCheck,
-  Plus,
-  Minus,
-  Search,
-  Download,
-  Trash2,
-  Edit3,
-  RefreshCw,
-  Eye,
-  EyeOff,
-  AlertTriangle,
-  Wallet,
-  ArrowUpRight,
-  ArrowDownLeft,
-  X,
-  FileSpreadsheet,
-  Check,
-} from 'lucide-react';
+import Icon from '@hackclub/icons';
 import { FinanceTransaction, TransactionType, FinanceCategory } from '../types';
 import {
   verifyDevPortalPin,
@@ -324,13 +303,13 @@ export const DevPortal: React.FC = () => {
             className="text-center space-y-2"
           >
             <div className="inline-flex items-center justify-center w-12 h-12 bg-[#1e1e24] border border-[#2d2d38] text-[#ec3750]">
-              <Lock className="w-6 h-6" />
+              <Icon glyph="private" size={24} />
             </div>
-            <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
               Developer & Treasury Portal
             </h2>
             <p className="text-sm text-white font-medium">
-              Marina Chapter internal finance management. Enter officer PIN to continue.
+              Marina Chapter internal finance management under 501(c)(3) Hack Club Bank fiscal sponsorship. Enter officer PIN to continue.
             </p>
           </motion.div>
 
@@ -348,7 +327,7 @@ export const DevPortal: React.FC = () => {
                     onClick={() => setShowPin(!showPin)}
                     className="text-white hover:text-[#f1c40f] flex items-center gap-1 cursor-pointer transition-colors"
                   >
-                    {showPin ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                    {showPin ? <Icon glyph="view-hide" size={14} /> : <Icon glyph="view" size={14} />}
                     <span className="text-xs">{showPin ? 'Hide' : 'Show'}</span>
                   </button>
                 </div>
@@ -369,7 +348,7 @@ export const DevPortal: React.FC = () => {
 
               {errorMessage && (
                 <div className="p-3 bg-[#ec3750]/10 border border-[#ec3750]/40 text-xs text-[#ff8c37] flex items-center gap-2">
-                  <AlertTriangle className="w-4 h-4 flex-shrink-0 text-[#ec3750]" />
+                  <Icon glyph="important" size={16} className="text-[#ec3750] flex-shrink-0" />
                   <span>{errorMessage}</span>
                 </div>
               )}
@@ -386,9 +365,9 @@ export const DevPortal: React.FC = () => {
                 className="w-full py-2.5 px-4 font-bold text-xs uppercase tracking-wider bg-[#ec3750] hover:bg-[#d62b42] disabled:opacity-50 text-white flex items-center justify-center gap-2 transition-all cursor-pointer"
               >
                 {isVerifying ? (
-                  <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                  <Icon glyph="view-reload" size={14} className="animate-spin" />
                 ) : (
-                  <Unlock className="w-3.5 h-3.5" />
+                  <Icon glyph="private-unlocked" size={14} />
                 )}
                 <span>Unlock Portal</span>
               </button>
@@ -434,11 +413,11 @@ export const DevPortal: React.FC = () => {
 
             <div className="pt-3 border-t border-[#252429] space-y-1.5 text-xs text-white">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#33d6a6] flex-shrink-0" />
+                <Icon glyph="badge-check" size={16} className="text-[#33d6a6] flex-shrink-0" />
                 <span>Salted SHA-256 Hash Verification</span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-[#338eda] flex-shrink-0" />
+                <Icon glyph="badge" size={16} className="text-[#338eda] flex-shrink-0" />
                 <span>Rate-Limit Protection</span>
               </div>
             </div>
@@ -463,11 +442,11 @@ export const DevPortal: React.FC = () => {
                 <span className="text-[#33d6a6] font-semibold ml-2">{syncNotice}</span>
               )}
             </div>
-            <h1 className="text-xl sm:text-2xl font-black tracking-tight text-white">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
               Finance & Spending Management
             </h1>
             <p className="text-sm text-white font-medium leading-relaxed">
-              Live ledger for chapter transactions, money added, and expenses. Stored on server for all officers to access.
+              Live ledger for chapter transactions, money added, and expenses under 501(c)(3) fiscal sponsorship via Hack Club Bank (The Hack Foundation, EIN: 81-2908499).
             </p>
           </div>
 
@@ -476,7 +455,7 @@ export const DevPortal: React.FC = () => {
               onClick={() => openAddModal('income')}
               className="px-3.5 py-2 text-xs sm:text-sm font-bold bg-[#33d6a6] hover:bg-[#28b38a] text-[#121217] flex items-center gap-1.5 transition-all cursor-pointer"
             >
-              <Plus className="w-4 h-4" />
+              <Icon glyph="plus" size={16} />
               <span>Add Money (+)</span>
             </button>
 
@@ -484,7 +463,7 @@ export const DevPortal: React.FC = () => {
               onClick={() => openAddModal('expense')}
               className="px-3.5 py-2 text-xs sm:text-sm font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-all cursor-pointer"
             >
-              <Minus className="w-4 h-4" />
+              <Icon glyph="minus" size={16} />
               <span>Subtract Money (-)</span>
             </button>
 
@@ -494,7 +473,7 @@ export const DevPortal: React.FC = () => {
               className="px-3 py-2 text-xs sm:text-sm font-bold bg-[#252429] hover:bg-[#2d2d38] text-white border border-[#3d3d4a] flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Refresh ledger from server"
             >
-              <RefreshCw className={`w-3.5 h-3.5 ${isLoadingData ? 'animate-spin' : ''}`} />
+              <Icon glyph="view-reload" size={14} className={isLoadingData ? 'animate-spin' : ''} />
               <span className="hidden sm:inline">Refresh</span>
             </button>
 
@@ -504,7 +483,7 @@ export const DevPortal: React.FC = () => {
               className="px-3 py-2 text-xs sm:text-sm font-bold bg-[#252429] hover:bg-[#2d2d38] disabled:opacity-40 text-white border border-[#3d3d4a] flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Download CSV file"
             >
-              <FileSpreadsheet className="w-4 h-4 text-[#338eda]" />
+              <Icon glyph="docs" size={16} className="text-[#338eda]" />
               <span className="hidden sm:inline">Export CSV</span>
             </button>
 
@@ -513,7 +492,7 @@ export const DevPortal: React.FC = () => {
               className="px-3 py-2 text-xs sm:text-sm font-bold bg-[#252429] hover:bg-[#ec3750]/20 text-[#ec3750] border border-[#ec3750]/40 flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Lock dev portal"
             >
-              <Lock className="w-3.5 h-3.5" />
+              <Icon glyph="private" size={14} />
               <span>Lock</span>
             </button>
           </div>
@@ -523,7 +502,7 @@ export const DevPortal: React.FC = () => {
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
             <div className="flex items-center justify-between text-white text-xs font-mono uppercase tracking-wider font-bold">
               <span>Treasury Balance</span>
-              <Wallet className="w-4 h-4 text-[#f1c40f]" />
+              <Icon glyph="purse" size={16} className="text-[#f1c40f]" />
             </div>
             <div className={`text-2xl font-black font-mono ${stats.netBalance >= 0 ? 'text-[#33d6a6]' : 'text-[#ec3750]'}`}>
               ${stats.netBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
@@ -536,7 +515,7 @@ export const DevPortal: React.FC = () => {
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
             <div className="flex items-center justify-between text-[#33d6a6] text-xs font-mono uppercase tracking-wider font-bold">
               <span>Total Money Added</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <Icon glyph="up" size={16} className="text-[#33d6a6]" />
             </div>
             <div className="text-2xl font-black font-mono text-[#33d6a6]">
               +${stats.totalIncome.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
@@ -549,7 +528,7 @@ export const DevPortal: React.FC = () => {
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
             <div className="flex items-center justify-between text-[#ec3750] text-xs font-mono uppercase tracking-wider font-bold">
               <span>Total Spent</span>
-              <ArrowDownLeft className="w-4 h-4" />
+              <Icon glyph="down" size={16} className="text-[#ec3750]" />
             </div>
             <div className="text-2xl font-black font-mono text-[#ec3750]">
               -${stats.totalExpense.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
@@ -562,7 +541,7 @@ export const DevPortal: React.FC = () => {
           <div className="p-4 bg-[#1e1e24] border border-[#2d2d38] space-y-1">
             <div className="flex items-center justify-between text-[#338eda] text-xs font-mono uppercase tracking-wider font-bold">
               <span>Total Records</span>
-              <Check className="w-4 h-4" />
+              <Icon glyph="checkmark" size={16} className="text-[#338eda]" />
             </div>
             <div className="text-2xl font-black font-mono text-white">
               {transactions.length}
@@ -610,7 +589,7 @@ export const DevPortal: React.FC = () => {
           
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
             <div className="relative flex-1 max-w-md">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-white" />
+              <Icon glyph="search" size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-white" />
               <input
                 type="text"
                 value={searchQuery}
@@ -771,14 +750,14 @@ export const DevPortal: React.FC = () => {
                             className="p-1.5 hover:bg-[#2d2d38] text-white hover:text-[#338eda] transition-colors cursor-pointer"
                             title="Edit Record"
                           >
-                            <Edit3 className="w-3.5 h-3.5" />
+                            <Icon glyph="edit" size={14} />
                           </button>
                           <button
                             onClick={() => setDeletingTx(tx)}
                             className="p-1.5 hover:bg-[#ec3750]/20 text-white hover:text-[#ec3750] transition-colors cursor-pointer"
                             title="Delete Record"
                           >
-                            <Trash2 className="w-3.5 h-3.5" />
+                            <Icon glyph="delete" size={14} />
                           </button>
                         </div>
                       </td>
@@ -800,7 +779,7 @@ export const DevPortal: React.FC = () => {
                 disabled={transactions.length === 0}
                 className="text-white hover:text-[#33d6a6] disabled:opacity-40 transition-colors cursor-pointer flex items-center gap-1"
               >
-                <Download className="w-3 h-3" />
+                <Icon glyph="download" size={14} />
                 <span>Backup JSON</span>
               </button>
             </div>
@@ -827,7 +806,7 @@ export const DevPortal: React.FC = () => {
                   onClick={() => setIsModalOpen(false)}
                   className="p-1 hover:bg-[#252429] text-white hover:text-[#ec3750] transition-colors cursor-pointer"
                 >
-                  <X className="w-4 h-4" />
+                  <Icon glyph="view-close" size={16} />
                 </button>
               </div>
 
@@ -845,7 +824,7 @@ export const DevPortal: React.FC = () => {
                           : 'bg-[#17171d] text-white border-[#2d2d38] hover:bg-[#252429]'
                       }`}
                     >
-                      <Plus className="w-4 h-4" />
+                      <Icon glyph="plus" size={16} />
                       <span>Add Money (+)</span>
                     </button>
 
@@ -858,7 +837,7 @@ export const DevPortal: React.FC = () => {
                           : 'bg-[#17171d] text-white border-[#2d2d38] hover:bg-[#252429]'
                       }`}
                     >
-                      <Minus className="w-4 h-4" />
+                      <Icon glyph="minus" size={16} />
                       <span>Subtract Money (-)</span>
                     </button>
                   </div>

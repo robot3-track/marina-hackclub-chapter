@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { ExternalLink, Copy, Check, Send, Mail, Calendar, MapPin, ShieldCheck } from 'lucide-react';
+import Icon from '@hackclub/icons';
 
 const GOOGLE_FORM_URL = 'https://forms.gle/oPvfMFuVs8yu46267';
 const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe32tFv1nQh8pA1n-z6M5Qk7U4L_0p_4G9M3h2J-1K/viewform?embedded=true';
@@ -36,12 +36,12 @@ export const SignupForm: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center max-w-3xl mx-auto space-y-3"
         >
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
             Join Hack Club Marina
           </h2>
 
           <p className="text-sm sm:text-lg text-white leading-relaxed max-w-2xl mx-auto font-normal">
-            Fill out the official membership form below to sign up for the chapter. You will be added to the chapter group chat, receive workshop announcements, claim free software & hardware grants, and get free stickers upon signup.
+            Fill out the official membership form below to sign up for the chapter. As a student-led nonprofit organization operating under the 501(c)(3) fiscal sponsorship of Hack Club Bank (The Hack Foundation, EIN: 81-2908499), membership and all hardware/software grants are 100% free with zero dues. You will be added to the chapter group chat, receive workshop announcements, claim free grants, and get free stickers!
           </p>
         </motion.div>
 
@@ -57,7 +57,7 @@ export const SignupForm: React.FC = () => {
               className="inline-flex items-center gap-1.5 text-white hover:text-[#ec3750] transition-colors font-bold underline underline-offset-4 focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
             >
               <span>Open form in new tab ({GOOGLE_FORM_URL})</span>
-              <ExternalLink className="w-4 h-4 text-[#ec3750]" />
+              <Icon glyph="external" size={16} className="text-[#ec3750]" />
             </a>
           </div>
 
@@ -93,7 +93,7 @@ export const SignupForm: React.FC = () => {
                 <span className="text-xs font-bold text-[#ec3750] uppercase tracking-wider block">
                   Text Group Chat SMS
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black text-white mt-1 font-mono">
+                <h3 className="text-2xl sm:text-3xl font-black text-white mt-1 font-mono">
                   657-505-8696
                 </h3>
                 <p className="text-sm text-white mt-2 leading-relaxed">
@@ -108,7 +108,7 @@ export const SignupForm: React.FC = () => {
                   href="sms:6575058696"
                   className="flex-1 px-4 py-2.5 rounded-md bg-[#ec3750] hover:bg-[#d62b42] text-white font-black text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
-                  <Send className="w-4 h-4" />
+                  <Icon glyph="send" size={16} />
                   <span>Send Text SMS</span>
                 </a>
 
@@ -120,12 +120,12 @@ export const SignupForm: React.FC = () => {
                 >
                   {copiedPhone ? (
                     <>
-                      <Check className="w-4 h-4 text-[#33d6a6]" />
+                      <Icon glyph="checkmark" size={16} className="text-[#33d6a6]" />
                       <span className="text-[#33d6a6] font-bold">Copied</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4 text-white" />
+                      <Icon glyph="copy" size={16} className="text-white" />
                       <span>Copy</span>
                     </>
                   )}
@@ -144,7 +144,7 @@ export const SignupForm: React.FC = () => {
                 <span className="text-xs font-bold text-[#338eda] uppercase tracking-wider block">
                   Email Club President
                 </span>
-                <h3 className="text-base sm:text-lg font-black text-white mt-1 font-mono break-all">
+                <h3 className="text-lg sm:text-xl font-black text-white mt-1 font-mono break-all">
                   yychang100@student.hbuhsd.edu
                 </h3>
                 <p className="text-sm text-white mt-2 leading-relaxed">
@@ -159,7 +159,7 @@ export const SignupForm: React.FC = () => {
                   href="mailto:yychang100@student.hbuhsd.edu"
                   className="flex-1 px-4 py-2.5 rounded-md bg-[#338eda] hover:bg-[#2b7bbd] text-white font-black text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Icon glyph="email" size={16} />
                   <span>Send Email</span>
                 </a>
 
@@ -171,12 +171,12 @@ export const SignupForm: React.FC = () => {
                 >
                   {copiedEmail ? (
                     <>
-                      <Check className="w-4 h-4 text-[#33d6a6]" />
+                      <Icon glyph="checkmark" size={16} className="text-[#33d6a6]" />
                       <span className="text-[#33d6a6] font-bold">Copied</span>
                     </>
                   ) : (
                     <>
-                      <Copy className="w-4 h-4 text-white" />
+                      <Icon glyph="copy" size={16} className="text-white" />
                       <span>Copy</span>
                     </>
                   )}
@@ -188,8 +188,8 @@ export const SignupForm: React.FC = () => {
 
         <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm sm:text-base font-black text-white flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-[#ec3750]" />
+            <h3 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
+              <Icon glyph="event-code" size={18} className="text-[#ec3750]" />
               <span>Chapter Meeting Schedule & Details</span>
             </h3>
             <div className="flex items-center gap-2">
@@ -200,7 +200,7 @@ export const SignupForm: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-sm text-white font-medium">
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 text-[#33d6a6]" />
+                <Icon glyph="event-code" size={16} className="text-[#33d6a6]" />
                 <span>Meeting Schedule</span>
               </span>
               <p className="text-white">Lunch & After School Sessions</p>
@@ -208,7 +208,7 @@ export const SignupForm: React.FC = () => {
 
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-[#ff8c37]" />
+                <Icon glyph="map-pin" size={16} className="text-[#ff8c37]" />
                 <span>Location</span>
               </span>
               <p className="text-white">Room 252 and Lunch on Mondays unless revised (Marina HS)</p>
@@ -216,7 +216,7 @@ export const SignupForm: React.FC = () => {
 
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
               <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-[#338eda]" />
+                <Icon glyph="badge-check" size={16} className="text-[#338eda]" />
                 <span>Membership Fee</span>
               </span>
               <p className="text-[#33d6a6] font-extrabold">$0 Dues (100% Free)</p>
@@ -225,7 +225,7 @@ export const SignupForm: React.FC = () => {
         </div>
 
         <div className="p-4 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-center text-sm text-white">
-          Member directory is kept private. Submissions go directly to chapter leadership. Text <strong className="text-[#33d6a6] font-mono">657-505-8696</strong> if you have any questions.
+          Hack Club Marina is a 501(c)(3) fiscally sponsored nonprofit organization under Hack Club Bank (The Hack Foundation, EIN: 81-2908499). Member registration is 100% free with $0 dues. Member directory is kept private. Submissions go directly to chapter leadership.
         </div>
       </div>
     </section>
