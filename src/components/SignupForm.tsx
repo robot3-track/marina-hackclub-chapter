@@ -36,17 +36,17 @@ export const SignupForm: React.FC = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="text-center max-w-3xl mx-auto space-y-3"
         >
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight">
             Join Hack Club Marina
           </h2>
 
-          <p className="text-sm sm:text-lg text-white leading-relaxed max-w-2xl mx-auto font-normal">
-            Fill out the official membership form below to sign up for the chapter. As a student-led nonprofit organization operating under the 501(c)(3) fiscal sponsorship of Hack Club Bank (The Hack Foundation, EIN: 81-2908499), membership and all hardware/software grants are 100% free with zero dues. You will be added to the chapter group chat, receive workshop announcements, claim free grants, and get free stickers!
+          <p className="text-xs sm:text-sm text-white/80 font-normal leading-relaxed max-w-2xl mx-auto">
+            Fill out the official membership form below. Chapter registration is 100% free with $0 dues. You will be added to the group chat, receive meeting reminders, and claim free hardware grants!
           </p>
         </motion.div>
 
         <div className="w-full space-y-3">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm">
             <span className="text-white font-bold">
               Sign-up Form:
             </span>
@@ -69,7 +69,7 @@ export const SignupForm: React.FC = () => {
             Loading form...
           </iframe>
 
-          <div className="text-center text-sm text-white">
+          <div className="text-center text-xs sm:text-sm text-white/80">
             Direct form link:{' '}
             <a
               href={GOOGLE_FORM_URL}
@@ -90,13 +90,13 @@ export const SignupForm: React.FC = () => {
               </div>
 
               <div>
-                <span className="text-xs font-bold text-[#ec3750] uppercase tracking-wider block">
+                <span className="text-xs sm:text-sm font-bold text-[#ec3750] uppercase tracking-wider block">
                   Text Group Chat SMS
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-black text-white mt-1 font-mono">
+                <h3 className="text-2xl sm:text-4xl font-black text-white mt-1 font-mono">
                   657-505-8696
                 </h3>
-                <p className="text-sm text-white mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/80 mt-2 leading-relaxed font-normal">
                   Text this number with your name and grade to get added directly to the official Hack Club Marina chapter group chat.
                 </p>
               </div>
@@ -141,13 +141,13 @@ export const SignupForm: React.FC = () => {
               </div>
 
               <div>
-                <span className="text-xs font-bold text-[#338eda] uppercase tracking-wider block">
+                <span className="text-xs sm:text-sm font-bold text-[#338eda] uppercase tracking-wider block">
                   Email Club President
                 </span>
-                <h3 className="text-lg sm:text-xl font-black text-white mt-1 font-mono break-all">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mt-1 font-mono break-all">
                   yychang100@student.hbuhsd.edu
                 </h3>
-                <p className="text-sm text-white mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/80 mt-2 leading-relaxed font-normal">
                   Email Club President Yohan Chang for official chapter inquiries, workshop proposals, or ASB administration details.
                 </p>
               </div>
@@ -188,7 +188,7 @@ export const SignupForm: React.FC = () => {
 
         <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
+            <h3 className="text-lg sm:text-xl font-black text-white flex items-center gap-2">
               <Icon glyph="event-code" size={18} className="text-[#ec3750]" />
               <span>Chapter Meeting Schedule & Details</span>
             </h3>
@@ -197,25 +197,25 @@ export const SignupForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-sm text-white font-medium">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm text-white font-normal">
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
-              <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
+              <span className="font-extrabold text-white block text-xs sm:text-sm flex items-center gap-1.5">
                 <Icon glyph="event-code" size={16} className="text-[#33d6a6]" />
                 <span>Meeting Schedule</span>
               </span>
-              <p className="text-white">Lunch & After School Sessions</p>
+              <p className="text-white/80">Lunch & After School Sessions</p>
             </div>
 
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
-              <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
+              <span className="font-extrabold text-white block text-xs sm:text-sm flex items-center gap-1.5">
                 <Icon glyph="map-pin" size={16} className="text-[#ff8c37]" />
                 <span>Location</span>
               </span>
-              <p className="text-white">Room 252 and Lunch on Mondays unless revised (Marina HS)</p>
+              <p className="text-white/80">Room 252 and Lunch on Mondays unless revised (Marina HS)</p>
             </div>
 
             <div className="p-3.5 rounded-md bg-[#17171d] border border-[#2d2d38] space-y-1">
-              <span className="font-extrabold text-white block text-sm flex items-center gap-1.5">
+              <span className="font-extrabold text-white block text-xs sm:text-sm flex items-center gap-1.5">
                 <Icon glyph="badge-check" size={16} className="text-[#338eda]" />
                 <span>Membership Fee</span>
               </span>
@@ -224,7 +224,7 @@ export const SignupForm: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-4 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-center text-sm text-white">
+        <div className="p-4 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-center text-xs text-white/80 leading-relaxed">
           Hack Club Marina is a 501(c)(3) fiscally sponsored nonprofit organization under Hack Club Bank (The Hack Foundation, EIN: 81-2908499). Member registration is 100% free with $0 dues. Member directory is kept private. Submissions go directly to chapter leadership.
         </div>
       </div>

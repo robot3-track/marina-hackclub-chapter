@@ -28,12 +28,12 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
             <img src="https://assets.hackclub.com/flag-standalone.svg" alt="Hack Club Flag" className="h-10 sm:h-12 object-contain" />
           </div>
 
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white">
             What We Do at <span className="text-[#ec3750]">Hack Club Marina</span>
           </h2>
 
-          <p className="text-base sm:text-lg lg:text-xl text-[#cbd5e1] leading-relaxed">
-            We build cool software & hardware projects together, claim <strong className="text-white">free software & hardware grants</strong> (hosting, APIs, microcontrollers & kits), participate in Hack Club & Devpost hackathons—<strong className="text-[#338eda]">starting first with the NASA Space Apps Challenge on November 14–15th</strong>—get <strong className="text-[#f1c40f]">free sticker drops</strong>, and hang out at Marina High School.
+          <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal max-w-2xl mx-auto">
+            Marina High School students collaborate on real software & hardware projects, submit to global competitions like the NASA Space Apps Challenge, claim free microcontrollers & tech grants, and learn to code together.
           </p>
         </motion.div>
 
@@ -72,41 +72,41 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#38bdf8] block">
                   Chapter Kickoff Hackathon
                 </span>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+                <h3 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
                   NASA Space Apps Challenge
                 </h3>
               </div>
 
-              <p className="text-sm sm:text-base text-[#cbd5e1] leading-relaxed">
-                Hack Club Marina is kicking off our competition calendar with the official <strong className="text-white">NASA International Space Apps Challenge</strong> on <strong className="text-[#38bdf8]">November 14–15th</strong>! Marina High School students will collaborate in teams to solve real-world challenges on Earth and in space using NASA’s open-source satellite data, space exploration missions, and developer APIs.
+              <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
+                Hack Club Marina is kicking off our competition calendar with the official <strong className="text-white font-bold">NASA International Space Apps Challenge</strong> on <strong className="text-[#38bdf8] font-bold">November 14–15th</strong>! Marina High School students will collaborate in teams to solve real-world challenges on Earth and in space using NASA’s open-source satellite data, space exploration missions, and developer APIs.
               </p>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-[#cbd5e1] pt-2">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-white/80 pt-2 font-normal">
                 <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-2 inline-block flex-shrink-0" />
-                  <span><strong className="text-white">Date:</strong> November 14–15th</span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
+                  <span><strong className="text-[#38bdf8] font-bold">Date:</strong> November 14–15th</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-2 inline-block flex-shrink-0" />
-                  <span><strong className="text-white">Format:</strong> Official 48-Hour Global Hackathon</span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
+                  <span><strong className="text-[#38bdf8] font-bold">Format:</strong> Official 48-Hour Global Hackathon</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-2 inline-block flex-shrink-0" />
-                  <span><strong className="text-white">Real NASA Data:</strong> Earth observation & Mars/Artemis APIs</span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
+                  <span><strong className="text-[#38bdf8] font-bold">Real NASA Data:</strong> Earth observation & Mars APIs</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-2 inline-block flex-shrink-0" />
-                  <span><strong className="text-white">All Levels:</strong> Coders, designers, scientists & beginners</span>
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#38bdf8] mt-1.5 inline-block flex-shrink-0" />
+                  <span><strong className="text-[#38bdf8] font-bold">All Levels:</strong> Coders, designers & beginners</span>
                 </li>
               </ul>
             </div>
 
             <div className="lg:col-span-5 flex flex-col justify-between p-5 sm:p-6 rounded-md bg-[#0f172a] border border-[#1e293b] space-y-4">
               <div className="space-y-2">
-                <span className="text-xs font-mono uppercase tracking-widest text-[#94a3b8] block">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#f1c40f] font-bold block">
                   Marina High School Squad
                 </span>
-                <p className="text-sm text-[#e0e6ed]">
+                <p className="text-xs sm:text-sm text-white/80 font-normal leading-relaxed">
                   Want to be on the Marina High School roster for the November 14–15th NASA hackathon? Join our official team roster directly on Space Apps!
                 </p>
               </div>
@@ -122,7 +122,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                   <span className="font-mono group-hover:translate-x-0.5 transition-transform">→</span>
                 </a>
 
-                <div className="flex items-center justify-center gap-2 pt-1 text-sm">
+                <div className="flex items-center justify-center gap-2 pt-1 text-xs sm:text-sm">
                   <a
                     href="https://www.spaceappschallenge.org"
                     target="_blank"
@@ -151,19 +151,19 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                 <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Flag Orpheus" className="h-8 object-contain" />
               </div>
 
-              <span className="text-xs font-bold text-[#ec3750] uppercase tracking-wider block">
+              <span className="text-xs sm:text-sm font-bold text-[#ec3750] uppercase tracking-wider block">
                 01. Hack Club Hackathons
               </span>
 
-              <h3 className="text-xl sm:text-2xl font-black text-white">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">
                 Global & Regional Hackathons
               </h3>
 
-              <p className="text-sm text-[#cbd5e1] leading-relaxed">
+              <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
                 As an official chapter supported by Hack Club HQ, Marina HS students get access to global Hack Club hackathons, micro-grants for hardware, free domain names, and sticker swaps.
               </p>
 
-              <ul className="space-y-2 text-sm text-[#e0e6ed]">
+              <ul className="space-y-2 text-xs sm:text-sm text-white/80 font-normal">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-none bg-[#ec3750] inline-block flex-shrink-0"></span>
                   <span>Travel stipends & micro-grants from HQ</span>
@@ -187,10 +187,10 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               href="https://hackclub.com/hackathons"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#ec3750] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#ec3750] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
             >
               <span>Explore Hack Club Events</span>
-              <span className="font-mono text-sm">→</span>
+              <span className="font-mono text-xs sm:text-sm">→</span>
             </a>
           </motion.div>
 
@@ -206,19 +206,19 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                 <img src="/devpost.svg" alt="Devpost Logo" className="h-8 w-8 object-contain" />
               </div>
 
-              <span className="text-xs font-bold text-[#338eda] uppercase tracking-wider block">
+              <span className="text-xs sm:text-sm font-bold text-[#338eda] uppercase tracking-wider block">
                 02. Devpost Competitions
               </span>
 
-              <h3 className="text-xl sm:text-2xl font-black text-white">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">
                 Submit & Win on Devpost
               </h3>
 
-              <p className="text-sm text-[#cbd5e1] leading-relaxed">
+              <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
                 We team up to build software apps, games, hardware hacks, and web services, submitting our chapter projects to Devpost high school competitions to win prizes and build real portfolios.
               </p>
 
-              <ul className="space-y-2 text-sm text-[#e0e6ed]">
+              <ul className="space-y-2 text-xs sm:text-sm text-white/80 font-normal">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-none bg-[#338eda] inline-block flex-shrink-0"></span>
                   <span>Team project sprints for all skill levels</span>
@@ -238,10 +238,10 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               href="https://devpost.com/hackathons"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#338eda] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] focus-visible:ring-2 focus-visible:ring-[#338eda] focus-visible:outline-hidden"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#338eda] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] focus-visible:ring-2 focus-visible:ring-[#338eda] focus-visible:outline-hidden"
             >
               <span>Browse Devpost Hackathons</span>
-              <span className="font-mono text-sm">→</span>
+              <span className="font-mono text-xs sm:text-sm">→</span>
             </a>
           </motion.div>
 
@@ -257,19 +257,19 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                 <img src="https://assets.hackclub.com/icon-rounded.svg" alt="Hack Club Rounded Icon" className="h-8 w-8 object-contain" />
               </div>
 
-              <span className="text-xs font-bold text-[#33d6a6] uppercase tracking-wider block">
+              <span className="text-xs sm:text-sm font-bold text-[#33d6a6] uppercase tracking-wider block">
                 03. Inclusive Community
               </span>
 
-              <h3 className="text-xl sm:text-2xl font-black text-white">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">
                 Marina High School Culture
               </h3>
 
-              <p className="text-sm text-[#cbd5e1] leading-relaxed">
+              <p className="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
                 No prior coding experience needed. Whether you want to write your first line of Python, build a robot, or just hang out with friends during lunch, Hack Club Marina is your space.
               </p>
 
-              <ul className="space-y-2 text-sm text-[#e0e6ed]">
+              <ul className="space-y-2 text-xs sm:text-sm text-white/80 font-normal">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-none bg-[#33d6a6] inline-block flex-shrink-0"></span>
                   <span>0 Membership Dues — 100% Free for all students</span>
@@ -287,10 +287,10 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
             <button
               onClick={() => setActiveTab('signup')}
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#33d6a6] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] cursor-pointer text-left focus-visible:ring-2 focus-visible:ring-[#33d6a6] focus-visible:outline-hidden"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#33d6a6] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] cursor-pointer text-left focus-visible:ring-2 focus-visible:ring-[#33d6a6] focus-visible:outline-hidden"
             >
               <span>Join Chapter Group Chat</span>
-              <span className="font-mono text-sm">→</span>
+              <span className="font-mono text-xs sm:text-sm">→</span>
             </button>
           </motion.div>
         </div>
@@ -307,13 +307,13 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           <div className="space-y-2 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3">
               <img src="https://assets.hackclub.com/hcb-light.svg" alt="Hack Club Bank" className="h-5 object-contain" />
-              <span className="text-sm font-bold text-[#ff8c37]">Official Chapter Charter • Marina High School</span>
+              <span className="text-xs sm:text-sm font-bold text-[#ff8c37]">Official Chapter Charter • Marina High School</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-black text-white">
+            <h3 className="text-2xl sm:text-4xl font-black text-white">
               Ready to build cool stuff with us?
             </h3>
-            <p className="text-sm sm:text-base text-[#cbd5e1] max-w-xl">
-              Text <strong className="text-white">657-505-8696</strong> or email <strong className="text-white">yychang100@student.hbuhsd.edu</strong> to join the Hack Club Marina group chat!
+            <p className="text-xs sm:text-sm text-white/80 max-w-xl font-normal">
+              Text <strong className="text-[#33d6a6] font-bold">657-505-8696</strong> or email <strong className="text-[#338eda] font-bold">yychang100@student.hbuhsd.edu</strong> to join the Hack Club Marina group chat!
             </p>
           </div>
 

@@ -88,6 +88,13 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             </p>
             <ul className="space-y-2 text-sm font-medium text-white">
               <li>
+                <a href="https://hcb.hackclub.com/donations/start/hackclub-marina-chapter" target="_blank" rel="noopener noreferrer" className="text-[#f1c40f] hover:underline font-bold transition-colors flex items-center gap-1.5">
+                  <Icon glyph="purse" size={16} className="text-[#f1c40f]" />
+                  <span>Donate to Hack Club Marina</span>
+                  <Icon glyph="forward" size={14} className="text-[#f1c40f]" />
+                </a>
+              </li>
+              <li>
                 <a href="https://bank.hackclub.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#338eda] transition-colors flex items-center gap-1.5">
                   <img src="https://assets.hackclub.com/hcb-light.svg" alt="Hack Club Bank" className="h-4 object-contain inline-block" />
                   <span>Hack Club Bank (Fiscal Sponsor)</span>

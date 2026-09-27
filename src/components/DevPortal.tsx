@@ -305,10 +305,10 @@ export const DevPortal: React.FC = () => {
             <div className="inline-flex items-center justify-center w-12 h-12 bg-[#1e1e24] border border-[#2d2d38] text-[#ec3750]">
               <Icon glyph="private" size={24} />
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
               Developer & Treasury Portal
             </h2>
-            <p className="text-sm text-white font-medium">
+            <p className="text-xs sm:text-sm text-white/80 font-normal leading-relaxed">
               Marina Chapter internal finance management under 501(c)(3) Hack Club Bank fiscal sponsorship. Enter officer PIN to continue.
             </p>
           </motion.div>
@@ -442,10 +442,10 @@ export const DevPortal: React.FC = () => {
                 <span className="text-[#33d6a6] font-semibold ml-2">{syncNotice}</span>
               )}
             </div>
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">
               Finance & Spending Management
             </h1>
-            <p className="text-sm text-white font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-white/80 font-normal leading-relaxed">
               Live ledger for chapter transactions, money added, and expenses under 501(c)(3) fiscal sponsorship via Hack Club Bank (The Hack Foundation, EIN: 81-2908499).
             </p>
           </div>

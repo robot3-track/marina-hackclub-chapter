@@ -42,12 +42,12 @@ export const ConstitutionViewer: React.FC = () => {
             <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Top Flag" className="h-10 object-contain" />
           </div>
 
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight">
             Hack Club Marina Constitution
           </h2>
 
-          <p className="text-sm sm:text-base text-white font-normal">
-            Official constitution governing Hack Club Marina Chapter of Marina High School, operating as a 501(c)(3) fiscally sponsored nonprofit student organization under Hack Club Bank (The Hack Foundation, EIN: 81-2908499). Covering membership, officer duties, finances, and meeting procedures.
+          <p className="text-xs sm:text-sm text-white/80 font-normal leading-relaxed max-w-2xl mx-auto">
+            Official bylaws governing the Hack Club Marina Chapter of Marina High School, outlining membership rights, officer duties, treasury management, and meeting procedures.
           </p>
         </motion.div>
 
@@ -101,12 +101,12 @@ export const ConstitutionViewer: React.FC = () => {
         <div className="space-y-4 sm:space-y-6">
           {filteredArticles.length === 0 ? (
             <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-md border border-[#2d2d38]">
-              <p className="text-sm font-semibold text-white">
+              <p className="text-xs sm:text-sm font-semibold text-white/80">
                 No matching articles found for "{searchTerm}"
               </p>
               <button
                 onClick={() => setSearchTerm('')}
-                className="mt-3 text-sm font-bold text-[#ec3750] hover:underline cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
+                className="mt-3 text-xs sm:text-sm font-bold text-[#ec3750] hover:underline cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
               >
                 Clear Search
               </button>
@@ -123,20 +123,20 @@ export const ConstitutionViewer: React.FC = () => {
               >
                 <div className="flex items-center gap-2.5 pb-3 border-b border-[#2d2d38]">
                   <span className="w-2.5 h-2.5 rounded-sm bg-[#ec3750] inline-block"></span>
-                  <h3 className="text-lg sm:text-2xl font-black text-white">
+                  <h3 className="text-xl sm:text-3xl font-black text-white">
                     {article.title}
                   </h3>
                 </div>
 
                 <div className="space-y-3 sm:space-y-4">
                   {article.sections.map((sec, idx) => (
-                    <div key={idx} className="space-y-1.5 text-sm sm:text-base leading-relaxed text-white">
+                    <div key={idx} className="space-y-1.5 text-xs sm:text-sm leading-relaxed text-white">
                       {sec.number && (
-                        <span className="font-extrabold text-[#ec3750] block text-xs sm:text-sm uppercase tracking-wider mt-2">
+                        <span className="font-extrabold text-[#ec3750] block text-xs uppercase tracking-wider mt-2">
                           {sec.number} {sec.title ? `• ${sec.title}` : ''}
                         </span>
                       )}
-                      <p className="font-normal text-white">
+                      <p className="font-normal text-white/80 leading-relaxed">
                         {sec.content}
                       </p>
                     </div>
@@ -160,7 +160,7 @@ export const ConstitutionViewer: React.FC = () => {
               <p className="font-extrabold text-sm sm:text-base text-white">
                 Ratified Charter of Hack Club Marina Chapter
               </p>
-              <p className="text-xs sm:text-sm text-white font-medium">
+              <p className="text-xs text-white/80 font-normal">
                 Marina High School Interclub Council & Hack Club HQ Supported
               </p>
             </div>
