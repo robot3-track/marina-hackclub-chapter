@@ -38,14 +38,14 @@ export const ConstitutionViewer: React.FC = () => {
           className="text-center max-w-3xl mx-auto space-y-3"
         >
           <div className="flex items-center justify-center gap-3">
-            <img src="/flag-orpheus-top.svg" alt="Marina Viking Logo" className="h-10 object-contain" />
+            <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Top Flag" className="h-10 object-contain" />
           </div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white">
             Hack Club Marina Constitution
           </h2>
 
-          <p className="text-xs sm:text-base text-[#8492a6]">
+          <p className="text-sm sm:text-base text-[#cbd5e1]">
             Official constitution governing Hack Club Marina Chapter of Marina High School. Covering membership, officer duties, finances, and meeting procedures.
           </p>
         </motion.div>
@@ -64,17 +64,17 @@ export const ConstitutionViewer: React.FC = () => {
                 placeholder="Search constitution bylaws..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2.5 text-xs rounded-md bg-[#17171d] text-white placeholder-[#8492a6] border border-[#2d2d38] focus:border-[#ec3750] outline-none"
+                className="w-full px-4 py-2.5 text-sm rounded-md bg-[#17171d] text-white placeholder-[#8492a6] border border-[#2d2d38] focus:border-[#ec3750] focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden outline-none"
               />
             </div>
 
             <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 scrollbar-none">
               <button
                 onClick={() => setActiveArticleId('all')}
-                className={`px-3.5 py-1.5 text-xs font-bold rounded-md transition-colors whitespace-nowrap cursor-pointer ${
+                className={`px-3.5 py-1.5 text-xs sm:text-sm font-bold rounded-md transition-colors whitespace-nowrap cursor-pointer focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden ${
                   activeArticleId === 'all'
                     ? 'bg-[#ec3750] text-white'
-                    : 'bg-[#17171d] text-[#8492a6] hover:text-white border border-[#2d2d38]'
+                    : 'bg-[#17171d] text-[#cbd5e1] hover:text-white border border-[#2d2d38]'
                 }`}
               >
                 All Articles
@@ -83,10 +83,10 @@ export const ConstitutionViewer: React.FC = () => {
                 <button
                   key={art.id}
                   onClick={() => setActiveArticleId(art.id)}
-                  className={`px-3.5 py-1.5 text-xs font-bold rounded-md transition-colors whitespace-nowrap cursor-pointer ${
+                  className={`px-3.5 py-1.5 text-xs sm:text-sm font-bold rounded-md transition-colors whitespace-nowrap cursor-pointer focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden ${
                     activeArticleId === art.id
                       ? 'bg-[#ec3750] text-white'
-                      : 'bg-[#17171d] text-[#8492a6] hover:text-white border border-[#2d2d38]'
+                      : 'bg-[#17171d] text-[#cbd5e1] hover:text-white border border-[#2d2d38]'
                   }`}
                 >
                   {art.title.split(' - ')[0]}
@@ -99,12 +99,12 @@ export const ConstitutionViewer: React.FC = () => {
         <div className="space-y-4 sm:space-y-6">
           {filteredArticles.length === 0 ? (
             <div className="p-8 sm:p-12 text-center bg-[#1e1e24] rounded-md border border-[#2d2d38]">
-              <p className="text-xs sm:text-sm font-semibold text-[#8492a6]">
+              <p className="text-sm font-semibold text-[#cbd5e1]">
                 No matching articles found for "{searchTerm}"
               </p>
               <button
                 onClick={() => setSearchTerm('')}
-                className="mt-3 text-xs font-bold text-[#ec3750] hover:underline cursor-pointer"
+                className="mt-3 text-sm font-bold text-[#ec3750] hover:underline cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
               >
                 Clear Search
               </button>
@@ -128,13 +128,13 @@ export const ConstitutionViewer: React.FC = () => {
 
                 <div className="space-y-3 sm:space-y-4">
                   {article.sections.map((sec, idx) => (
-                    <div key={idx} className="space-y-1.5 text-xs sm:text-base leading-relaxed text-[#a0aec0]">
+                    <div key={idx} className="space-y-1.5 text-sm sm:text-base leading-relaxed text-[#cbd5e1]">
                       {sec.number && (
-                        <span className="font-extrabold text-[#ec3750] block text-xs uppercase tracking-wider mt-2">
+                        <span className="font-extrabold text-[#ec3750] block text-xs sm:text-sm uppercase tracking-wider mt-2">
                           {sec.number} {sec.title ? `• ${sec.title}` : ''}
                         </span>
                       )}
-                      <p className="font-normal text-white/90">
+                      <p className="font-normal text-[#e0e6ed]">
                         {sec.content}
                       </p>
                     </div>
@@ -153,12 +153,12 @@ export const ConstitutionViewer: React.FC = () => {
           className="p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md"
         >
           <div className="flex items-center gap-3">
-            <img src="/hcb-light.png" alt="Hack Club Marina" className="w-8 h-8 object-contain" />
+            <img src="https://assets.hackclub.com/hcb-light.svg" alt="Hack Club Bank" className="w-8 h-8 object-contain" />
             <div>
-              <p className="font-extrabold text-sm">
+              <p className="font-extrabold text-sm sm:text-base">
                 Ratified Charter of Hack Club Marina Chapter
               </p>
-              <p className="text-xs text-[#8492a6]">
+              <p className="text-xs sm:text-sm text-[#cbd5e1]">
                 Marina High School Interclub Council & Hack Club HQ Supported
               </p>
             </div>
@@ -168,7 +168,7 @@ export const ConstitutionViewer: React.FC = () => {
             href="https://hackclub.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 rounded-md text-xs font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors cursor-pointer shadow-sm"
+            className="px-5 py-2.5 rounded-md text-xs sm:text-sm font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-1.5 transition-colors cursor-pointer shadow-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
           >
             <span>Hack Club Main HQ</span>
             <span className="font-mono text-sm">→</span>

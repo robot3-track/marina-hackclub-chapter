@@ -42,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="font-black text-sm sm:text-lg lg:text-xl tracking-tight text-white group-hover:text-[#ec3750] transition-colors leading-none">
               HACK CLUB <span className="text-[#ec3750]">MARINA</span>
             </span>
-            <span className="text-[9px] sm:text-[11px] font-medium text-[#8492a6] mt-0.5">
+            <span className="text-xs font-semibold text-[#cbd5e1] mt-0.5">
               Marina High School Chapter
             </span>
           </div>
@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({
             className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden ${
               activeTab === 'overview'
                 ? 'bg-[#252429] text-white border border-[#ec3750]/60'
-                : 'text-[#8492a6] hover:text-white'
+                : 'text-[#cbd5e1] hover:text-white'
             }`}
           >
             About
@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({
             className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden ${
               activeTab === 'hackathons'
                 ? 'bg-[#252429] text-white border border-[#ec3750]/60'
-                : 'text-[#8492a6] hover:text-white'
+                : 'text-[#cbd5e1] hover:text-white'
             }`}
           >
             Hackathons & Devpost
@@ -76,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({
             className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#338eda] focus-visible:outline-hidden ${
               activeTab === 'constitution'
                 ? 'bg-[#252429] text-white border border-[#338eda]/60'
-                : 'text-[#8492a6] hover:text-white'
+                : 'text-[#cbd5e1] hover:text-white'
             }`}
           >
             Constitution
@@ -87,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({
             className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#33d6a6] focus-visible:outline-hidden ${
               activeTab === 'signup'
                 ? 'bg-[#252429] text-white border border-[#33d6a6]/60'
-                : 'text-[#8492a6] hover:text-white'
+                : 'text-[#cbd5e1] hover:text-white'
             }`}
           >
             Contact & Join
@@ -98,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({
             className={`px-3.5 py-1.5 text-xs sm:text-sm font-extrabold rounded-md transition-colors cursor-pointer flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-[#f1c40f] focus-visible:outline-hidden ${
               activeTab === 'devportal'
                 ? 'bg-[#252429] text-[#f1c40f] border border-[#f1c40f]/60'
-                : 'text-[#8492a6] hover:text-[#f1c40f]'
+                : 'text-[#cbd5e1] hover:text-[#f1c40f]'
             }`}
             title="Internal Finance & Developer Portal"
           >
@@ -121,7 +121,7 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           onClick={() => setActiveTab('overview')}
           className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden ${
-            activeTab === 'overview' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
+            activeTab === 'overview' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#cbd5e1]'
           }`}
         >
           About
@@ -129,7 +129,7 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           onClick={() => setActiveTab('hackathons')}
           className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden ${
-            activeTab === 'hackathons' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
+            activeTab === 'hackathons' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#cbd5e1]'
           }`}
         >
           Hackathons & Devpost
@@ -138,7 +138,7 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           onClick={() => setActiveTab('constitution')}
           className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#338eda] focus-visible:outline-hidden ${
-            activeTab === 'constitution' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
+            activeTab === 'constitution' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#cbd5e1]'
           }`}
         >
           Constitution
@@ -146,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           onClick={() => setActiveTab('signup')}
           className={`px-3.5 py-1.5 text-xs font-extrabold rounded-md whitespace-nowrap transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#33d6a6] focus-visible:outline-hidden ${
-            activeTab === 'signup' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#8492a6]'
+            activeTab === 'signup' ? 'bg-[#ec3750] text-white' : 'bg-[#252429] text-[#cbd5e1]'
           }`}
         >
           Contact & Join
