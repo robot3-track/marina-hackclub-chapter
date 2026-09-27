@@ -25,7 +25,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4"
         >
           <div className="flex items-center justify-center gap-3">
-            <img src="/flag-standalone.svg" alt="Hack Club Flag" className="h-10 sm:h-12 object-contain" />
+            <img src="https://assets.hackclub.com/flag-standalone.svg" alt="Hack Club Flag" className="h-10 sm:h-12 object-contain" />
           </div>
 
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
@@ -116,7 +116,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                   href="https://www.spaceappschallenge.org/2026/find-a-team/hackclub-marina-high-school-chapter-team-1/?tab=details"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-md font-black text-xs sm:text-sm bg-[#2563eb] hover:bg-[#1d4ed8] text-white flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md group"
+                  className="w-full py-3 px-4 rounded-md font-black text-xs sm:text-sm bg-[#2563eb] hover:bg-[#1d4ed8] text-white flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md group focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
                   <span>Join Marina Space Apps Team</span>
                   <span className="font-mono group-hover:translate-x-0.5 transition-transform">→</span>
@@ -127,7 +127,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                     href="https://www.spaceappschallenge.org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#60a5fa] hover:text-white transition-colors font-bold inline-flex items-center gap-1"
+                    className="text-[#60a5fa] hover:text-white transition-colors font-bold inline-flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-[#60a5fa] focus-visible:outline-hidden"
                   >
                     <span>Space Apps Challenge Overview</span>
                     <span className="font-mono text-xs">↗</span>
@@ -148,7 +148,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           >
             <div className="space-y-3 sm:space-y-4">
               <div className="h-10 flex items-center">
-                <img src="/flag-orpheus-top.svg" alt="Hack Club Flag Orpheus" className="h-8 object-contain" />
+                <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Flag Orpheus" className="h-8 object-contain" />
               </div>
 
               <span className="text-xs font-bold text-[#ec3750] uppercase tracking-wider block">
@@ -174,7 +174,11 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-none bg-[#ec3750] inline-block flex-shrink-0"></span>
-                  <span>Connect with 25,000+ teen hackers globally</span>
+                  <span>Connect with 25,000+ teen Hack Clubbers globally</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-none bg-[#f1c40f] inline-block flex-shrink-0"></span>
+                  <span>Free sticker drops (Rule: "Hack Club" must appear on all designs)</span>
                 </li>
               </ul>
             </div>
@@ -183,7 +187,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               href="https://hackclub.com/hackathons"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ec3750] hover:text-white transition-colors pt-4 border-t border-[#2d2d38]"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ec3750] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
             >
               <span>Explore Hack Club Events</span>
               <span className="font-mono text-sm">→</span>
@@ -211,7 +215,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               </h3>
 
               <p className="text-xs sm:text-sm text-[#8492a6] leading-relaxed">
-                We team up to build software apps, games, AI tools, and web services, submitting our chapter projects to Devpost high school competitions to win prizes and build real portfolios.
+                We team up to build software apps, games, hardware hacks, and web services, submitting our chapter projects to Devpost high school competitions to win prizes and build real portfolios.
               </p>
 
               <ul className="space-y-2 text-xs text-[#a0aec0]">
@@ -234,7 +238,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
               href="https://devpost.com/hackathons"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#338eda] hover:text-white transition-colors pt-4 border-t border-[#2d2d38]"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#338eda] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] focus-visible:ring-2 focus-visible:ring-[#338eda] focus-visible:outline-hidden"
             >
               <span>Browse Devpost Hackathons</span>
               <span className="font-mono text-sm">→</span>
@@ -250,7 +254,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
           >
             <div className="space-y-3 sm:space-y-4">
               <div className="h-10 flex items-center">
-                <img src="/icon-rounded.svg" alt="Hack Club Rounded Icon" className="h-8 w-8 object-contain" />
+                <img src="https://assets.hackclub.com/icon-rounded.svg" alt="Hack Club Rounded Icon" className="h-8 w-8 object-contain" />
               </div>
 
               <span className="text-xs font-bold text-[#33d6a6] uppercase tracking-wider block">
@@ -283,7 +287,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
             <button
               onClick={() => setActiveTab('signup')}
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#33d6a6] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] cursor-pointer text-left"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#33d6a6] hover:text-white transition-colors pt-4 border-t border-[#2d2d38] cursor-pointer text-left focus-visible:ring-2 focus-visible:ring-[#33d6a6] focus-visible:outline-hidden"
             >
               <span>Join Chapter Group Chat</span>
               <span className="font-mono text-sm">→</span>
@@ -302,7 +306,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
         >
           <div className="space-y-2 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <img src="/hcb-light.png" alt="Hack Club Bank" className="h-4 object-contain" />
+              <img src="https://assets.hackclub.com/hcb-light.svg" alt="Hack Club Bank" className="h-4 object-contain" />
               <span className="text-xs font-bold text-[#ff8c37]">Official Chapter Charter • Marina High School</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
@@ -315,7 +319,7 @@ export const HackathonsSection: React.FC<HackathonsSectionProps> = ({ setActiveT
 
           <button
             onClick={() => setActiveTab('signup')}
-            className="w-full sm:w-auto justify-center px-6 py-3 rounded-md font-extrabold text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap shadow-md"
+            className="w-full sm:w-auto justify-center px-6 py-3 rounded-md font-extrabold text-sm bg-[#ec3750] hover:bg-[#d62b42] text-white flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap shadow-md focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
           >
             <span>Join Hack Club Marina</span>
           </button>

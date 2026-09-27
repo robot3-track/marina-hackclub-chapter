@@ -9,13 +9,11 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
   return (
     <footer className="bg-[#121217] text-white border-t border-[#252429] pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-[#252429]">
-          
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/icon-square.svg"
+                src="https://assets.hackclub.com/icon-square.svg"
                 alt="Hack Club Marina Logo"
                 className="w-10 h-10 rounded-md object-contain"
               />
@@ -34,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 href="https://www.instagram.com/hackclub.marina"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#252429] hover:bg-[#2d2b33] border border-[#323138] text-white text-xs font-semibold transition-all hover:scale-105 group"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-[#252429] hover:bg-[#2d2b33] border border-[#323138] text-white text-xs font-semibold transition-all hover:scale-105 group focus-visible:ring-2 focus-visible:ring-[#E4405F] focus-visible:outline-hidden"
               >
                 <Instagram className="w-4 h-4 text-[#E4405F] group-hover:scale-110 transition-transform" />
                 <span>Follow @hackclub.marina</span>
@@ -102,19 +100,18 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
               </li>
             </ul>
           </div>
-
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-[#8492a6] gap-3">
           <p>© {new Date().getFullYear()} Hack Club Marina High School Chapter.</p>
           <div className="flex items-center gap-3">
-            <span>Built for Marina HS Student Hackers</span>
+            <span>Built for Marina HS Student Hack Clubbers</span>
             {setActiveTab && (
               <>
                 <span>•</span>
                 <button
                   onClick={() => setActiveTab('devportal')}
-                  className="hover:text-[#f1c40f] transition-colors cursor-pointer flex items-center gap-1.5 font-semibold"
+                  className="hover:text-[#f1c40f] transition-colors cursor-pointer flex items-center gap-1.5 font-semibold focus-visible:ring-2 focus-visible:ring-[#f1c40f] focus-visible:outline-hidden"
                 >
                   <Lock className="w-3 h-3 text-[#f1c40f]" />
                   <span>Dev Portal</span>
@@ -123,7 +120,6 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
             )}
           </div>
         </div>
-
       </div>
     </footer>
   );

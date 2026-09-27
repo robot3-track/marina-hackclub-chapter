@@ -45,6 +45,20 @@ export const SignupForm: React.FC = () => {
           </p>
         </motion.div>
 
+        <div className="p-3.5 rounded-md bg-[#1e1e24] border border-[#f1c40f]/40 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="space-y-0.5">
+            <span className="font-extrabold text-[#f1c40f] uppercase tracking-wider block text-[11px]">
+              Sticker Design Requirement
+            </span>
+            <p className="text-[#8492a6] text-[11px]">
+              All sticker designs must have the text <strong className="text-white font-bold">Hack Club</strong> somewhere on the design (it can be subtle, but "Hack Club" must appear).
+            </p>
+          </div>
+          <span className="text-[10px] font-mono font-bold text-[#f1c40f] bg-[#17171d] px-2 py-1 rounded border border-[#f1c40f]/30 shrink-0">
+            HQ Requirement
+          </span>
+        </div>
+
         <div className="w-full space-y-3">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm">
             <span className="text-[#8492a6]">
@@ -54,7 +68,7 @@ export const SignupForm: React.FC = () => {
               href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-white hover:text-[#ec3750] transition-colors font-bold underline underline-offset-4"
+              className="inline-flex items-center gap-1.5 text-white hover:text-[#ec3750] transition-colors font-bold underline underline-offset-4 focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
             >
               <span>Open form in new tab ({GOOGLE_FORM_URL})</span>
               <ExternalLink className="w-3.5 h-3.5 text-[#ec3750]" />
@@ -75,7 +89,7 @@ export const SignupForm: React.FC = () => {
               href={GOOGLE_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#ec3750] underline font-mono ml-1"
+              className="text-white hover:text-[#ec3750] underline font-mono ml-1 focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
             >
               {GOOGLE_FORM_URL}
             </a>
@@ -86,7 +100,7 @@ export const SignupForm: React.FC = () => {
           <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 flex flex-col justify-between hover:border-[#ec3750]/50 transition-all">
             <div className="space-y-3">
               <div className="h-8 flex items-center">
-                <img src="/icon-square.svg" alt="Hack Club Icon" className="w-7 h-7 rounded-md object-contain" />
+                <img src="https://assets.hackclub.com/icon-square.svg" alt="Hack Club Icon" className="w-7 h-7 rounded-md object-contain" />
               </div>
 
               <div>
@@ -106,7 +120,7 @@ export const SignupForm: React.FC = () => {
               <div className="flex flex-col xs:flex-row gap-2">
                 <a
                   href="sms:6575058696"
-                  className="flex-1 px-4 py-2.5 rounded-md bg-[#ec3750] hover:bg-[#d62b42] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
+                  className="flex-1 px-4 py-2.5 rounded-md bg-[#ec3750] hover:bg-[#d62b42] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Send Text SMS</span>
@@ -114,8 +128,9 @@ export const SignupForm: React.FC = () => {
 
                 <button
                   onClick={() => copyToClipboard('657-505-8696', 'phone')}
-                  className="px-4 py-2.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer"
+                  className="px-4 py-2.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
                   title="Copy Phone Number"
+                  aria-label="Copy phone number"
                 >
                   {copiedPhone ? (
                     <>
@@ -136,7 +151,7 @@ export const SignupForm: React.FC = () => {
           <div className="p-5 sm:p-6 rounded-md bg-[#1e1e24] border border-[#2d2d38] space-y-4 flex flex-col justify-between hover:border-[#338eda]/50 transition-all">
             <div className="space-y-3">
               <div className="h-8 flex items-center">
-                <img src="/hcb-light.png" alt="Hack Club Flag Left" className="h-6 object-contain" />
+                <img src="https://assets.hackclub.com/hcb-light.svg" alt="Hack Club Bank Logo" className="h-5 object-contain" />
               </div>
 
               <div>
@@ -156,7 +171,7 @@ export const SignupForm: React.FC = () => {
               <div className="flex flex-col xs:flex-row gap-2">
                 <a
                   href="mailto:yychang100@student.hbuhsd.edu"
-                  className="flex-1 px-4 py-2.5 rounded-md bg-[#338eda] hover:bg-[#2b7bbd] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md"
+                  className="flex-1 px-4 py-2.5 rounded-md bg-[#338eda] hover:bg-[#2b7bbd] text-white font-black text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>Send Email</span>
@@ -164,8 +179,9 @@ export const SignupForm: React.FC = () => {
 
                 <button
                   onClick={() => copyToClipboard('yychang100@student.hbuhsd.edu', 'email')}
-                  className="px-4 py-2.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer"
+                  className="px-4 py-2.5 rounded-md bg-[#252429] hover:bg-[#32303c] text-white font-bold text-xs flex items-center justify-center gap-1.5 border border-[#3c4858] transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-[#338eda] focus-visible:outline-hidden"
                   title="Copy Email Address"
+                  aria-label="Copy email address"
                 >
                   {copiedEmail ? (
                     <>
@@ -191,7 +207,7 @@ export const SignupForm: React.FC = () => {
               <span>Chapter Meeting Schedule & Details</span>
             </h3>
             <div className="flex items-center gap-2">
-              <img src="/flag-orpheus-top.svg" alt="Hack Club Top Flag" className="h-5 object-contain" />
+              <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Top Flag" className="h-5 object-contain" />
             </div>
           </div>
 
@@ -225,7 +241,6 @@ export const SignupForm: React.FC = () => {
         <div className="p-3.5 rounded-md bg-[#1e1e24] border border-[#2d2d38] text-center text-xs text-[#8492a6]">
           Member directory is kept private. Submissions go directly to chapter leadership. Text <strong className="text-white font-mono">657-505-8696</strong> if you have any questions.
         </div>
-
       </div>
     </section>
   );

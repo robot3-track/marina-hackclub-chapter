@@ -31,7 +31,7 @@ const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
     tag: 'Global Hardware Hackathon',
     tagColor: '#ec3750',
     description: 'Hack Club flagship high school hardware & software hackathon taking place in 100+ cities worldwide simultaneously.',
-    icon: '/flag-standalone.svg',
+    icon: 'https://assets.hackclub.com/flag-standalone.svg',
     linkText: 'Explore Scrapyard',
     linkUrl: 'https://scrapyard.hackclub.com',
     accentBorder: 'hover:border-[#ec3750]',
@@ -42,7 +42,7 @@ const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
     tag: 'Winter Shipathon',
     tagColor: '#338eda',
     description: 'Ship projects every week, earn Doubloons, and claim free laptops, 3D printers, microcontrollers & tech grants.',
-    icon: '/2026.svg',
+    icon: 'https://assets.hackclub.com/banners/2026.svg',
     linkText: 'View High Seas',
     linkUrl: 'https://highseas.hackclub.com',
     accentBorder: 'hover:border-[#338eda]',
@@ -53,7 +53,7 @@ const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
     tag: 'Build & Earn Hardware',
     tagColor: '#f1c40f',
     description: 'Log hours coding games, websites, or apps, and trade your development hours for real physical electronics & kits.',
-    icon: '/hcb-light.png',
+    icon: 'https://assets.hackclub.com/hcb-light.svg',
     linkText: 'Check Arcade',
     linkUrl: 'https://arcade.hackclub.com',
     accentBorder: 'hover:border-[#f1c40f]',
@@ -75,7 +75,7 @@ const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
     tag: 'HQ Flagship Events',
     tagColor: '#a633d6',
     description: '42-hour international teen hackathons with hardware labs, workshops, midnight karaoke, and global hacker networking.',
-    icon: '/flag-orpheus-top.svg',
+    icon: 'https://assets.hackclub.com/flag-orpheus-top.svg',
     linkText: 'Discover Epoch',
     linkUrl: 'https://epoch.hackclub.com',
     accentBorder: 'hover:border-[#a633d6]',
@@ -86,7 +86,7 @@ const HACKATHON_CAROUSEL_ITEMS: CarouselItem[] = [
     tag: 'Custom Hardware Grants',
     tagColor: '#ff8c37',
     description: 'Build a tilemap game in JS to receive a free custom handheld console kit shipped straight to your doorstep.',
-    icon: '/icon-rounded.svg',
+    icon: 'https://assets.hackclub.com/icon-rounded.svg',
     linkText: 'Claim Sprig Kit',
     linkUrl: 'https://sprig.hackclub.com',
     accentBorder: 'hover:border-[#ff8c37]',
@@ -154,7 +154,7 @@ export const CarouselTicker: React.FC = () => {
                 href={item.linkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-bold transition-colors pt-3 border-t border-[#2d2d38]"
+                className="inline-flex items-center gap-1.5 text-xs font-bold transition-colors pt-3 border-t border-[#2d2d38] focus-visible:ring-2 focus-visible:ring-[#ec3750] focus-visible:outline-hidden"
                 style={{ color: item.tagColor }}
               >
                 <span>{item.linkText}</span>
