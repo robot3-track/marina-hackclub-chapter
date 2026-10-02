@@ -995,7 +995,7 @@ export const DevPortal: React.FC = () => {
                   onClick={confirmDelete}
                   className="px-4 py-2 text-xs sm:text-sm font-bold bg-[#ec3750] hover:bg-[#d62b42] text-white transition-all cursor-pointer"
                 >
-                  Delete Transaction
+                  Remove Transaction
                 </button>
               </div>
             </motion.div>
