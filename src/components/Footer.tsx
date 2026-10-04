@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="https://assets.hackclub.com/icon-square.svg"
+                src="https://ibb.co/B95dCtC"
                 alt="Hack Club Marina Logo"
                 className="w-10 h-10 rounded-md object-contain"
               />
