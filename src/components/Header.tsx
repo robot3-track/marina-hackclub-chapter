@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
           aria-label="Hack Club Marina Overview"
         >
           <img
-            src="https://ibb.co/B95dCtC"
+            src="https://i.ibb.co/KJpRrXr/image-removebg-preview-6.png"
             alt="Hack Club Logo"
             className="w-7 h-7 sm:w-9 sm:h-9 object-contain group-hover:scale-105 transition-transform"
           />
